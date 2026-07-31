@@ -42,8 +42,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          FILE_ID='1lYztlfcZQ51plcW987TnUINDK4iHrik5'
-          curl -L --fail --retry 3 "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" -o /tmp/overlay.zip
+          FILE_ID='1QGnD8sAS91S0a-CXWfFGRnJz5eYRx463'
+          URL="https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t"
+          curl --location --fail --retry 4 --retry-all-errors --connect-timeout 20 "$URL" -o /tmp/overlay.zip
+          file /tmp/overlay.zip
           unzip -t /tmp/overlay.zip
           unzip -oq /tmp/overlay.zip -d .
           rm -rf .github/patches/chatclient-5.0.0
