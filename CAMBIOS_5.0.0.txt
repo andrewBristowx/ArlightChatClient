@@ -1,0 +1,9 @@
+ArlightChatClient 5.0.0 - WARDROBE PET POSITION EDITOR
+
+- Añade el botón "Ajustar posición de mascota" al ropero.
+- Editor visual en vivo para X lateral, Y altura y Z distancia.
+- Pasos de 0.05 con límites seguros para evitar perder la mascota fuera de cámara.
+- Botones Restablecer y Guardar y volver.
+- La posición se aplica a la previsualización y al render en el mundo mediante el puente opcional de Curios.
+- El ropero sigue funcionando aunque ArlightCosmeticsCurios no esté instalado; el editor queda desactivado en ese caso.
+- Mantiene el arreglo de insignias pequeñas del podio universal 4.9.1.

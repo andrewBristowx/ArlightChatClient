@@ -34,6 +34,8 @@ public final class VisualWardrobeScreen extends Screen {
     private float mannequinYaw = 0.0F;
     private boolean rotatingMannequin;
     private double lastDragX;
+    private boolean positionEditing;
+    private float[] petPosition = new float[]{0.0F, 0.0F, 0.0F};
 
     public VisualWardrobeScreen() {
         super(Component.literal("Ropero Pony0n"));
@@ -86,8 +88,8 @@ public final class VisualWardrobeScreen extends Screen {
         int bottom = y + h - 18;
         g.fill(previewX, previewY, previewX + previewW, bottom, CARD);
 
-        hoveredIndex = gridHover(shown, mouseX, mouseY, previewX + previewW + 18, previewY, x + w - 18, bottom);
-        int detailIndex = hoveredIndex >= 0 ? hoveredIndex : selectedIndex;
+        hoveredIndex = positionEditing ? -1 : gridHover(shown, mouseX, mouseY, previewX + previewW + 18, previewY, x + w - 18, bottom);
+        int detailIndex = positionEditing ? selectedIndex : (hoveredIndex >= 0 ? hoveredIndex : selectedIndex);
         detailIndex = Math.max(0, Math.min(detailIndex, shown.size() - 1));
         WardrobeState.Entry detail = shown.get(detailIndex);
 
@@ -152,35 +154,39 @@ public final class VisualWardrobeScreen extends Screen {
         int cell = 70;
         int gap = 6;
         int gridTop = previewY;
-        int rowsVisible = Math.max(1, (bottom - gridTop - 52) / (cell + gap));
+        boolean selectedCompanion = WardrobePreviewBridge.isCompanion(shown.get(selectedIndex).id());
+        int reservedBottom = selectedCompanion ? 88 : 52;
+        int rowsVisible = Math.max(1, (bottom - gridTop - reservedBottom) / (cell + gap));
         int maxScroll = Math.max(0, (shown.size() + columns - 1) / columns - rowsVisible);
         scrollRow = Math.max(0, Math.min(scrollRow, maxScroll));
 
-        for (int local = 0; local < rowsVisible * columns; local++) {
-            int idx = (scrollRow * columns) + local;
-            if (idx >= shown.size()) break;
-            int col = local % columns;
-            int row = local / columns;
-            int cx = gridX + col * (cell + gap);
-            int cy = gridTop + row * (cell + gap);
-            WardrobeState.Entry e = shown.get(idx);
-            boolean over = idx == hoveredIndex;
-            boolean selected = idx == selectedIndex;
-            String active = WardrobeState.equipped().get(e.slot());
-            boolean equipped = Objects.equals(active, e.id());
-            int color = selected ? 0xEE6C3977 : over ? CARD_HOVER : 0xCC261B35;
-            g.fill(cx, cy, cx + cell, cy + cell, color);
-            g.fill(cx, cy, cx + cell, cy + 3, equipped ? GREEN : rarityColor(e.rarity()));
-            ItemStack stack = stackFor(e.id());
-            if (!stack.isEmpty()) {
-                g.pose().pushPose();
-                g.pose().translate(cx + 15, cy + 9, 0);
-                g.pose().scale(2.0F, 2.0F, 1.0F);
-                g.renderItem(stack, 0, 0);
-                g.pose().popPose();
+        if (!positionEditing) {
+            for (int local = 0; local < rowsVisible * columns; local++) {
+                int idx = (scrollRow * columns) + local;
+                if (idx >= shown.size()) break;
+                int col = local % columns;
+                int row = local / columns;
+                int cx = gridX + col * (cell + gap);
+                int cy = gridTop + row * (cell + gap);
+                WardrobeState.Entry e = shown.get(idx);
+                boolean over = idx == hoveredIndex;
+                boolean selected = idx == selectedIndex;
+                String active = WardrobeState.equipped().get(e.slot());
+                boolean equipped = Objects.equals(active, e.id());
+                int color = selected ? 0xEE6C3977 : over ? CARD_HOVER : 0xCC261B35;
+                g.fill(cx, cy, cx + cell, cy + cell, color);
+                g.fill(cx, cy, cx + cell, cy + 3, equipped ? GREEN : rarityColor(e.rarity()));
+                ItemStack stack = stackFor(e.id());
+                if (!stack.isEmpty()) {
+                    g.pose().pushPose();
+                    g.pose().translate(cx + 15, cy + 9, 0);
+                    g.pose().scale(2.0F, 2.0F, 1.0F);
+                    g.renderItem(stack, 0, 0);
+                    g.pose().popPose();
+                }
+                drawCardName(g, e.name(), cx, cy, cell, equipped ? GREEN : 0xFFFFFFFF);
+                if (equipped) g.drawString(font, "✓", cx + cell - 11, cy + 6, GREEN, true);
             }
-            drawCardName(g, e.name(), cx, cy, cell, equipped ? GREEN : 0xFFFFFFFF);
-            if (equipped) g.drawString(font, "✓", cx + cell - 11, cy + 6, GREEN, true);
         }
 
         WardrobeState.Entry selected = shown.get(selectedIndex);
@@ -188,13 +194,20 @@ public final class VisualWardrobeScreen extends Screen {
         boolean equipped = Objects.equals(active, selected.id());
         int buttonY = bottom - 38;
         int buttonW = Math.min(150, gridW / 2);
-        button(g, gridX, buttonY, buttonW, 26, equipped ? "Quitar" : "Equipar", mouseX, mouseY);
         int clearX = gridX + buttonW + 8;
         int clearW = Math.min(130, Math.max(96, gridW - buttonW - 8));
-        button(g, clearX, buttonY, clearW, 26, "Quitar todos", mouseX, mouseY);
-        if (maxScroll > 0) {
-            g.drawString(font, "Rueda del mouse: " + (scrollRow + 1) + "/" + (maxScroll + 1),
-                    gridX, buttonY - 14, MUTED, false);
+        if (positionEditing && selectedCompanion) {
+            renderPositionEditor(g, selected, gridX, previewY, gridW, bottom, mouseX, mouseY);
+        } else {
+            button(g, gridX, buttonY, buttonW, 26, equipped ? "Quitar" : "Equipar", mouseX, mouseY);
+            button(g, clearX, buttonY, clearW, 26, "Quitar todos", mouseX, mouseY);
+            if (selectedCompanion) {
+                button(g, gridX, buttonY - 34, Math.min(gridW, buttonW + clearW + 8), 26,
+                        "Ajustar posición de mascota", mouseX, mouseY);
+            } else if (maxScroll > 0) {
+                g.drawString(font, "Rueda del mouse: " + (scrollRow + 1) + "/" + (maxScroll + 1),
+                        gridX, buttonY - 14, MUTED, false);
+            }
         }
         super.render(g, mouseX, mouseY, partialTick);
     }
@@ -214,6 +227,7 @@ public final class VisualWardrobeScreen extends Screen {
                 filterIndex = i;
                 selectedIndex = 0;
                 scrollRow = 0;
+                positionEditing = false;
                 return true;
             }
             filterX += fw + 5;
@@ -235,23 +249,36 @@ public final class VisualWardrobeScreen extends Screen {
         int columns = Math.max(4, gridW / 76);
         int cell = 70;
         int gap = 6;
-        int rowsVisible = Math.max(1, (bottom - previewY - 52) / (cell + gap));
-        int localHover = gridHover(shown, mouseX, mouseY, gridX, previewY, x + w - 18, bottom);
+        WardrobeState.Entry selected = shown.get(selectedIndex);
+        boolean selectedCompanion = WardrobePreviewBridge.isCompanion(selected.id());
+        if (positionEditing && selectedCompanion) {
+            if (handlePositionEditorClick(selected, gridX, previewY, gridW, bottom, mouseX, mouseY)) return true;
+        }
+        int reservedBottom = selectedCompanion ? 88 : 52;
+        int rowsVisible = Math.max(1, (bottom - previewY - reservedBottom) / (cell + gap));
+        int localHover = positionEditing ? -1 : gridHover(shown, mouseX, mouseY, gridX, previewY, x + w - 18, bottom);
         if (localHover >= 0) {
             selectedIndex = localHover;
+            positionEditing = false;
             return true;
         }
 
         int buttonY = bottom - 38;
         int buttonW = Math.min(150, gridW / 2);
+        int clearX = gridX + buttonW + 8;
+        int clearW = Math.min(130, Math.max(96, gridW - buttonW - 8));
+        if (selectedCompanion && hit(mouseX, mouseY, gridX, buttonY - 34,
+                Math.min(gridW, buttonW + clearW + 8), 26)) {
+            positionEditing = true;
+            petPosition = WardrobePreviewBridge.position(selected.id());
+            return true;
+        }
         if (hit(mouseX, mouseY, gridX, buttonY, buttonW, 26)) {
             WardrobeState.Entry e = shown.get(selectedIndex);
             String active = WardrobeState.equipped().get(e.slot());
             send(Objects.equals(active, e.id()) ? "UNEQUIP|" + e.slot() : "EQUIP|" + WardrobeState.enc(e.id()));
             return true;
         }
-        int clearX = gridX + buttonW + 8;
-        int clearW = Math.min(130, Math.max(96, gridW - buttonW - 8));
         if (hit(mouseX, mouseY, clearX, buttonY, clearW, 26)) {
             send("CLEARALL|all");
             return true;
@@ -309,7 +336,8 @@ public final class VisualWardrobeScreen extends Screen {
         int columns = Math.max(4, gridW / 76);
         int cell = 70;
         int gap = 6;
-        int rowsVisible = Math.max(1, (bottom - gridY - 52) / (cell + gap));
+        int reservedBottom = WardrobePreviewBridge.isCompanion(shown.get(selectedIndex).id()) ? 88 : 52;
+        int rowsVisible = Math.max(1, (bottom - gridY - reservedBottom) / (cell + gap));
         for (int local = 0; local < rowsVisible * columns; local++) {
             int idx = scrollRow * columns + local;
             if (idx >= shown.size()) break;
@@ -336,6 +364,80 @@ public final class VisualWardrobeScreen extends Screen {
         if (value.contains("EPIC")) return 0xFFD36BFF;
         if (value.contains("RARE")) return 0xFF62B7FF;
         return 0xFFBEB2C8;
+    }
+
+    private void renderPositionEditor(GuiGraphics g, WardrobeState.Entry selected,
+                                      int x, int y, int w, int bottom,
+                                      double mouseX, double mouseY) {
+        g.fill(x, y, x + w, bottom - 46, 0xE31C1427);
+        g.drawCenteredString(font, "AJUSTAR POSICIÓN", x + w / 2, y + 18, PINK);
+        g.drawCenteredString(font, selected.name(), x + w / 2, y + 34, 0xFFFFFFFF);
+        g.drawCenteredString(font, "Los cambios se ven en vivo en el maniquí y en el mundo",
+                x + w / 2, y + 50, MUTED);
+
+        int rowX = x + Math.max(12, (w - 280) / 2);
+        int rowW = Math.min(280, w - 24);
+        int rowY = y + 78;
+        positionRow(g, rowX, rowY, rowW, "Lateral X", petPosition[0], mouseX, mouseY);
+        positionRow(g, rowX, rowY + 38, rowW, "Altura Y", petPosition[1], mouseX, mouseY);
+        positionRow(g, rowX, rowY + 76, rowW, "Distancia Z", petPosition[2], mouseX, mouseY);
+
+        g.drawCenteredString(font, "X: izquierda/derecha  •  Y: abajo/arriba  •  Z: cerca/lejos",
+                x + w / 2, rowY + 116, MUTED);
+        int actionY = bottom - 82;
+        int actionW = Math.min(132, (w - 10) / 2);
+        button(g, x, actionY, actionW, 26, "Restablecer", mouseX, mouseY);
+        button(g, x + actionW + 10, actionY, actionW, 26, "Guardar y volver", mouseX, mouseY);
+    }
+
+    private void positionRow(GuiGraphics g, int x, int y, int w, String label, float value,
+                             double mouseX, double mouseY) {
+        int control = 46;
+        button(g, x, y, control, 26, "−", mouseX, mouseY);
+        g.fill(x + control + 6, y, x + w - control - 6, y + 26, 0xAA2A1D38);
+        g.drawCenteredString(font, label + ": " + String.format(Locale.ROOT, "%+.2f", value),
+                x + w / 2, y + 9, 0xFFFFFFFF);
+        button(g, x + w - control, y, control, 26, "+", mouseX, mouseY);
+    }
+
+    private boolean handlePositionEditorClick(WardrobeState.Entry selected,
+                                              int x, int y, int w, int bottom,
+                                              double mouseX, double mouseY) {
+        int rowX = x + Math.max(12, (w - 280) / 2);
+        int rowW = Math.min(280, w - 24);
+        int rowY = y + 78;
+        int control = 46;
+        final float step = 0.05F;
+        for (int axis = 0; axis < 3; axis++) {
+            int cy = rowY + axis * 38;
+            if (hit(mouseX, mouseY, rowX, cy, control, 26)) {
+                petPosition = adjust(selected.id(), axis, -step);
+                return true;
+            }
+            if (hit(mouseX, mouseY, rowX + rowW - control, cy, control, 26)) {
+                petPosition = adjust(selected.id(), axis, step);
+                return true;
+            }
+        }
+        int actionY = bottom - 82;
+        int actionW = Math.min(132, (w - 10) / 2);
+        if (hit(mouseX, mouseY, x, actionY, actionW, 26)) {
+            petPosition = WardrobePreviewBridge.resetPosition(selected.id());
+            return true;
+        }
+        if (hit(mouseX, mouseY, x + actionW + 10, actionY, actionW, 26)) {
+            WardrobePreviewBridge.savePositions();
+            positionEditing = false;
+            return true;
+        }
+        return false;
+    }
+
+    private static float[] adjust(String cosmeticId, int axis, float amount) {
+        return WardrobePreviewBridge.adjustPosition(cosmeticId,
+                axis == 0 ? amount : 0.0F,
+                axis == 1 ? amount : 0.0F,
+                axis == 2 ? amount : 0.0F);
     }
 
     private void drawCardName(GuiGraphics g, String value, int x, int y, int cell, int color) {
@@ -377,6 +479,7 @@ public final class VisualWardrobeScreen extends Screen {
     public void removed() {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player != null) WardrobePreviewBridge.end(mc.player);
+        WardrobePreviewBridge.savePositions();
         super.removed();
     }
 
@@ -384,6 +487,7 @@ public final class VisualWardrobeScreen extends Screen {
     public void onClose() {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player != null) WardrobePreviewBridge.end(mc.player);
+        WardrobePreviewBridge.savePositions();
         super.onClose();
     }
 

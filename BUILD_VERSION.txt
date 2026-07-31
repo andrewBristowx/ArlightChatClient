@@ -1,1 +1,1 @@
-ArlightChatClient 4.9.1 PODIUM-BADGE-FIX
+ArlightChatClient 5.0.0 WARDROBE-PET-POSITION-EDITOR

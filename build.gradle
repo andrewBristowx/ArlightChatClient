@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.gradle.userdev' version '7.1.38'
 }
 
-version = "4.9.1"
+version = "5.0.0"
 group = 'com.arlight.chatclient'
 
 base {
