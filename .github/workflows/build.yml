@@ -38,20 +38,15 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Importar fuente ArlightChatClient 4.9.1
+      - name: Aplicar parche ArlightChatClient 4.9.1
         shell: bash
         run: |
           set -euo pipefail
-          FILE_ID='1ZEhNTv110VbzQlqaOmJS0YWNhS9P9B90'
-          curl -L --fail --retry 3 "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" -o /tmp/source.zip
-          unzip -t /tmp/source.zip
-          rm -rf /tmp/source-extracted
-          mkdir -p /tmp/source-extracted
-          unzip -q /tmp/source.zip -d /tmp/source-extracted
-          ROOT_FILE="$(find /tmp/source-extracted -maxdepth 5 -type f -name build.gradle | head -n 1)"
-          test -n "$ROOT_FILE"
-          ROOT="$(dirname "$ROOT_FILE")"
-          rsync -a --exclude '.git/' --exclude '.github/' "$ROOT/" ./
+          PATCH='.github/patches/ArlightChatClient-4.9.1.patch.zip'
+          test -f "$PATCH"
+          unzip -t "$PATCH"
+          unzip -oq "$PATCH" -d .
+          rm -f "$PATCH"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
