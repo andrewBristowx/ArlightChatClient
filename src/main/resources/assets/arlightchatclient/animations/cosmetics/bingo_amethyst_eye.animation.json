@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.bingo_amethyst_eye.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "eye_orb": {
+          "position": [
+            0,
+            "math.sin(query.life_time*125.0)*0.45",
+            0
+          ],
+          "rotation": [
+            0,
+            "math.sin(query.life_time*45.0)*8.0",
+            0
+          ]
+        },
+        "eye_crystal_top": {
+          "rotation": [
+            0,
+            "query.life_time*60.0",
+            0
+          ]
+        },
+        "eye_tendril_one": {
+          "rotation": [
+            "25.0 + math.sin(query.life_time*120.0)*8.0",
+            0,
+            "-20.0 + math.sin(query.life_time*80.0)*5.0"
+          ]
+        },
+        "eye_tendril_two": {
+          "rotation": [
+            "25.0 - math.sin(query.life_time*120.0)*8.0",
+            0,
+            "20.0 - math.sin(query.life_time*80.0)*5.0"
+          ]
+        }
+      }
+    }
+  }
+}

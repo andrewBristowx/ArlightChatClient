@@ -1,0 +1,3 @@
+ArlightChatClient 4.2.0
+- Botón Quitar todos en el ropero.
+- Filtros de pecho, piernas y pies separados.

@@ -1,0 +1,8952 @@
+{
+  "pony_horn_crown": {
+    "palette": [
+      {
+        "color": [
+          35,
+          51,
+          93,
+          255
+        ]
+      },
+      {
+        "color": [
+          52,
+          77,
+          130,
+          255
+        ]
+      },
+      {
+        "color": [
+          112,
+          216,
+          236,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          139,
+          185,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          245,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          154,
+          116,
+          93,
+          255
+        ]
+      },
+      {
+        "color": [
+          106,
+          73,
+          57,
+          255
+        ]
+      },
+      {
+        "color": [
+          143,
+          219,
+          202,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          240,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          183,
+          162,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          46,
+          36,
+          71,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          199,
+          223,
+          255
+        ]
+      },
+      {
+        "color": [
+          108,
+          149,
+          220,
+          255
+        ]
+      },
+      {
+        "color": [
+          219,
+          183,
+          90,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          32,
+          57,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      8
+    ],
+    "bones": [
+      {
+        "name": "band",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.25,
+              -8.35,
+              -4.22
+            ],
+            "size": [
+              8.5,
+              0.55,
+              0.42
+            ],
+            "mat": 0,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.25,
+              -8.35,
+              3.8
+            ],
+            "size": [
+              8.5,
+              0.55,
+              0.42
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.25,
+              -8.35,
+              -3.8
+            ],
+            "size": [
+              0.42,
+              0.55,
+              7.6
+            ],
+            "mat": 0,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              3.83,
+              -8.35,
+              -3.8
+            ],
+            "size": [
+              0.42,
+              0.55,
+              7.6
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.75,
+              -8.75,
+              -4.48
+            ],
+            "size": [
+              1.5,
+              0.8,
+              0.3
+            ],
+            "mat": 2,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.28,
+              -8.58,
+              -4.73
+            ],
+            "size": [
+              0.56,
+              0.48,
+              0.2
+            ],
+            "mat": 8,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "ear_left",
+        "anchor": "HEAD",
+        "pivot": [
+          3.85,
+          -7.55,
+          0.15
+        ],
+        "rotation": [
+          0,
+          0,
+          -10
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0,
+              -2.45,
+              -0.95
+            ],
+            "size": [
+              1.05,
+              2.55,
+              1.9
+            ],
+            "mat": 2,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.13,
+              -2.05,
+              -0.58
+            ],
+            "size": [
+              0.82,
+              1.65,
+              1.16
+            ],
+            "mat": 3,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      },
+      {
+        "name": "ear_right",
+        "anchor": "HEAD",
+        "pivot": [
+          -3.85,
+          -7.55,
+          0.15
+        ],
+        "rotation": [
+          0,
+          0,
+          10
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.05,
+              -2.45,
+              -0.95
+            ],
+            "size": [
+              1.05,
+              2.55,
+              1.9
+            ],
+            "mat": 2,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.95,
+              -2.05,
+              -0.58
+            ],
+            "size": [
+              0.82,
+              1.65,
+              1.16
+            ],
+            "mat": 3,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      },
+      {
+        "name": "horn_left_base",
+        "anchor": "HEAD",
+        "pivot": [
+          2.25,
+          -8.15,
+          0.45
+        ],
+        "rotation": [
+          -12,
+          -4,
+          -11
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.66,
+              -3.1,
+              -0.66
+            ],
+            "size": [
+              1.32,
+              3.2,
+              1.32
+            ],
+            "mat": 5,
+            "inflate": 0.04,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      },
+      {
+        "name": "horn_left_mid",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          -3.0,
+          0
+        ],
+        "rotation": [
+          8,
+          3,
+          12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.52,
+              -2.45,
+              -0.52
+            ],
+            "size": [
+              1.04,
+              2.55,
+              1.04
+            ],
+            "mat": 6,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "horn_left_base"
+      },
+      {
+        "name": "horn_left_tip",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          -2.35,
+          0
+        ],
+        "rotation": [
+          14,
+          4,
+          12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.34,
+              -1.55,
+              -0.34
+            ],
+            "size": [
+              0.68,
+              1.65,
+              0.68
+            ],
+            "mat": 6,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "horn_left_mid"
+      },
+      {
+        "name": "horn_right_base",
+        "anchor": "HEAD",
+        "pivot": [
+          -2.25,
+          -8.15,
+          0.45
+        ],
+        "rotation": [
+          -12,
+          4,
+          11
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.66,
+              -3.1,
+              -0.66
+            ],
+            "size": [
+              1.32,
+              3.2,
+              1.32
+            ],
+            "mat": 5,
+            "inflate": 0.04,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      },
+      {
+        "name": "horn_right_mid",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          -3.0,
+          0
+        ],
+        "rotation": [
+          8,
+          -3,
+          -12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.52,
+              -2.45,
+              -0.52
+            ],
+            "size": [
+              1.04,
+              2.55,
+              1.04
+            ],
+            "mat": 6,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "horn_right_base"
+      },
+      {
+        "name": "horn_right_tip",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          -2.35,
+          0
+        ],
+        "rotation": [
+          14,
+          -4,
+          -12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.34,
+              -1.55,
+              -0.34
+            ],
+            "size": [
+              0.68,
+              1.65,
+              0.68
+            ],
+            "mat": 6,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "horn_right_mid"
+      },
+      {
+        "name": "ribbon_left",
+        "anchor": "HEAD",
+        "pivot": [
+          3.45,
+          -8.0,
+          3.95
+        ],
+        "rotation": [
+          12,
+          0,
+          -8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.05,
+              -0.1,
+              -0.16
+            ],
+            "size": [
+              1.15,
+              1.75,
+              0.32
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      },
+      {
+        "name": "ribbon_right",
+        "anchor": "HEAD",
+        "pivot": [
+          -3.45,
+          -8.0,
+          3.95
+        ],
+        "rotation": [
+          12,
+          0,
+          8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.1,
+              -0.1,
+              -0.16
+            ],
+            "size": [
+              1.15,
+              1.75,
+              0.32
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          }
+        ],
+        "parent": "band"
+      }
+    ],
+    "animations": {
+      "ear_left": {
+        "rotation": [
+          0,
+          0,
+          "-10.0 + math.sin(query.life_time*120.0)*2.0"
+        ]
+      },
+      "ear_right": {
+        "rotation": [
+          0,
+          0,
+          "10.0 - math.sin(query.life_time*120.0)*2.0"
+        ]
+      },
+      "ribbon_left": {
+        "rotation": [
+          "12.0 + math.sin(query.life_time*95.0)*2.0",
+          0,
+          -8
+        ]
+      },
+      "ribbon_right": {
+        "rotation": [
+          "12.0 - math.sin(query.life_time*95.0)*2.0",
+          0,
+          8
+        ]
+      }
+    }
+  },
+  "pony_pastel_outfit": {
+    "palette": [
+      {
+        "color": [
+          23,
+          40,
+          79,
+          255
+        ]
+      },
+      {
+        "color": [
+          36,
+          61,
+          112,
+          255
+        ]
+      },
+      {
+        "color": [
+          53,
+          88,
+          144,
+          255
+        ]
+      },
+      {
+        "color": [
+          114,
+          216,
+          233,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          138,
+          185,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          208,
+          230,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          244,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          216,
+          198,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          242,
+          211,
+          111,
+          255
+        ]
+      },
+      {
+        "color": [
+          138,
+          218,
+          199,
+          255
+        ]
+      },
+      {
+        "color": [
+          16,
+          24,
+          47,
+          255
+        ]
+      },
+      {
+        "color": [
+          188,
+          136,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          243,
+          185,
+          92,
+          255
+        ]
+      },
+      {
+        "color": [
+          99,
+          139,
+          209,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          44,
+          43,
+          77,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      3,
+      8
+    ],
+    "bones": [
+      {
+        "name": "jacket_body",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              8.04,
+              12.04,
+              4.04
+            ],
+            "mat": 0,
+            "inflate": 0.31,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.55,
+              0.45,
+              -2.11
+            ],
+            "size": [
+              2.3,
+              8.7,
+              0.16
+            ],
+            "mat": 1,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.25,
+              0.45,
+              -2.11
+            ],
+            "size": [
+              2.3,
+              8.7,
+              0.16
+            ],
+            "mat": 1,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.55,
+              1.0,
+              -2.14
+            ],
+            "size": [
+              3.1,
+              6.7,
+              0.18
+            ],
+            "mat": 6,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.18,
+              1.2,
+              -2.22
+            ],
+            "size": [
+              0.36,
+              6.1,
+              0.16
+            ],
+            "mat": 8,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.08,
+              8.2,
+              -2.08
+            ],
+            "size": [
+              8.16,
+              1.05,
+              4.16
+            ],
+            "mat": 10,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.75,
+              -0.38,
+              -2.22
+            ],
+            "size": [
+              2.1,
+              1.05,
+              0.28
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.65,
+              -0.38,
+              -2.22
+            ],
+            "size": [
+              2.1,
+              1.05,
+              0.28
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "hood_left",
+        "anchor": "BODY",
+        "pivot": [
+          -1.45,
+          -0.1,
+          2.05
+        ],
+        "rotation": [
+          12,
+          0,
+          8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.7,
+              -0.45,
+              -0.12
+            ],
+            "size": [
+              1.8,
+              2.25,
+              0.42
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "hood_right",
+        "anchor": "BODY",
+        "pivot": [
+          1.45,
+          -0.1,
+          2.05
+        ],
+        "rotation": [
+          12,
+          0,
+          -8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.1,
+              -0.45,
+              -0.12
+            ],
+            "size": [
+              1.8,
+              2.25,
+              0.42
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "skirt_front_left",
+        "anchor": "BODY",
+        "pivot": [
+          -2.15,
+          9.7,
+          -2.02
+        ],
+        "rotation": [
+          -3,
+          0,
+          -4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.15,
+              0,
+              -0.22
+            ],
+            "size": [
+              4.15,
+              3.65,
+              0.5
+            ],
+            "mat": 4,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.15,
+              3.15,
+              -0.25
+            ],
+            "size": [
+              4.15,
+              0.55,
+              0.56
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "skirt_front_right",
+        "anchor": "BODY",
+        "pivot": [
+          2.15,
+          9.7,
+          -2.02
+        ],
+        "rotation": [
+          -3,
+          0,
+          4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.0,
+              0,
+              -0.22
+            ],
+            "size": [
+              4.15,
+              3.65,
+              0.5
+            ],
+            "mat": 4,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.0,
+              3.15,
+              -0.25
+            ],
+            "size": [
+              4.15,
+              0.55,
+              0.56
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "skirt_back_left",
+        "anchor": "BODY",
+        "pivot": [
+          -2.15,
+          9.7,
+          2.02
+        ],
+        "rotation": [
+          3,
+          0,
+          -4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.15,
+              0,
+              -0.28
+            ],
+            "size": [
+              4.15,
+              3.65,
+              0.5
+            ],
+            "mat": 4,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "skirt_back_right",
+        "anchor": "BODY",
+        "pivot": [
+          2.15,
+          9.7,
+          2.02
+        ],
+        "rotation": [
+          3,
+          0,
+          4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.0,
+              0,
+              -0.28
+            ],
+            "size": [
+              4.15,
+              3.65,
+              0.5
+            ],
+            "mat": 4,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "jacket_body"
+      },
+      {
+        "name": "left_sleeve",
+        "anchor": "LEFT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 0,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.1,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 3,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 10,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_sleeve",
+        "anchor": "RIGHT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 0,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.92,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 4,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 10,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "left_stocking",
+        "anchor": "LEFT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 10,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 15,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 11,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_stocking",
+        "anchor": "RIGHT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 10,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 15,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.9,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 11,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "skirt_front_left": {
+        "rotation": [
+          "-3.0 + math.sin(query.life_time*110.0)*1.3 + query.modified_move_speed*2.5",
+          0,
+          -4
+        ]
+      },
+      "skirt_front_right": {
+        "rotation": [
+          "-3.0 + math.sin(query.life_time*110.0)*1.3 + query.modified_move_speed*2.5",
+          0,
+          4
+        ]
+      },
+      "skirt_back_left": {
+        "rotation": [
+          "3.0 - math.sin(query.life_time*110.0)*1.2 - query.modified_move_speed*2.0",
+          0,
+          -4
+        ]
+      },
+      "skirt_back_right": {
+        "rotation": [
+          "3.0 - math.sin(query.life_time*110.0)*1.2 - query.modified_move_speed*2.0",
+          0,
+          4
+        ]
+      },
+      "hood_left": {
+        "rotation": [
+          "12.0 + math.sin(query.life_time*70.0)*1.0",
+          0,
+          8
+        ]
+      },
+      "hood_right": {
+        "rotation": [
+          "12.0 - math.sin(query.life_time*70.0)*1.0",
+          0,
+          -8
+        ]
+      }
+    }
+  },
+  "pony_whale_tail": {
+    "palette": [
+      {
+        "color": [
+          33,
+          67,
+          111,
+          255
+        ]
+      },
+      {
+        "color": [
+          46,
+          103,
+          155,
+          255
+        ]
+      },
+      {
+        "color": [
+          98,
+          201,
+          228,
+          255
+        ]
+      },
+      {
+        "color": [
+          156,
+          231,
+          236,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          139,
+          185,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          210,
+          229,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          244,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          113,
+          79,
+          155,
+          255
+        ]
+      },
+      {
+        "color": [
+          26,
+          42,
+          81,
+          255
+        ]
+      },
+      {
+        "color": [
+          116,
+          217,
+          196,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          237,
+          156,
+          255
+        ]
+      },
+      {
+        "color": [
+          65,
+          107,
+          164,
+          255
+        ]
+      },
+      {
+        "color": [
+          183,
+          155,
+          242,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          24,
+          51,
+          78,
+          255
+        ]
+      },
+      {
+        "color": [
+          217,
+          107,
+          167,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      10,
+      13
+    ],
+    "bones": [
+      {
+        "name": "tail_base",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          9.45,
+          2.15
+        ],
+        "rotation": [
+          14,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.4,
+              -0.65,
+              -0.25
+            ],
+            "size": [
+              2.8,
+              4.45,
+              2.8
+            ],
+            "mat": 0,
+            "inflate": 0.14,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "tail_mid",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          3.45,
+          1.35
+        ],
+        "rotation": [
+          8,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.12,
+              -0.45,
+              -0.25
+            ],
+            "size": [
+              2.24,
+              4.25,
+              2.3
+            ],
+            "mat": 1,
+            "inflate": 0.12,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_base"
+      },
+      {
+        "name": "tail_tip",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          3.45,
+          1.05
+        ],
+        "rotation": [
+          8,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.88,
+              -0.35,
+              -0.2
+            ],
+            "size": [
+              1.76,
+              3.65,
+              1.85
+            ],
+            "mat": 2,
+            "inflate": 0.1,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_mid"
+      },
+      {
+        "name": "tail_fluke_connector",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          2.95,
+          0.72
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.45,
+              -1.0,
+              -0.92
+            ],
+            "size": [
+              2.9,
+              2.1,
+              1.84
+            ],
+            "mat": 2,
+            "inflate": 0.14,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_tip"
+      },
+      {
+        "name": "tail_fin_left",
+        "anchor": "BODY",
+        "pivot": [
+          -0.1,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          -10,
+          -24
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -5.55,
+              -1.05,
+              -0.62
+            ],
+            "size": [
+              5.7,
+              2.5,
+              1.28
+            ],
+            "mat": 2,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.65,
+              1.05,
+              -0.52
+            ],
+            "size": [
+              4.75,
+              1.75,
+              1.08
+            ],
+            "mat": 3,
+            "inflate": 0.07,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.2,
+              2.45,
+              -0.42
+            ],
+            "size": [
+              3.3,
+              1.2,
+              0.88
+            ],
+            "mat": 1,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_fluke_connector"
+      },
+      {
+        "name": "tail_fin_right",
+        "anchor": "BODY",
+        "pivot": [
+          0.1,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          10,
+          24
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.15,
+              -1.05,
+              -0.62
+            ],
+            "size": [
+              5.7,
+              2.5,
+              1.28
+            ],
+            "mat": 2,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.1,
+              1.05,
+              -0.52
+            ],
+            "size": [
+              4.75,
+              1.75,
+              1.08
+            ],
+            "mat": 3,
+            "inflate": 0.07,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.1,
+              2.45,
+              -0.42
+            ],
+            "size": [
+              3.3,
+              1.2,
+              0.88
+            ],
+            "mat": 1,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_fluke_connector"
+      },
+      {
+        "name": "tail_bow",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0.35,
+          -0.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1,
+              -1,
+              -0.8
+            ],
+            "size": [
+              2,
+              2,
+              1.2
+            ],
+            "mat": 4,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4,
+              -1.6,
+              -0.5
+            ],
+            "size": [
+              3.2,
+              3.2,
+              0.9
+            ],
+            "mat": 4,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.8,
+              -1.6,
+              -0.5
+            ],
+            "size": [
+              3.2,
+              3.2,
+              0.9
+            ],
+            "mat": 5,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.6,
+              1,
+              -0.4
+            ],
+            "size": [
+              1.5,
+              3.3,
+              0.75
+            ],
+            "mat": 5,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.1,
+              1,
+              -0.4
+            ],
+            "size": [
+              1.5,
+              3.3,
+              0.75
+            ],
+            "mat": 4,
+            "inflate": 0.04,
+            "mirror": false
+          }
+        ],
+        "parent": "tail_base"
+      }
+    ],
+    "animations": {
+      "tail_base": {
+        "rotation": [
+          "18.0 + math.sin(query.life_time*95.0)*4.0",
+          "math.sin(query.life_time*70.0)*5.0",
+          0
+        ]
+      },
+      "tail_fin_left": {
+        "rotation": [
+          18,
+          -12,
+          "-30.0 + math.sin(query.life_time*120.0)*5.0"
+        ]
+      },
+      "tail_fin_right": {
+        "rotation": [
+          18,
+          12,
+          "30.0 - math.sin(query.life_time*120.0)*5.0"
+        ]
+      },
+      "tail_bow": {
+        "rotation": [
+          0,
+          "math.sin(query.life_time*80.0)*3.0",
+          0
+        ]
+      }
+    }
+  },
+  "pony_axolotl_pal": {
+    "palette": [
+      {
+        "color": [
+          242,
+          155,
+          187,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          196,
+          217,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          221,
+          235,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          62,
+          101,
+          255
+        ]
+      },
+      {
+        "color": [
+          52,
+          40,
+          68,
+          255
+        ]
+      },
+      {
+        "color": [
+          123,
+          215,
+          228,
+          255
+        ]
+      },
+      {
+        "color": [
+          179,
+          238,
+          242,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          245,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          111,
+          210,
+          189,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          237,
+          158,
+          255
+        ]
+      },
+      {
+        "color": [
+          185,
+          147,
+          234,
+          255
+        ]
+      },
+      {
+        "color": [
+          230,
+          111,
+          158,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          143,
+          95,
+          130,
+          255
+        ]
+      },
+      {
+        "color": [
+          47,
+          39,
+          70,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          180,
+          206,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      0,
+      1,
+      5,
+      6,
+      9,
+      12
+    ],
+    "bones": [
+      {
+        "name": "axolotl_root",
+        "anchor": "BODY",
+        "pivot": [
+          10.2,
+          -9.1,
+          -2.0
+        ],
+        "rotation": [
+          0,
+          -8,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.2,
+              -2.1,
+              -1.9
+            ],
+            "size": [
+              4.4,
+              3.8,
+              3.8
+            ],
+            "mat": 0,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.7,
+              1.2,
+              -1.4
+            ],
+            "size": [
+              3.4,
+              3.4,
+              2.8
+            ],
+            "mat": 1,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.2,
+              4.2,
+              -1.0
+            ],
+            "size": [
+              2.4,
+              2.0,
+              2.0
+            ],
+            "mat": 1,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.6,
+              -1.1,
+              -2.15
+            ],
+            "size": [
+              0.65,
+              0.65,
+              0.35
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.95,
+              -1.1,
+              -2.15
+            ],
+            "size": [
+              0.65,
+              0.65,
+              0.35
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.3,
+              -0.25,
+              -2.25
+            ],
+            "size": [
+              0.6,
+              0.3,
+              0.3
+            ],
+            "mat": 11,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "gill_left",
+        "anchor": "BODY",
+        "pivot": [
+          -2.0,
+          -0.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.2,
+              -2.7,
+              -0.55
+            ],
+            "size": [
+              0.75,
+              2.8,
+              1.1
+            ],
+            "mat": 5,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.15,
+              -2.4,
+              -0.45
+            ],
+            "size": [
+              0.8,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.15,
+              -1.4,
+              -0.45
+            ],
+            "size": [
+              0.9,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.15,
+              -0.4,
+              -0.45
+            ],
+            "size": [
+              0.8,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "axolotl_root"
+      },
+      {
+        "name": "gill_right",
+        "anchor": "BODY",
+        "pivot": [
+          2.0,
+          -0.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.55,
+              -2.7,
+              -0.55
+            ],
+            "size": [
+              0.75,
+              2.8,
+              1.1
+            ],
+            "mat": 5,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.95,
+              -2.4,
+              -0.45
+            ],
+            "size": [
+              0.8,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.05,
+              -1.4,
+              -0.45
+            ],
+            "size": [
+              0.9,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.95,
+              -0.4,
+              -0.45
+            ],
+            "size": [
+              0.8,
+              0.7,
+              0.9
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "axolotl_root"
+      },
+      {
+        "name": "axolotl_tail",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          5.6,
+          1.3
+        ],
+        "rotation": [
+          -20,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.7,
+              -0.2,
+              -0.4
+            ],
+            "size": [
+              1.4,
+              4.0,
+              1.0
+            ],
+            "mat": 0,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.6,
+              2.8,
+              -0.25
+            ],
+            "size": [
+              5.2,
+              1.8,
+              0.7
+            ],
+            "mat": 5,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": "axolotl_root"
+      },
+      {
+        "name": "leg_front_left",
+        "anchor": "BODY",
+        "pivot": [
+          -1.4,
+          3.1,
+          -0.7
+        ],
+        "rotation": [
+          0,
+          0,
+          18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.35,
+              -0.2,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              2.0,
+              0.7
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "axolotl_root"
+      },
+      {
+        "name": "leg_front_right",
+        "anchor": "BODY",
+        "pivot": [
+          1.4,
+          3.1,
+          -0.7
+        ],
+        "rotation": [
+          0,
+          0,
+          -18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.35,
+              -0.2,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              2.0,
+              0.7
+            ],
+            "mat": 1,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "axolotl_root"
+      }
+    ],
+    "animations": {
+      "axolotl_root": {
+        "position": [
+          0,
+          "math.sin(query.life_time*130.0)*0.25",
+          0
+        ],
+        "rotation": [
+          0,
+          "-8.0 + math.sin(query.life_time*55.0)*4.0",
+          0
+        ]
+      },
+      "gill_left": {
+        "rotation": [
+          0,
+          0,
+          "-12.0 + math.sin(query.life_time*160.0)*5.0"
+        ]
+      },
+      "gill_right": {
+        "rotation": [
+          0,
+          0,
+          "12.0 - math.sin(query.life_time*160.0)*5.0"
+        ]
+      },
+      "axolotl_tail": {
+        "rotation": [
+          "-20.0 + math.sin(query.life_time*120.0)*7.0",
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "pony_whale_stars": {
+    "palette": [
+      {
+        "color": [
+          43,
+          93,
+          140,
+          255
+        ]
+      },
+      {
+        "color": [
+          79,
+          159,
+          196,
+          255
+        ]
+      },
+      {
+        "color": [
+          121,
+          212,
+          232,
+          255
+        ]
+      },
+      {
+        "color": [
+          179,
+          237,
+          242,
+          255
+        ]
+      },
+      {
+        "color": [
+          241,
+          140,
+          186,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          211,
+          228,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          244,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          245,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          165,
+          141,
+          228,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          36,
+          52,
+          88,
+          255
+        ]
+      },
+      {
+        "color": [
+          103,
+          205,
+          182,
+          255
+        ]
+      },
+      {
+        "color": [
+          221,
+          110,
+          162,
+          255
+        ]
+      },
+      {
+        "color": [
+          122,
+          100,
+          183,
+          255
+        ]
+      },
+      {
+        "color": [
+          239,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          21,
+          35,
+          63,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      14
+    ],
+    "bones": [
+      {
+        "name": "orbit_whale",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              9.0,
+              -2.0,
+              -2.0
+            ],
+            "size": [
+              5.0,
+              4.0,
+              4.0
+            ],
+            "mat": 1,
+            "inflate": 0.15,
+            "mirror": false
+          },
+          {
+            "origin": [
+              7.0,
+              -1.4,
+              -1.5
+            ],
+            "size": [
+              2.7,
+              2.8,
+              3.0
+            ],
+            "mat": 2,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              13.1,
+              -1.0,
+              -1.4
+            ],
+            "size": [
+              2.2,
+              2.0,
+              2.8
+            ],
+            "mat": 3,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              8.3,
+              -0.4,
+              -2.35
+            ],
+            "size": [
+              0.5,
+              0.5,
+              0.4
+            ],
+            "mat": 15,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              8.4,
+              0.4,
+              -2.35
+            ],
+            "size": [
+              0.4,
+              0.25,
+              0.35
+            ],
+            "mat": 4,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "whale_tail_left",
+        "anchor": "ROOT",
+        "pivot": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0,
+          0,
+          -25
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0,
+              -1.4,
+              -0.6
+            ],
+            "size": [
+              3.2,
+              1.8,
+              1.2
+            ],
+            "mat": 2,
+            "inflate": 0.06,
+            "mirror": false
+          }
+        ],
+        "parent": "orbit_whale"
+      },
+      {
+        "name": "whale_tail_right",
+        "anchor": "ROOT",
+        "pivot": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0,
+          0,
+          25
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0,
+              -0.4,
+              -0.6
+            ],
+            "size": [
+              3.2,
+              1.8,
+              1.2
+            ],
+            "mat": 3,
+            "inflate": 0.06,
+            "mirror": false
+          }
+        ],
+        "parent": "orbit_whale"
+      },
+      {
+        "name": "star_one",
+        "anchor": "ROOT",
+        "pivot": [
+          -10,
+          6,
+          -3
+        ],
+        "rotation": [
+          0,
+          0,
+          45
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.0,
+              -1.0,
+              -0.35
+            ],
+            "size": [
+              2.0,
+              2.0,
+              0.7
+            ],
+            "mat": 6,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              -1.7,
+              -0.3
+            ],
+            "size": [
+              0.7,
+              3.4,
+              0.6
+            ],
+            "mat": 6,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "star_two",
+        "anchor": "ROOT",
+        "pivot": [
+          -6,
+          14,
+          7
+        ],
+        "rotation": [
+          0,
+          0,
+          45
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.8,
+              -0.8,
+              -0.3
+            ],
+            "size": [
+              1.6,
+              1.6,
+              0.6
+            ],
+            "mat": 4,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.3,
+              -1.35,
+              -0.25
+            ],
+            "size": [
+              0.6,
+              2.7,
+              0.5
+            ],
+            "mat": 4,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "star_three",
+        "anchor": "ROOT",
+        "pivot": [
+          2,
+          3,
+          10
+        ],
+        "rotation": [
+          0,
+          0,
+          45
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.7,
+              -0.7,
+              -0.25
+            ],
+            "size": [
+              1.4,
+              1.4,
+              0.5
+            ],
+            "mat": 8,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.25,
+              -1.2,
+              -0.22
+            ],
+            "size": [
+              0.5,
+              2.4,
+              0.44
+            ],
+            "mat": 8,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "orbit_whale": {
+        "rotation": [
+          0,
+          "query.life_time*55.0",
+          0
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*115.0)*0.8",
+          0
+        ]
+      },
+      "whale_tail_left": {
+        "rotation": [
+          0,
+          0,
+          "-25.0 + math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "whale_tail_right": {
+        "rotation": [
+          0,
+          0,
+          "25.0 - math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "star_one": {
+        "rotation": [
+          0,
+          "query.life_time*90.0",
+          45
+        ]
+      },
+      "star_two": {
+        "rotation": [
+          0,
+          "-query.life_time*110.0",
+          45
+        ]
+      },
+      "star_three": {
+        "rotation": [
+          0,
+          "query.life_time*130.0",
+          45
+        ]
+      }
+    }
+  },
+  "somita_bat_clip": {
+    "palette": [
+      {
+        "color": [
+          36,
+          21,
+          47,
+          255
+        ]
+      },
+      {
+        "color": [
+          59,
+          28,
+          73,
+          255
+        ]
+      },
+      {
+        "color": [
+          100,
+          36,
+          95,
+          255
+        ]
+      },
+      {
+        "color": [
+          150,
+          56,
+          117,
+          255
+        ]
+      },
+      {
+        "color": [
+          198,
+          83,
+          142,
+          255
+        ]
+      },
+      {
+        "color": [
+          231,
+          138,
+          181,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          192,
+          214,
+          255
+        ]
+      },
+      {
+        "color": [
+          249,
+          238,
+          246,
+          255
+        ]
+      },
+      {
+        "color": [
+          176,
+          44,
+          88,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          84,
+          111,
+          255
+        ]
+      },
+      {
+        "color": [
+          103,
+          37,
+          111,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          21,
+          16,
+          29,
+          255
+        ]
+      },
+      {
+        "color": [
+          125,
+          56,
+          94,
+          255
+        ]
+      },
+      {
+        "color": [
+          217,
+          113,
+          163,
+          255
+        ]
+      },
+      {
+        "color": [
+          48,
+          15,
+          45,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      4,
+      5,
+      8,
+      9,
+      11
+    ],
+    "bones": [
+      {
+        "name": "clip_body",
+        "anchor": "HEAD",
+        "pivot": [
+          -2.7,
+          -7.8,
+          -4.2
+        ],
+        "rotation": [
+          0,
+          0,
+          -14
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.1,
+              -0.9,
+              -0.35
+            ],
+            "size": [
+              2.2,
+              1.8,
+              0.7
+            ],
+            "mat": 0,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.5,
+              -1.6,
+              -0.3
+            ],
+            "size": [
+              1.0,
+              0.9,
+              0.6
+            ],
+            "mat": 1,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              0.7,
+              -0.3
+            ],
+            "size": [
+              0.7,
+              0.8,
+              0.6
+            ],
+            "mat": 2,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              -0.35,
+              -0.52
+            ],
+            "size": [
+              0.7,
+              0.7,
+              0.35
+            ],
+            "mat": 4,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "clip_wing_left",
+        "anchor": "HEAD",
+        "pivot": [
+          -0.9,
+          0.1,
+          0.0
+        ],
+        "rotation": [
+          0,
+          0,
+          -18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -3.4,
+              -1.0,
+              -0.25
+            ],
+            "size": [
+              3.4,
+              1.1,
+              0.5
+            ],
+            "mat": 0,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.8,
+              0,
+              -0.22
+            ],
+            "size": [
+              2.2,
+              1.2,
+              0.44
+            ],
+            "mat": 1,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.8,
+              0.9,
+              -0.2
+            ],
+            "size": [
+              1.2,
+              1.0,
+              0.4
+            ],
+            "mat": 2,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": "clip_body"
+      },
+      {
+        "name": "clip_wing_right",
+        "anchor": "HEAD",
+        "pivot": [
+          0.9,
+          0.1,
+          0.0
+        ],
+        "rotation": [
+          0,
+          0,
+          18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0,
+              -1.0,
+              -0.25
+            ],
+            "size": [
+              3.4,
+              1.1,
+              0.5
+            ],
+            "mat": 0,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.6,
+              0,
+              -0.22
+            ],
+            "size": [
+              2.2,
+              1.2,
+              0.44
+            ],
+            "mat": 1,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.6,
+              0.9,
+              -0.2
+            ],
+            "size": [
+              1.2,
+              1.0,
+              0.4
+            ],
+            "mat": 2,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": "clip_body"
+      }
+    ],
+    "animations": {
+      "clip_wing_left": {
+        "rotation": [
+          0,
+          0,
+          "-18.0 + math.sin(query.life_time*210.0)*8.0"
+        ]
+      },
+      "clip_wing_right": {
+        "rotation": [
+          0,
+          0,
+          "18.0 - math.sin(query.life_time*210.0)*8.0"
+        ]
+      }
+    }
+  },
+  "somita_night_outfit": {
+    "palette": [
+      {
+        "color": [
+          43,
+          20,
+          47,
+          255
+        ]
+      },
+      {
+        "color": [
+          68,
+          32,
+          70,
+          255
+        ]
+      },
+      {
+        "color": [
+          101,
+          39,
+          93,
+          255
+        ]
+      },
+      {
+        "color": [
+          139,
+          54,
+          111,
+          255
+        ]
+      },
+      {
+        "color": [
+          170,
+          75,
+          131,
+          255
+        ]
+      },
+      {
+        "color": [
+          209,
+          112,
+          164,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          168,
+          200,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          233,
+          242,
+          255
+        ]
+      },
+      {
+        "color": [
+          29,
+          21,
+          33,
+          255
+        ]
+      },
+      {
+        "color": [
+          51,
+          39,
+          55,
+          255
+        ]
+      },
+      {
+        "color": [
+          9,
+          8,
+          13,
+          255
+        ]
+      },
+      {
+        "color": [
+          199,
+          49,
+          85,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          106,
+          121,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          112,
+          49,
+          95,
+          255
+        ]
+      },
+      {
+        "color": [
+          185,
+          108,
+          159,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      11,
+      12
+    ],
+    "bones": [
+      {
+        "name": "sweater_body",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.03,
+              -0.03,
+              -2.03
+            ],
+            "size": [
+              8.06,
+              12.06,
+              4.06
+            ],
+            "mat": 2,
+            "inflate": 0.31,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.08,
+              -0.1,
+              -2.08
+            ],
+            "size": [
+              8.16,
+              1.15,
+              4.16
+            ],
+            "mat": 3,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.35,
+              -0.15,
+              -2.16
+            ],
+            "size": [
+              2.7,
+              1.45,
+              0.2
+            ],
+            "mat": 7,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.18,
+              0.95,
+              -2.2
+            ],
+            "size": [
+              0.36,
+              2.95,
+              0.16
+            ],
+            "mat": 8,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.55,
+              1.55,
+              -2.22
+            ],
+            "size": [
+              1.1,
+              1.1,
+              0.18
+            ],
+            "mat": 12,
+            "inflate": 0.012,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.08,
+              8.45,
+              -2.08
+            ],
+            "size": [
+              8.16,
+              1.15,
+              4.16
+            ],
+            "mat": 1,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "somita_skirt_front_left",
+        "anchor": "BODY",
+        "pivot": [
+          -2.1,
+          9.75,
+          -2.03
+        ],
+        "rotation": [
+          -3,
+          0,
+          -4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.1,
+              0,
+              -0.22
+            ],
+            "size": [
+              4.05,
+              3.8,
+              0.48
+            ],
+            "mat": 8,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.1,
+              3.3,
+              -0.25
+            ],
+            "size": [
+              4.05,
+              0.55,
+              0.54
+            ],
+            "mat": 7,
+            "inflate": 0.018,
+            "mirror": false
+          }
+        ],
+        "parent": "sweater_body"
+      },
+      {
+        "name": "somita_skirt_front_right",
+        "anchor": "BODY",
+        "pivot": [
+          2.1,
+          9.75,
+          -2.03
+        ],
+        "rotation": [
+          -3,
+          0,
+          4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.95,
+              0,
+              -0.22
+            ],
+            "size": [
+              4.05,
+              3.8,
+              0.48
+            ],
+            "mat": 8,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.95,
+              3.3,
+              -0.25
+            ],
+            "size": [
+              4.05,
+              0.55,
+              0.54
+            ],
+            "mat": 7,
+            "inflate": 0.018,
+            "mirror": false
+          }
+        ],
+        "parent": "sweater_body"
+      },
+      {
+        "name": "somita_skirt_back_left",
+        "anchor": "BODY",
+        "pivot": [
+          -2.1,
+          9.75,
+          2.03
+        ],
+        "rotation": [
+          3,
+          0,
+          -4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.1,
+              0,
+              -0.26
+            ],
+            "size": [
+              4.05,
+              3.8,
+              0.48
+            ],
+            "mat": 8,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "sweater_body"
+      },
+      {
+        "name": "somita_skirt_back_right",
+        "anchor": "BODY",
+        "pivot": [
+          2.1,
+          9.75,
+          2.03
+        ],
+        "rotation": [
+          3,
+          0,
+          4
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.95,
+              0,
+              -0.26
+            ],
+            "size": [
+              4.05,
+              3.8,
+              0.48
+            ],
+            "mat": 8,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": "sweater_body"
+      },
+      {
+        "name": "left_somita_sleeve",
+        "anchor": "LEFT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 2,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.1,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 4,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 5,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_somita_sleeve",
+        "anchor": "RIGHT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 2,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.92,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 4,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 5,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "left_somita_stocking",
+        "anchor": "LEFT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 8,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 10,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 14,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_somita_stocking",
+        "anchor": "RIGHT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 8,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 10,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.9,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 14,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "somita_skirt_front_left": {
+        "rotation": [
+          "-3.0 + math.sin(query.life_time*105.0)*1.4 + query.modified_move_speed*2.5",
+          0,
+          -4
+        ]
+      },
+      "somita_skirt_front_right": {
+        "rotation": [
+          "-3.0 + math.sin(query.life_time*105.0)*1.4 + query.modified_move_speed*2.5",
+          0,
+          4
+        ]
+      },
+      "somita_skirt_back_left": {
+        "rotation": [
+          "3.0 - math.sin(query.life_time*105.0)*1.2 - query.modified_move_speed*2.0",
+          0,
+          -4
+        ]
+      },
+      "somita_skirt_back_right": {
+        "rotation": [
+          "3.0 - math.sin(query.life_time*105.0)*1.2 - query.modified_move_speed*2.0",
+          0,
+          4
+        ]
+      }
+    }
+  },
+  "somita_bat_wings": {
+    "palette": [
+      {
+        "color": [
+          22,
+          13,
+          29,
+          255
+        ]
+      },
+      {
+        "color": [
+          36,
+          18,
+          43,
+          255
+        ]
+      },
+      {
+        "color": [
+          55,
+          23,
+          58,
+          255
+        ]
+      },
+      {
+        "color": [
+          84,
+          32,
+          78,
+          255
+        ]
+      },
+      {
+        "color": [
+          127,
+          46,
+          101,
+          255
+        ]
+      },
+      {
+        "color": [
+          166,
+          62,
+          120,
+          255
+        ]
+      },
+      {
+        "color": [
+          206,
+          108,
+          155,
+          255
+        ]
+      },
+      {
+        "color": [
+          236,
+          159,
+          193,
+          255
+        ]
+      },
+      {
+        "color": [
+          11,
+          8,
+          15,
+          255
+        ]
+      },
+      {
+        "color": [
+          67,
+          34,
+          70,
+          255
+        ]
+      },
+      {
+        "color": [
+          118,
+          42,
+          94,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          191,
+          53,
+          95,
+          255
+        ]
+      },
+      {
+        "color": [
+          88,
+          35,
+          92,
+          255
+        ]
+      },
+      {
+        "color": [
+          46,
+          23,
+          54,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          90,
+          122,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      4,
+      5,
+      6,
+      12,
+      15
+    ],
+    "bones": [
+      {
+        "name": "wing_left_base",
+        "anchor": "BODY",
+        "pivot": [
+          -3.15,
+          2.35,
+          2.55
+        ],
+        "rotation": [
+          4,
+          18,
+          -9
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -9,
+              -0.68,
+              -0.68
+            ],
+            "size": [
+              9.2,
+              1.36,
+              1.36
+            ],
+            "mat": 0,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -8,
+              2.65,
+              -0.55
+            ],
+            "size": [
+              7.1,
+              0.92,
+              1.1
+            ],
+            "mat": 1,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -6.25,
+              5.6,
+              -0.48
+            ],
+            "size": [
+              5.25,
+              0.82,
+              0.96
+            ],
+            "mat": 2,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "wing_left_membrane_top",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0.18
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -8.35,
+              0.25,
+              -0.12
+            ],
+            "size": [
+              7.45,
+              2.25,
+              0.24
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -7.35,
+              2.45,
+              -0.1
+            ],
+            "size": [
+              6.25,
+              2.65,
+              0.2
+            ],
+            "mat": 4,
+            "inflate": 0.012,
+            "mirror": false
+          }
+        ],
+        "parent": "wing_left_base"
+      },
+      {
+        "name": "wing_left_membrane_low",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0.42
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -5.95,
+              5.05,
+              -0.1
+            ],
+            "size": [
+              4.75,
+              2.45,
+              0.2
+            ],
+            "mat": 5,
+            "inflate": 0.012,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.55,
+              7.25,
+              -0.09
+            ],
+            "size": [
+              3.25,
+              1.85,
+              0.18
+            ],
+            "mat": 6,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "wing_left_base"
+      },
+      {
+        "name": "wing_right_base",
+        "anchor": "BODY",
+        "pivot": [
+          3.15,
+          2.35,
+          2.55
+        ],
+        "rotation": [
+          4,
+          -18,
+          9
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.2,
+              -0.68,
+              -0.68
+            ],
+            "size": [
+              9.2,
+              1.36,
+              1.36
+            ],
+            "mat": 0,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.9,
+              2.65,
+              -0.55
+            ],
+            "size": [
+              7.1,
+              0.92,
+              1.1
+            ],
+            "mat": 1,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1,
+              5.6,
+              -0.48
+            ],
+            "size": [
+              5.25,
+              0.82,
+              0.96
+            ],
+            "mat": 2,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "wing_right_membrane_top",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0.18
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0.9,
+              0.25,
+              -0.12
+            ],
+            "size": [
+              7.45,
+              2.25,
+              0.24
+            ],
+            "mat": 3,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.1,
+              2.45,
+              -0.1
+            ],
+            "size": [
+              6.25,
+              2.65,
+              0.2
+            ],
+            "mat": 4,
+            "inflate": 0.012,
+            "mirror": false
+          }
+        ],
+        "parent": "wing_right_base"
+      },
+      {
+        "name": "wing_right_membrane_low",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0.42
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              1.2,
+              5.05,
+              -0.1
+            ],
+            "size": [
+              4.75,
+              2.45,
+              0.2
+            ],
+            "mat": 5,
+            "inflate": 0.012,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.3,
+              7.25,
+              -0.09
+            ],
+            "size": [
+              3.25,
+              1.85,
+              0.18
+            ],
+            "mat": 6,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "wing_right_base"
+      }
+    ],
+    "animations": {
+      "wing_left_base": {
+        "rotation": [
+          "4.0 + math.sin(query.life_time*120.0)*2.0",
+          "18.0 + math.sin(query.life_time*160.0)*8.0",
+          "-10.0 - query.modified_move_speed*8.0"
+        ]
+      },
+      "wing_right_base": {
+        "rotation": [
+          "4.0 - math.sin(query.life_time*120.0)*2.0",
+          "-18.0 - math.sin(query.life_time*160.0)*8.0",
+          "10.0 + query.modified_move_speed*8.0"
+        ]
+      },
+      "wing_left_membrane_top": {
+        "rotation": [
+          0,
+          0,
+          "-8.0 + math.sin(query.life_time*160.0)*4.0"
+        ]
+      },
+      "wing_right_membrane_top": {
+        "rotation": [
+          0,
+          0,
+          "8.0 - math.sin(query.life_time*160.0)*4.0"
+        ]
+      }
+    }
+  },
+  "somita_bat_pal": {
+    "palette": [
+      {
+        "color": [
+          23,
+          16,
+          29,
+          255
+        ]
+      },
+      {
+        "color": [
+          40,
+          20,
+          45,
+          255
+        ]
+      },
+      {
+        "color": [
+          62,
+          26,
+          65,
+          255
+        ]
+      },
+      {
+        "color": [
+          99,
+          34,
+          85,
+          255
+        ]
+      },
+      {
+        "color": [
+          145,
+          51,
+          105,
+          255
+        ]
+      },
+      {
+        "color": [
+          189,
+          78,
+          131,
+          255
+        ]
+      },
+      {
+        "color": [
+          223,
+          124,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          247,
+          176,
+          206,
+          255
+        ]
+      },
+      {
+        "color": [
+          8,
+          7,
+          11,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          224,
+          79,
+          107,
+          255
+        ]
+      },
+      {
+        "color": [
+          104,
+          38,
+          95,
+          255
+        ]
+      },
+      {
+        "color": [
+          177,
+          66,
+          116,
+          255
+        ]
+      },
+      {
+        "color": [
+          242,
+          211,
+          228,
+          255
+        ]
+      },
+      {
+        "color": [
+          75,
+          32,
+          63,
+          255
+        ]
+      },
+      {
+        "color": [
+          37,
+          18,
+          45,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "bones": [
+      {
+        "name": "bat_pal_body",
+        "anchor": "BODY",
+        "pivot": [
+          10.0,
+          -9.3,
+          -1.9
+        ],
+        "rotation": [
+          0,
+          10,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.5,
+              -1.7,
+              -1.2
+            ],
+            "size": [
+              3.0,
+              3.4,
+              2.4
+            ],
+            "mat": 0,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.15,
+              -3.5,
+              -1.0
+            ],
+            "size": [
+              2.3,
+              2.2,
+              2.0
+            ],
+            "mat": 1,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.1,
+              -4.5,
+              -0.6
+            ],
+            "size": [
+              0.8,
+              1.5,
+              1.0
+            ],
+            "mat": 2,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.3,
+              -4.5,
+              -0.6
+            ],
+            "size": [
+              0.8,
+              1.5,
+              1.0
+            ],
+            "mat": 2,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.75,
+              -2.9,
+              -1.25
+            ],
+            "size": [
+              0.45,
+              0.45,
+              0.3
+            ],
+            "mat": 10,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.3,
+              -2.9,
+              -1.25
+            ],
+            "size": [
+              0.45,
+              0.45,
+              0.3
+            ],
+            "mat": 10,
+            "inflate": 0.015,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.25,
+              -2.2,
+              -1.32
+            ],
+            "size": [
+              0.5,
+              0.3,
+              0.25
+            ],
+            "mat": 9,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "bat_pal_wing_left",
+        "anchor": "BODY",
+        "pivot": [
+          -1.4,
+          -0.5,
+          0.1
+        ],
+        "rotation": [
+          0,
+          0,
+          -25
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -3.8,
+              -0.5,
+              -0.25
+            ],
+            "size": [
+              3.8,
+              1.0,
+              0.5
+            ],
+            "mat": 1,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.2,
+              0.3,
+              -0.22
+            ],
+            "size": [
+              2.7,
+              1.6,
+              0.44
+            ],
+            "mat": 3,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.2,
+              1.6,
+              -0.2
+            ],
+            "size": [
+              1.7,
+              1.3,
+              0.4
+            ],
+            "mat": 2,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "bat_pal_body"
+      },
+      {
+        "name": "bat_pal_wing_right",
+        "anchor": "BODY",
+        "pivot": [
+          1.4,
+          -0.5,
+          0.1
+        ],
+        "rotation": [
+          0,
+          0,
+          25
+        ],
+        "cubes": [
+          {
+            "origin": [
+              0,
+              -0.5,
+              -0.25
+            ],
+            "size": [
+              3.8,
+              1.0,
+              0.5
+            ],
+            "mat": 1,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.5,
+              0.3,
+              -0.22
+            ],
+            "size": [
+              2.7,
+              1.6,
+              0.44
+            ],
+            "mat": 3,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.5,
+              1.6,
+              -0.2
+            ],
+            "size": [
+              1.7,
+              1.3,
+              0.4
+            ],
+            "mat": 2,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "bat_pal_body"
+      }
+    ],
+    "animations": {
+      "bat_pal_body": {
+        "position": [
+          0,
+          "math.sin(query.life_time*150.0)*0.35",
+          0
+        ],
+        "rotation": [
+          0,
+          "10.0 + math.sin(query.life_time*65.0)*5.0",
+          0
+        ]
+      },
+      "bat_pal_wing_left": {
+        "rotation": [
+          0,
+          0,
+          "-25.0 + math.sin(query.life_time*300.0)*18.0"
+        ]
+      },
+      "bat_pal_wing_right": {
+        "rotation": [
+          0,
+          0,
+          "25.0 - math.sin(query.life_time*300.0)*18.0"
+        ]
+      }
+    }
+  },
+  "somita_crimson_hearts": {
+    "palette": [
+      {
+        "color": [
+          74,
+          20,
+          59,
+          255
+        ]
+      },
+      {
+        "color": [
+          117,
+          27,
+          78,
+          255
+        ]
+      },
+      {
+        "color": [
+          163,
+          38,
+          98,
+          255
+        ]
+      },
+      {
+        "color": [
+          207,
+          60,
+          114,
+          255
+        ]
+      },
+      {
+        "color": [
+          239,
+          93,
+          134,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          139,
+          170,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          192,
+          211,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          232,
+          240,
+          255
+        ]
+      },
+      {
+        "color": [
+          39,
+          17,
+          37,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          33,
+          78,
+          255
+        ]
+      },
+      {
+        "color": [
+          132,
+          36,
+          91,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          231,
+          63,
+          99,
+          255
+        ]
+      },
+      {
+        "color": [
+          157,
+          44,
+          112,
+          255
+        ]
+      },
+      {
+        "color": [
+          70,
+          27,
+          70,
+          255
+        ]
+      },
+      {
+        "color": [
+          20,
+          10,
+          23,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      11,
+      12
+    ],
+    "bones": [
+      {
+        "name": "heart_orbit_one",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              10,
+              -1,
+              -1
+            ],
+            "size": [
+              2.2,
+              2.2,
+              2.0
+            ],
+            "mat": 3,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              11.3,
+              -1,
+              -1
+            ],
+            "size": [
+              2.2,
+              2.2,
+              2.0
+            ],
+            "mat": 3,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              10.65,
+              0.1,
+              -1
+            ],
+            "size": [
+              2.2,
+              2.8,
+              2.0
+            ],
+            "mat": 4,
+            "inflate": 0.06,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "heart_orbit_two",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          120,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              8,
+              -0.8,
+              -0.8
+            ],
+            "size": [
+              1.8,
+              1.8,
+              1.6
+            ],
+            "mat": 2,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              9,
+              -0.8,
+              -0.8
+            ],
+            "size": [
+              1.8,
+              1.8,
+              1.6
+            ],
+            "mat": 2,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              8.5,
+              0.1,
+              -0.8
+            ],
+            "size": [
+              1.8,
+              2.3,
+              1.6
+            ],
+            "mat": 3,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "heart_orbit_three",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          240,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              12,
+              -1.2,
+              -1.2
+            ],
+            "size": [
+              2.5,
+              2.5,
+              2.2
+            ],
+            "mat": 4,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              13.4,
+              -1.2,
+              -1.2
+            ],
+            "size": [
+              2.5,
+              2.5,
+              2.2
+            ],
+            "mat": 4,
+            "inflate": 0.08,
+            "mirror": false
+          },
+          {
+            "origin": [
+              12.7,
+              0.1,
+              -1.2
+            ],
+            "size": [
+              2.5,
+              3.1,
+              2.2
+            ],
+            "mat": 5,
+            "inflate": 0.06,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "mist_crystal",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          8,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.6,
+              -6,
+              -0.6
+            ],
+            "size": [
+              1.2,
+              4.0,
+              1.2
+            ],
+            "mat": 9,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.4,
+              -8,
+              -0.4
+            ],
+            "size": [
+              0.8,
+              2.2,
+              0.8
+            ],
+            "mat": 13,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.5,
+              3,
+              -0.5
+            ],
+            "size": [
+              1.0,
+              4.0,
+              1.0
+            ],
+            "mat": 1,
+            "inflate": 0.04,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "heart_orbit_one": {
+        "rotation": [
+          0,
+          "query.life_time*70.0",
+          0
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "heart_orbit_two": {
+        "rotation": [
+          0,
+          "120.0 + query.life_time*70.0",
+          0
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0 + 2.0)*0.8",
+          0
+        ]
+      },
+      "heart_orbit_three": {
+        "rotation": [
+          0,
+          "240.0 + query.life_time*70.0",
+          0
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0 + 4.0)*0.8",
+          0
+        ]
+      },
+      "mist_crystal": {
+        "rotation": [
+          0,
+          "-query.life_time*45.0",
+          0
+        ]
+      }
+    }
+  },
+  "bingo_corrupted_crown": {
+    "palette": [
+      {
+        "color": [
+          16,
+          21,
+          26,
+          255
+        ]
+      },
+      {
+        "color": [
+          28,
+          39,
+          48,
+          255
+        ]
+      },
+      {
+        "color": [
+          38,
+          58,
+          59,
+          255
+        ]
+      },
+      {
+        "color": [
+          24,
+          167,
+          90,
+          255
+        ]
+      },
+      {
+        "color": [
+          55,
+          231,
+          125,
+          255
+        ]
+      },
+      {
+        "color": [
+          141,
+          247,
+          175,
+          255
+        ]
+      },
+      {
+        "color": [
+          118,
+          80,
+          28,
+          255
+        ]
+      },
+      {
+        "color": [
+          216,
+          156,
+          34,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          213,
+          88,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          240,
+          160,
+          255
+        ]
+      },
+      {
+        "color": [
+          71,
+          34,
+          89,
+          255
+        ]
+      },
+      {
+        "color": [
+          140,
+          68,
+          181,
+          255
+        ]
+      },
+      {
+        "color": [
+          215,
+          131,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          240,
+          200,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          5,
+          7,
+          8,
+          255
+        ]
+      },
+      {
+        "color": [
+          199,
+          231,
+          224,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13
+    ],
+    "bones": [
+      {
+        "name": "corrupt_band",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.8,
+              -8.9,
+              -4.5
+            ],
+            "size": [
+              9.6,
+              1.2,
+              0.8
+            ],
+            "mat": 0,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.8,
+              -8.9,
+              3.7
+            ],
+            "size": [
+              9.6,
+              1.2,
+              0.8
+            ],
+            "mat": 1,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.9,
+              -8.9,
+              -3.7
+            ],
+            "size": [
+              0.8,
+              1.2,
+              7.4
+            ],
+            "mat": 0,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              4.1,
+              -8.9,
+              -3.7
+            ],
+            "size": [
+              0.8,
+              1.2,
+              7.4
+            ],
+            "mat": 1,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.1,
+              -9.6,
+              -4.9
+            ],
+            "size": [
+              2.2,
+              2.0,
+              0.6
+            ],
+            "mat": 14,
+            "inflate": 0.04,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "emerald_spike",
+        "anchor": "HEAD",
+        "pivot": [
+          -2.6,
+          -8.5,
+          -0.5
+        ],
+        "rotation": [
+          -12,
+          0,
+          -8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.0,
+              -4.0,
+              -1.0
+            ],
+            "size": [
+              2.0,
+              4.2,
+              2.0
+            ],
+            "mat": 3,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.7,
+              -6.2,
+              -0.7
+            ],
+            "size": [
+              1.4,
+              2.4,
+              1.4
+            ],
+            "mat": 4,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              -7.4,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              1.3,
+              0.7
+            ],
+            "mat": 5,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_band"
+      },
+      {
+        "name": "gold_spike",
+        "anchor": "HEAD",
+        "pivot": [
+          0,
+          -8.7,
+          0
+        ],
+        "rotation": [
+          -8,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.1,
+              -5.0,
+              -1.1
+            ],
+            "size": [
+              2.2,
+              5.2,
+              2.2
+            ],
+            "mat": 7,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.75,
+              -7.4,
+              -0.75
+            ],
+            "size": [
+              1.5,
+              2.6,
+              1.5
+            ],
+            "mat": 8,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              -8.7,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              1.4,
+              0.7
+            ],
+            "mat": 9,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_band"
+      },
+      {
+        "name": "amethyst_spike",
+        "anchor": "HEAD",
+        "pivot": [
+          2.6,
+          -8.5,
+          -0.5
+        ],
+        "rotation": [
+          -12,
+          0,
+          8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.0,
+              -4.0,
+              -1.0
+            ],
+            "size": [
+              2.0,
+              4.2,
+              2.0
+            ],
+            "mat": 11,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.7,
+              -6.2,
+              -0.7
+            ],
+            "size": [
+              1.4,
+              2.4,
+              1.4
+            ],
+            "mat": 12,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.35,
+              -7.4,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              1.3,
+              0.7
+            ],
+            "mat": 13,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_band"
+      },
+      {
+        "name": "left_rune",
+        "anchor": "HEAD",
+        "pivot": [
+          -4.4,
+          -8.2,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.25,
+              -2.2,
+              -2.0
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.0
+            ],
+            "mat": 3,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_band"
+      },
+      {
+        "name": "right_rune",
+        "anchor": "HEAD",
+        "pivot": [
+          4.4,
+          -8.2,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.25,
+              -2.2,
+              -2.0
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.0
+            ],
+            "mat": 11,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_band"
+      }
+    ],
+    "animations": {
+      "emerald_spike": {
+        "position": [
+          0,
+          "math.sin(query.life_time*115.0)*0.25",
+          0
+        ],
+        "rotation": [
+          "-12.0 + math.sin(query.life_time*75.0)*2.0",
+          0,
+          -8
+        ]
+      },
+      "gold_spike": {
+        "position": [
+          0,
+          "math.sin(query.life_time*115.0 + 2.0)*0.3",
+          0
+        ],
+        "rotation": [
+          "-8.0 + math.sin(query.life_time*75.0 + 2.0)*2.0",
+          0,
+          0
+        ]
+      },
+      "amethyst_spike": {
+        "position": [
+          0,
+          "math.sin(query.life_time*115.0 + 4.0)*0.25",
+          0
+        ],
+        "rotation": [
+          "-12.0 + math.sin(query.life_time*75.0 + 4.0)*2.0",
+          0,
+          8
+        ]
+      }
+    }
+  },
+  "bingo_corrupted_outfit": {
+    "palette": [
+      {
+        "color": [
+          9,
+          12,
+          16,
+          255
+        ]
+      },
+      {
+        "color": [
+          17,
+          24,
+          32,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          39,
+          48,
+          255
+        ]
+      },
+      {
+        "color": [
+          39,
+          57,
+          68,
+          255
+        ]
+      },
+      {
+        "color": [
+          12,
+          111,
+          58,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          184,
+          92,
+          255
+        ]
+      },
+      {
+        "color": [
+          85,
+          230,
+          139,
+          255
+        ]
+      },
+      {
+        "color": [
+          112,
+          73,
+          15,
+          255
+        ]
+      },
+      {
+        "color": [
+          184,
+          120,
+          19,
+          255
+        ]
+      },
+      {
+        "color": [
+          243,
+          189,
+          50,
+          255
+        ]
+      },
+      {
+        "color": [
+          53,
+          21,
+          68,
+          255
+        ]
+      },
+      {
+        "color": [
+          100,
+          36,
+          126,
+          255
+        ]
+      },
+      {
+        "color": [
+          162,
+          67,
+          200,
+          255
+        ]
+      },
+      {
+        "color": [
+          217,
+          120,
+          244,
+          255
+        ]
+      },
+      {
+        "color": [
+          216,
+          229,
+          232,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      5,
+      9,
+      12,
+      13
+    ],
+    "bones": [
+      {
+        "name": "corrupt_chest",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.03,
+              -0.03,
+              -2.03
+            ],
+            "size": [
+              8.06,
+              12.06,
+              4.06
+            ],
+            "mat": 1,
+            "inflate": 0.31,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.08,
+              -0.1,
+              -2.08
+            ],
+            "size": [
+              8.16,
+              1.2,
+              4.16
+            ],
+            "mat": 2,
+            "inflate": 0.025,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.18,
+              0.55,
+              -2.18
+            ],
+            "size": [
+              0.36,
+              7.65,
+              0.16
+            ],
+            "mat": 14,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.05,
+              0.55,
+              -2.2
+            ],
+            "size": [
+              0.5,
+              5.2,
+              0.18
+            ],
+            "mat": 5,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.25,
+              2.3,
+              -2.22
+            ],
+            "size": [
+              0.5,
+              5.4,
+              0.18
+            ],
+            "mat": 9,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              2.55,
+              0.55,
+              -2.2
+            ],
+            "size": [
+              0.5,
+              5.2,
+              0.18
+            ],
+            "mat": 12,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -4.08,
+              8.6,
+              -2.08
+            ],
+            "size": [
+              8.16,
+              1.1,
+              4.16
+            ],
+            "mat": 0,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "corrupt_tabard_front",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          9.45,
+          -2.04
+        ],
+        "rotation": [
+          -2,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.75,
+              0,
+              -0.24
+            ],
+            "size": [
+              3.5,
+              4.35,
+              0.52
+            ],
+            "mat": 2,
+            "inflate": 0.022,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.25,
+              0.4,
+              -0.28
+            ],
+            "size": [
+              0.45,
+              3.5,
+              0.16
+            ],
+            "mat": 5,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.22,
+              0.4,
+              -0.28
+            ],
+            "size": [
+              0.45,
+              3.5,
+              0.16
+            ],
+            "mat": 9,
+            "inflate": 0.008,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.8,
+              0.4,
+              -0.28
+            ],
+            "size": [
+              0.45,
+              3.5,
+              0.16
+            ],
+            "mat": 12,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_chest"
+      },
+      {
+        "name": "corrupt_tabard_back",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          9.45,
+          2.04
+        ],
+        "rotation": [
+          2,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -1.75,
+              0,
+              -0.28
+            ],
+            "size": [
+              3.5,
+              4.35,
+              0.52
+            ],
+            "mat": 2,
+            "inflate": 0.022,
+            "mirror": false
+          }
+        ],
+        "parent": "corrupt_chest"
+      },
+      {
+        "name": "left_corrupt_arm",
+        "anchor": "LEFT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 1,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.1,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 5,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 0,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_corrupt_arm",
+        "anchor": "RIGHT_ARM",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -2.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 1,
+            "inflate": 0.3,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.92,
+              1.0,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              6.2,
+              0.16
+            ],
+            "mat": 12,
+            "inflate": 0.01,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.75,
+              -2.08
+            ],
+            "size": [
+              4.16,
+              1.35,
+              4.16
+            ],
+            "mat": 0,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "left_corrupt_leg",
+        "anchor": "LEFT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 1,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 0,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 9,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "right_corrupt_leg",
+        "anchor": "RIGHT_LEG",
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.02,
+              -0.02,
+              -2.02
+            ],
+            "size": [
+              4.04,
+              12.04,
+              4.04
+            ],
+            "mat": 1,
+            "inflate": 0.28,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.08,
+              8.15,
+              -2.2
+            ],
+            "size": [
+              4.16,
+              3.95,
+              4.45
+            ],
+            "mat": 0,
+            "inflate": 0.035,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.9,
+              1.2,
+              -2.08
+            ],
+            "size": [
+              0.18,
+              5.4,
+              0.16
+            ],
+            "mat": 5,
+            "inflate": 0.008,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "left_arm_crystal",
+        "anchor": "LEFT_ARM",
+        "pivot": [
+          -1.9,
+          1.7,
+          -2.15
+        ],
+        "rotation": [
+          -18,
+          0,
+          -12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.35,
+              -1.5,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              1.7,
+              0.7
+            ],
+            "mat": 5,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.2,
+              -2.2,
+              -0.2
+            ],
+            "size": [
+              0.4,
+              0.8,
+              0.4
+            ],
+            "mat": 6,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "left_corrupt_arm"
+      },
+      {
+        "name": "right_arm_crystal",
+        "anchor": "RIGHT_ARM",
+        "pivot": [
+          1.9,
+          2.4,
+          -2.15
+        ],
+        "rotation": [
+          -18,
+          0,
+          12
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.35,
+              -1.5,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              1.7,
+              0.7
+            ],
+            "mat": 12,
+            "inflate": 0.02,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.2,
+              -2.2,
+              -0.2
+            ],
+            "size": [
+              0.4,
+              0.8,
+              0.4
+            ],
+            "mat": 13,
+            "inflate": 0.01,
+            "mirror": false
+          }
+        ],
+        "parent": "right_corrupt_arm"
+      }
+    ],
+    "animations": {
+      "corrupt_tabard_front": {
+        "rotation": [
+          "-2.0 + math.sin(query.life_time*110.0)*1.2 + query.modified_move_speed*2.8",
+          0,
+          0
+        ]
+      },
+      "corrupt_tabard_back": {
+        "rotation": [
+          "2.0 - math.sin(query.life_time*110.0)*1.1 - query.modified_move_speed*2.2",
+          0,
+          0
+        ]
+      },
+      "left_arm_crystal": {
+        "rotation": [
+          "-18.0 + math.sin(query.life_time*80.0)*1.5",
+          0,
+          -12
+        ]
+      },
+      "right_arm_crystal": {
+        "rotation": [
+          "-18.0 - math.sin(query.life_time*80.0)*1.5",
+          0,
+          12
+        ]
+      }
+    }
+  },
+  "bingo_void_wings": {
+    "palette": [
+      {
+        "color": [
+          7,
+          9,
+          16,
+          255
+        ]
+      },
+      {
+        "color": [
+          17,
+          21,
+          34,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          34,
+          48,
+          255
+        ]
+      },
+      {
+        "color": [
+          41,
+          45,
+          67,
+          255
+        ]
+      },
+      {
+        "color": [
+          58,
+          33,
+          82,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          47,
+          121,
+          255
+        ]
+      },
+      {
+        "color": [
+          135,
+          70,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          180,
+          104,
+          221,
+          255
+        ]
+      },
+      {
+        "color": [
+          223,
+          145,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          239,
+          202,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          25,
+          61,
+          56,
+          255
+        ]
+      },
+      {
+        "color": [
+          33,
+          104,
+          76,
+          255
+        ]
+      },
+      {
+        "color": [
+          49,
+          167,
+          103,
+          255
+        ]
+      },
+      {
+        "color": [
+          117,
+          237,
+          154,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          2,
+          3,
+          8,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "bones": [
+      {
+        "name": "void_wing_left_base",
+        "anchor": "BODY",
+        "pivot": [
+          -3.0,
+          2.0,
+          2.4
+        ],
+        "rotation": [
+          -4,
+          14,
+          -8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -10.0,
+              -0.8,
+              -0.8
+            ],
+            "size": [
+              10.2,
+              1.6,
+              1.6
+            ],
+            "mat": 0,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -9.4,
+              0.4,
+              -0.5
+            ],
+            "size": [
+              8.5,
+              1.0,
+              1.0
+            ],
+            "mat": 1,
+            "inflate": 0.07,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -8.4,
+              1.3,
+              -0.45
+            ],
+            "size": [
+              7.0,
+              0.9,
+              0.9
+            ],
+            "mat": 2,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -6.9,
+              2.2,
+              -0.4
+            ],
+            "size": [
+              5.0,
+              0.8,
+              0.8
+            ],
+            "mat": 3,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "void_wing_left_crystals",
+        "anchor": "BODY",
+        "pivot": [
+          -11.0,
+          3.0,
+          2.5
+        ],
+        "rotation": [
+          0,
+          0,
+          -10
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.5,
+              -0.8,
+              -0.45
+            ],
+            "size": [
+              8.5,
+              2.2,
+              0.9
+            ],
+            "mat": 5,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.0,
+              1.0,
+              -0.4
+            ],
+            "size": [
+              6.8,
+              2.0,
+              0.8
+            ],
+            "mat": 6,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              2.5,
+              2.6,
+              -0.35
+            ],
+            "size": [
+              5.0,
+              1.8,
+              0.7
+            ],
+            "mat": 7,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              4.4,
+              4.0,
+              -0.3
+            ],
+            "size": [
+              3.0,
+              1.5,
+              0.6
+            ],
+            "mat": 8,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "void_wing_left_spikes",
+        "anchor": "BODY",
+        "pivot": [
+          -13.0,
+          4.0,
+          2.6
+        ],
+        "rotation": [
+          0,
+          0,
+          -18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.45,
+              -4.5,
+              -0.45
+            ],
+            "size": [
+              0.9,
+              4.8,
+              0.9
+            ],
+            "mat": 7,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              2.4,
+              -3.8,
+              -0.4
+            ],
+            "size": [
+              0.8,
+              4.2,
+              0.8
+            ],
+            "mat": 8,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              4.8,
+              -3.0,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              3.4,
+              0.7
+            ],
+            "mat": 9,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "void_wing_right_base",
+        "anchor": "BODY",
+        "pivot": [
+          3.0,
+          2.0,
+          2.4
+        ],
+        "rotation": [
+          -4,
+          -14,
+          8
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.2,
+              -0.8,
+              -0.8
+            ],
+            "size": [
+              10.2,
+              1.6,
+              1.6
+            ],
+            "mat": 0,
+            "inflate": 0.1,
+            "mirror": false
+          },
+          {
+            "origin": [
+              0.9,
+              0.4,
+              -0.5
+            ],
+            "size": [
+              8.5,
+              1.0,
+              1.0
+            ],
+            "mat": 1,
+            "inflate": 0.07,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.4,
+              1.3,
+              -0.45
+            ],
+            "size": [
+              7.0,
+              0.9,
+              0.9
+            ],
+            "mat": 2,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              1.9,
+              2.2,
+              -0.4
+            ],
+            "size": [
+              5.0,
+              0.8,
+              0.8
+            ],
+            "mat": 3,
+            "inflate": 0.05,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "void_wing_right_crystals",
+        "anchor": "BODY",
+        "pivot": [
+          11.0,
+          3.0,
+          2.5
+        ],
+        "rotation": [
+          0,
+          0,
+          10
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -8.0,
+              -0.8,
+              -0.45
+            ],
+            "size": [
+              8.5,
+              2.2,
+              0.9
+            ],
+            "mat": 5,
+            "inflate": 0.06,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -7.8,
+              1.0,
+              -0.4
+            ],
+            "size": [
+              6.8,
+              2.0,
+              0.8
+            ],
+            "mat": 6,
+            "inflate": 0.05,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -7.5,
+              2.6,
+              -0.35
+            ],
+            "size": [
+              5.0,
+              1.8,
+              0.7
+            ],
+            "mat": 7,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -7.4,
+              4.0,
+              -0.3
+            ],
+            "size": [
+              3.0,
+              1.5,
+              0.6
+            ],
+            "mat": 8,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "void_wing_right_spikes",
+        "anchor": "BODY",
+        "pivot": [
+          13.0,
+          4.0,
+          2.6
+        ],
+        "rotation": [
+          0,
+          0,
+          18
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.45,
+              -4.5,
+              -0.45
+            ],
+            "size": [
+              0.9,
+              4.8,
+              0.9
+            ],
+            "mat": 7,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -3.2,
+              -3.8,
+              -0.4
+            ],
+            "size": [
+              0.8,
+              4.2,
+              0.8
+            ],
+            "mat": 8,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -5.5,
+              -3.0,
+              -0.35
+            ],
+            "size": [
+              0.7,
+              3.4,
+              0.7
+            ],
+            "mat": 9,
+            "inflate": 0.03,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "void_wing_left_base": {
+        "rotation": [
+          "-4.0 + math.sin(query.life_time*95.0)*2.0",
+          "14.0 + math.sin(query.life_time*145.0)*7.0",
+          "-8.0 - query.modified_move_speed*10.0"
+        ]
+      },
+      "void_wing_right_base": {
+        "rotation": [
+          "-4.0 - math.sin(query.life_time*95.0)*2.0",
+          "-14.0 - math.sin(query.life_time*145.0)*7.0",
+          "8.0 + query.modified_move_speed*10.0"
+        ]
+      },
+      "void_wing_left_crystals": {
+        "rotation": [
+          0,
+          0,
+          "-10.0 + math.sin(query.life_time*145.0)*4.0"
+        ]
+      },
+      "void_wing_right_crystals": {
+        "rotation": [
+          0,
+          0,
+          "10.0 - math.sin(query.life_time*145.0)*4.0"
+        ]
+      }
+    }
+  },
+  "bingo_amethyst_eye": {
+    "palette": [
+      {
+        "color": [
+          20,
+          16,
+          30,
+          255
+        ]
+      },
+      {
+        "color": [
+          36,
+          22,
+          50,
+          255
+        ]
+      },
+      {
+        "color": [
+          61,
+          32,
+          80,
+          255
+        ]
+      },
+      {
+        "color": [
+          97,
+          50,
+          124,
+          255
+        ]
+      },
+      {
+        "color": [
+          140,
+          77,
+          176,
+          255
+        ]
+      },
+      {
+        "color": [
+          189,
+          114,
+          223,
+          255
+        ]
+      },
+      {
+        "color": [
+          227,
+          162,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          243,
+          211,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          238,
+          232,
+          247,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          37,
+          38,
+          60,
+          255
+        ]
+      },
+      {
+        "color": [
+          67,
+          60,
+          101,
+          255
+        ]
+      },
+      {
+        "color": [
+          109,
+          91,
+          154,
+          255
+        ]
+      },
+      {
+        "color": [
+          213,
+          92,
+          241,
+          255
+        ]
+      },
+      {
+        "color": [
+          18,
+          12,
+          24,
+          255
+        ]
+      },
+      {
+        "color": [
+          5,
+          4,
+          8,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      4,
+      5,
+      6,
+      7,
+      9,
+      13
+    ],
+    "bones": [
+      {
+        "name": "eye_orb",
+        "anchor": "BODY",
+        "pivot": [
+          10.6,
+          -8.9,
+          -2.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -2.25,
+              -2.25,
+              -1.9
+            ],
+            "size": [
+              4.5,
+              4.5,
+              3.8
+            ],
+            "mat": 1,
+            "inflate": 0.12,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.8,
+              -1.8,
+              -2.2
+            ],
+            "size": [
+              3.6,
+              3.6,
+              0.58
+            ],
+            "mat": 8,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -1.16,
+              -1.16,
+              -2.4
+            ],
+            "size": [
+              2.32,
+              2.32,
+              0.44
+            ],
+            "mat": 5,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.5,
+              -0.5,
+              -2.55
+            ],
+            "size": [
+              1.0,
+              1.0,
+              0.34
+            ],
+            "mat": 15,
+            "inflate": 0.025,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "eye_crystal_top",
+        "anchor": "BODY",
+        "pivot": [
+          0,
+          -2.0,
+          0.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.65,
+              -3.0,
+              -0.65
+            ],
+            "size": [
+              1.3,
+              3.2,
+              1.3
+            ],
+            "mat": 4,
+            "inflate": 0.04,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.36,
+              -4.15,
+              -0.36
+            ],
+            "size": [
+              0.72,
+              1.3,
+              0.72
+            ],
+            "mat": 6,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "eye_orb"
+      },
+      {
+        "name": "eye_crystal_left",
+        "anchor": "BODY",
+        "pivot": [
+          -1.9,
+          0,
+          0.1
+        ],
+        "rotation": [
+          0,
+          0,
+          -55
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.55,
+              -2.3,
+              -0.55
+            ],
+            "size": [
+              1.1,
+              2.5,
+              1.1
+            ],
+            "mat": 3,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.28,
+              -3.2,
+              -0.28
+            ],
+            "size": [
+              0.56,
+              1.1,
+              0.56
+            ],
+            "mat": 5,
+            "inflate": 0.015,
+            "mirror": false
+          }
+        ],
+        "parent": "eye_orb"
+      },
+      {
+        "name": "eye_crystal_right",
+        "anchor": "BODY",
+        "pivot": [
+          1.9,
+          0,
+          0.1
+        ],
+        "rotation": [
+          0,
+          0,
+          55
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.55,
+              -2.3,
+              -0.55
+            ],
+            "size": [
+              1.1,
+              2.5,
+              1.1
+            ],
+            "mat": 3,
+            "inflate": 0.03,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.28,
+              -3.2,
+              -0.28
+            ],
+            "size": [
+              0.56,
+              1.1,
+              0.56
+            ],
+            "mat": 5,
+            "inflate": 0.015,
+            "mirror": false
+          }
+        ],
+        "parent": "eye_orb"
+      },
+      {
+        "name": "eye_tendril_one",
+        "anchor": "BODY",
+        "pivot": [
+          -1.0,
+          2.0,
+          0.6
+        ],
+        "rotation": [
+          25,
+          0,
+          -20
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.22,
+              -0.2,
+              -0.22
+            ],
+            "size": [
+              0.44,
+              4.0,
+              0.44
+            ],
+            "mat": 2,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "eye_orb"
+      },
+      {
+        "name": "eye_tendril_two",
+        "anchor": "BODY",
+        "pivot": [
+          1.0,
+          2.0,
+          0.6
+        ],
+        "rotation": [
+          25,
+          0,
+          20
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.22,
+              -0.2,
+              -0.22
+            ],
+            "size": [
+              0.44,
+              4.0,
+              0.44
+            ],
+            "mat": 2,
+            "inflate": 0.02,
+            "mirror": false
+          }
+        ],
+        "parent": "eye_orb"
+      }
+    ],
+    "animations": {
+      "eye_orb": {
+        "position": [
+          0,
+          "math.sin(query.life_time*125.0)*0.45",
+          0
+        ],
+        "rotation": [
+          0,
+          "math.sin(query.life_time*45.0)*8.0",
+          0
+        ]
+      },
+      "eye_crystal_top": {
+        "rotation": [
+          0,
+          "query.life_time*60.0",
+          0
+        ]
+      },
+      "eye_tendril_one": {
+        "rotation": [
+          "25.0 + math.sin(query.life_time*120.0)*8.0",
+          0,
+          "-20.0 + math.sin(query.life_time*80.0)*5.0"
+        ]
+      },
+      "eye_tendril_two": {
+        "rotation": [
+          "25.0 - math.sin(query.life_time*120.0)*8.0",
+          0,
+          "20.0 - math.sin(query.life_time*80.0)*5.0"
+        ]
+      }
+    }
+  },
+  "bingo_emerald_orbit": {
+    "palette": [
+      {
+        "color": [
+          8,
+          58,
+          36,
+          255
+        ]
+      },
+      {
+        "color": [
+          15,
+          141,
+          77,
+          255
+        ]
+      },
+      {
+        "color": [
+          37,
+          191,
+          105,
+          255
+        ]
+      },
+      {
+        "color": [
+          99,
+          240,
+          148,
+          255
+        ]
+      },
+      {
+        "color": [
+          217,
+          255,
+          232,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          11,
+          14,
+          18,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          34,
+          44,
+          255
+        ]
+      },
+      {
+        "color": [
+          48,
+          32,
+          61,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          232,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          122,
+          104,
+          255
+        ]
+      },
+      {
+        "color": [
+          215,
+          200,
+          122,
+          255
+        ]
+      },
+      {
+        "color": [
+          132,
+          97,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          16,
+          28,
+          255
+        ]
+      },
+      {
+        "color": [
+          212,
+          231,
+          230,
+          255
+        ]
+      },
+      {
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "bones": [
+      {
+        "name": "orbit_root",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [],
+        "parent": null
+      },
+      {
+        "name": "gem_core",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              10.36,
+              -2.46,
+              -1.64
+            ],
+            "size": [
+              3.28,
+              4.92,
+              3.28
+            ],
+            "mat": 1,
+            "inflate": 0.09839999999999999,
+            "mirror": false
+          },
+          {
+            "origin": [
+              9.54,
+              -1.394,
+              -1.23
+            ],
+            "size": [
+              4.92,
+              2.788,
+              2.46
+            ],
+            "mat": 2,
+            "inflate": 0.06559999999999999,
+            "mirror": false
+          },
+          {
+            "origin": [
+              10.934,
+              -3.3619999999999997,
+              -0.9839999999999999
+            ],
+            "size": [
+              2.132,
+              1.148,
+              1.9679999999999997
+            ],
+            "mat": 3,
+            "inflate": 0.049199999999999994,
+            "mirror": false
+          },
+          {
+            "origin": [
+              10.934,
+              2.46,
+              -0.9839999999999999
+            ],
+            "size": [
+              2.132,
+              1.148,
+              1.9679999999999997
+            ],
+            "mat": 3,
+            "inflate": 0.049199999999999994,
+            "mirror": false
+          },
+          {
+            "origin": [
+              11.016,
+              -1.312,
+              -1.927
+            ],
+            "size": [
+              1.9679999999999997,
+              2.624,
+              0.369
+            ],
+            "mat": 4,
+            "inflate": 0.024599999999999997,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "corrupt_ring",
+        "anchor": "ROOT",
+        "pivot": [
+          9.8,
+          10,
+          0
+        ],
+        "rotation": [
+          65,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -3.7439999999999998,
+              -0.27299999999999996,
+              -0.27299999999999996
+            ],
+            "size": [
+              7.4879999999999995,
+              0.5459999999999999,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.27299999999999996,
+              -3.7439999999999998,
+              -0.27299999999999996
+            ],
+            "size": [
+              0.5459999999999999,
+              7.4879999999999995,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -2.652,
+              -2.652,
+              -0.23399999999999999
+            ],
+            "size": [
+              0.507,
+              0.507,
+              0.46799999999999997
+            ],
+            "mat": 3,
+            "inflate": 0.0234,
+            "mirror": false
+          },
+          {
+            "origin": [
+              2.145,
+              2.145,
+              -0.23399999999999999
+            ],
+            "size": [
+              0.507,
+              0.507,
+              0.46799999999999997
+            ],
+            "mat": 3,
+            "inflate": 0.0234,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "gem_core": {
+        "rotation": [
+          "query.life_time*90.0",
+          "query.life_time*150.0",
+          "query.life_time*55.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "gold_core": {
+        "rotation": [
+          "query.life_time*55.0",
+          "query.life_time*130.0",
+          "query.life_time*35.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "amethyst_core": {
+        "rotation": [
+          "query.life_time*75.0",
+          "query.life_time*145.0",
+          "query.life_time*45.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "corrupt_ring": {
+        "rotation": [
+          "65.0 + query.life_time*40.0",
+          "query.life_time*95.0",
+          "query.life_time*60.0"
+        ]
+      },
+      "gold_flame_one": {
+        "rotation": [
+          0,
+          0,
+          "-15.0 + math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "gold_flame_two": {
+        "rotation": [
+          0,
+          0,
+          "20.0 - math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "shard_left": {
+        "rotation": [
+          0,
+          0,
+          "-28.0 + math.sin(query.life_time*140.0)*5.0"
+        ]
+      },
+      "shard_right": {
+        "rotation": [
+          0,
+          0,
+          "28.0 - math.sin(query.life_time*140.0)*5.0"
+        ]
+      }
+    }
+  },
+  "bingo_gold_orbit": {
+    "palette": [
+      {
+        "color": [
+          75,
+          44,
+          6,
+          255
+        ]
+      },
+      {
+        "color": [
+          184,
+          120,
+          16,
+          255
+        ]
+      },
+      {
+        "color": [
+          229,
+          169,
+          37,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          215,
+          95,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          243,
+          161,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          11,
+          14,
+          18,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          34,
+          44,
+          255
+        ]
+      },
+      {
+        "color": [
+          48,
+          32,
+          61,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          232,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          122,
+          104,
+          255
+        ]
+      },
+      {
+        "color": [
+          215,
+          200,
+          122,
+          255
+        ]
+      },
+      {
+        "color": [
+          132,
+          97,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          16,
+          28,
+          255
+        ]
+      },
+      {
+        "color": [
+          212,
+          231,
+          230,
+          255
+        ]
+      },
+      {
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "bones": [
+      {
+        "name": "gold_core",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              9.13,
+              -1.394,
+              -2.214
+            ],
+            "size": [
+              5.739999999999999,
+              2.788,
+              4.428
+            ],
+            "mat": 1,
+            "inflate": 0.12299999999999998,
+            "mirror": false
+          },
+          {
+            "origin": [
+              9.786000000000001,
+              -1.9679999999999997,
+              -1.722
+            ],
+            "size": [
+              4.428,
+              0.738,
+              3.444
+            ],
+            "mat": 2,
+            "inflate": 0.06559999999999999,
+            "mirror": false
+          },
+          {
+            "origin": [
+              9.786000000000001,
+              1.23,
+              -1.722
+            ],
+            "size": [
+              4.428,
+              0.738,
+              3.444
+            ],
+            "mat": 3,
+            "inflate": 0.06559999999999999,
+            "mirror": false
+          },
+          {
+            "origin": [
+              10.524,
+              -0.738,
+              -2.501
+            ],
+            "size": [
+              2.952,
+              1.476,
+              0.41
+            ],
+            "mat": 4,
+            "inflate": 0.024599999999999997,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "gold_flame_one",
+        "anchor": "ROOT",
+        "pivot": [
+          11,
+          -3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -15
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.369,
+              -2.624,
+              -0.369
+            ],
+            "size": [
+              0.738,
+              2.8699999999999997,
+              0.738
+            ],
+            "mat": 3,
+            "inflate": 0.032799999999999996,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.205,
+              -3.608,
+              -0.205
+            ],
+            "size": [
+              0.41,
+              1.148,
+              0.41
+            ],
+            "mat": 4,
+            "inflate": 0.016399999999999998,
+            "mirror": false
+          }
+        ],
+        "parent": "gold_core"
+      },
+      {
+        "name": "gold_flame_two",
+        "anchor": "ROOT",
+        "pivot": [
+          14,
+          -2,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          20
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.328,
+              -1.9679999999999997,
+              -0.328
+            ],
+            "size": [
+              0.656,
+              2.214,
+              0.656
+            ],
+            "mat": 2,
+            "inflate": 0.032799999999999996,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.164,
+              -2.7059999999999995,
+              -0.164
+            ],
+            "size": [
+              0.328,
+              0.902,
+              0.328
+            ],
+            "mat": 4,
+            "inflate": 0.016399999999999998,
+            "mirror": false
+          }
+        ],
+        "parent": "gold_core"
+      },
+      {
+        "name": "corrupt_ring",
+        "anchor": "ROOT",
+        "pivot": [
+          9.8,
+          10,
+          0
+        ],
+        "rotation": [
+          70,
+          0,
+          25
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -4.056,
+              -0.27299999999999996,
+              -0.27299999999999996
+            ],
+            "size": [
+              8.112,
+              0.5459999999999999,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.27299999999999996,
+              -4.056,
+              -0.27299999999999996
+            ],
+            "size": [
+              0.5459999999999999,
+              8.112,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "gem_core": {
+        "rotation": [
+          "query.life_time*90.0",
+          "query.life_time*150.0",
+          "query.life_time*55.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "gold_core": {
+        "rotation": [
+          "query.life_time*55.0",
+          "query.life_time*130.0",
+          "query.life_time*35.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "amethyst_core": {
+        "rotation": [
+          "query.life_time*75.0",
+          "query.life_time*145.0",
+          "query.life_time*45.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "corrupt_ring": {
+        "rotation": [
+          "65.0 + query.life_time*40.0",
+          "query.life_time*95.0",
+          "query.life_time*60.0"
+        ]
+      },
+      "gold_flame_one": {
+        "rotation": [
+          0,
+          0,
+          "-15.0 + math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "gold_flame_two": {
+        "rotation": [
+          0,
+          0,
+          "20.0 - math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "shard_left": {
+        "rotation": [
+          0,
+          0,
+          "-28.0 + math.sin(query.life_time*140.0)*5.0"
+        ]
+      },
+      "shard_right": {
+        "rotation": [
+          0,
+          0,
+          "28.0 - math.sin(query.life_time*140.0)*5.0"
+        ]
+      }
+    }
+  },
+  "bingo_amethyst_orbit": {
+    "palette": [
+      {
+        "color": [
+          48,
+          18,
+          61,
+          255
+        ]
+      },
+      {
+        "color": [
+          113,
+          49,
+          149,
+          255
+        ]
+      },
+      {
+        "color": [
+          166,
+          77,
+          202,
+          255
+        ]
+      },
+      {
+        "color": [
+          221,
+          140,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          241,
+          203,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          11,
+          14,
+          18,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          34,
+          44,
+          255
+        ]
+      },
+      {
+        "color": [
+          48,
+          32,
+          61,
+          255
+        ]
+      },
+      {
+        "color": [
+          248,
+          232,
+          255,
+          255
+        ]
+      },
+      {
+        "color": [
+          93,
+          122,
+          104,
+          255
+        ]
+      },
+      {
+        "color": [
+          215,
+          200,
+          122,
+          255
+        ]
+      },
+      {
+        "color": [
+          132,
+          97,
+          168,
+          255
+        ]
+      },
+      {
+        "color": [
+          27,
+          16,
+          28,
+          255
+        ]
+      },
+      {
+        "color": [
+          212,
+          231,
+          230,
+          255
+        ]
+      },
+      {
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ]
+      }
+    ],
+    "emissive": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "bones": [
+      {
+        "name": "amethyst_core",
+        "anchor": "ROOT",
+        "pivot": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              10.606000000000002,
+              -3.28,
+              -1.476
+            ],
+            "size": [
+              2.788,
+              6.231999999999999,
+              2.952
+            ],
+            "mat": 1,
+            "inflate": 0.082,
+            "mirror": false
+          },
+          {
+            "origin": [
+              9.868,
+              -1.476,
+              -2.05
+            ],
+            "size": [
+              4.264,
+              3.28,
+              4.1
+            ],
+            "mat": 2,
+            "inflate": 0.06559999999999999,
+            "mirror": false
+          },
+          {
+            "origin": [
+              11.016,
+              -4.6739999999999995,
+              -0.9839999999999999
+            ],
+            "size": [
+              1.9679999999999997,
+              1.64,
+              1.9679999999999997
+            ],
+            "mat": 3,
+            "inflate": 0.041,
+            "mirror": false
+          },
+          {
+            "origin": [
+              11.344,
+              2.624,
+              -0.656
+            ],
+            "size": [
+              1.312,
+              1.64,
+              1.312
+            ],
+            "mat": 3,
+            "inflate": 0.032799999999999996,
+            "mirror": false
+          },
+          {
+            "origin": [
+              11.016,
+              -1.23,
+              -2.296
+            ],
+            "size": [
+              1.9679999999999997,
+              2.46,
+              0.369
+            ],
+            "mat": 4,
+            "inflate": 0.024599999999999997,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      },
+      {
+        "name": "shard_left",
+        "anchor": "ROOT",
+        "pivot": [
+          9.2,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -28
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.41,
+              -2.624,
+              -0.41
+            ],
+            "size": [
+              0.82,
+              2.8699999999999997,
+              0.82
+            ],
+            "mat": 2,
+            "inflate": 0.032799999999999996,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.205,
+              -3.526,
+              -0.205
+            ],
+            "size": [
+              0.41,
+              1.066,
+              0.41
+            ],
+            "mat": 3,
+            "inflate": 0.016399999999999998,
+            "mirror": false
+          }
+        ],
+        "parent": "amethyst_core"
+      },
+      {
+        "name": "shard_right",
+        "anchor": "ROOT",
+        "pivot": [
+          14.8,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          28
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -0.41,
+              -2.624,
+              -0.41
+            ],
+            "size": [
+              0.82,
+              2.8699999999999997,
+              0.82
+            ],
+            "mat": 2,
+            "inflate": 0.032799999999999996,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.205,
+              -3.526,
+              -0.205
+            ],
+            "size": [
+              0.41,
+              1.066,
+              0.41
+            ],
+            "mat": 3,
+            "inflate": 0.016399999999999998,
+            "mirror": false
+          }
+        ],
+        "parent": "amethyst_core"
+      },
+      {
+        "name": "corrupt_ring",
+        "anchor": "ROOT",
+        "pivot": [
+          9.8,
+          10,
+          0
+        ],
+        "rotation": [
+          68,
+          20,
+          0
+        ],
+        "cubes": [
+          {
+            "origin": [
+              -3.9000000000000004,
+              -0.27299999999999996,
+              -0.27299999999999996
+            ],
+            "size": [
+              7.800000000000001,
+              0.5459999999999999,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          },
+          {
+            "origin": [
+              -0.27299999999999996,
+              -3.9000000000000004,
+              -0.27299999999999996
+            ],
+            "size": [
+              0.5459999999999999,
+              7.800000000000001,
+              0.5459999999999999
+            ],
+            "mat": 6,
+            "inflate": 0.0234,
+            "mirror": false
+          }
+        ],
+        "parent": null
+      }
+    ],
+    "animations": {
+      "gem_core": {
+        "rotation": [
+          "query.life_time*90.0",
+          "query.life_time*150.0",
+          "query.life_time*55.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "gold_core": {
+        "rotation": [
+          "query.life_time*55.0",
+          "query.life_time*130.0",
+          "query.life_time*35.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "amethyst_core": {
+        "rotation": [
+          "query.life_time*75.0",
+          "query.life_time*145.0",
+          "query.life_time*45.0"
+        ],
+        "position": [
+          0,
+          "math.sin(query.life_time*120.0)*0.8",
+          0
+        ]
+      },
+      "corrupt_ring": {
+        "rotation": [
+          "65.0 + query.life_time*40.0",
+          "query.life_time*95.0",
+          "query.life_time*60.0"
+        ]
+      },
+      "gold_flame_one": {
+        "rotation": [
+          0,
+          0,
+          "-15.0 + math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "gold_flame_two": {
+        "rotation": [
+          0,
+          0,
+          "20.0 - math.sin(query.life_time*180.0)*8.0"
+        ]
+      },
+      "shard_left": {
+        "rotation": [
+          0,
+          0,
+          "-28.0 + math.sin(query.life_time*140.0)*5.0"
+        ]
+      },
+      "shard_right": {
+        "rotation": [
+          0,
+          0,
+          "28.0 - math.sin(query.life_time*140.0)*5.0"
+        ]
+      }
+    }
+  }
+}

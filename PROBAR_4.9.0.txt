@@ -1,0 +1,9 @@
+PRUEBAS ARLIGHTCHATCLIENT 4.9.0
+
+1. Abre Mi Ropero.
+2. Verifica filtros: TODOS, CABEZA, TORSO, PIERNAS, PIES, ESPALDA, COLA, AURA, PASOS, MASCOTA.
+3. Confirma que los nombres largos se muestren en dos líneas.
+4. Previsualiza varias mascotas y cierra la pantalla.
+5. Comprueba que no quede una mascota fantasma de preview.
+6. Gira el maniquí 360 grados con pijamas y mascotas.
+7. Comprueba que Somita y el resto de funciones de ChatClient sigan operativas.

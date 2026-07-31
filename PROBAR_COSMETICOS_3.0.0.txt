@@ -1,0 +1,28 @@
+ARLIGHTCHATCLIENT 3.0.0 - PRUEBA DE COSMETICOS
+==============================================
+
+1. Compilar con Java 21:
+   gradlew.bat build
+
+2. Copiar el JAR generado desde build/libs a la carpeta mods del cliente.
+3. Retirar la version anterior de ArlightChatClient.
+4. Reiniciar Minecraft completamente.
+5. Conectar al servidor con ArlightCosmetics 1.0.0 instalado.
+6. Abrir /cosmeticos y probar las seis ranuras.
+
+COMPROBAR
+- Los accesorios siguen el cuerpo del jugador.
+- La cabeza se oculta si se lleva casco.
+- Las alas de espalda no se muestran con elytra.
+- Las auras orbitan y giran.
+- Los rastros solo aparecen al moverse.
+- /cosmeticos particulas desactiva particulas localmente.
+- /cosmeticos ocultar oculta los cosmeticos de otros jugadores.
+- El podio universal no se mezcla con los cosmeticos.
+- No quedan efectos al cambiar de servidor o desconectarse.
+
+LIMITACION DE ESTA ENTREGA
+No se pudo ejecutar un build completo en el entorno de entrega porque las
+dependencias de NeoForge no estaban disponibles localmente. Es una fuente
+validada estaticamente; la primera compilacion real puede revelar un ajuste de
+API o de posicion visual.

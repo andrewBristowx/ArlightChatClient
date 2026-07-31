@@ -1,0 +1,7 @@
+ARLIGHTCHATCLIENT 2.6.0
+
+- Iconos completos para objetivos de entidades, jefes y esbirros.
+- Interfaz del cartón sin difuminado ni oscurecimiento de pantalla completa.
+- Panel lateral del Bingo rediseñado.
+- Scoreboards visuales dinámicos para Lobby, Bingo y SkyWars.
+- El panel visual cubre el scoreboard vanilla; clientes sin el mod conservan el fallback.

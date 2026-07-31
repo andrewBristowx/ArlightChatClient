@@ -1,0 +1,6 @@
+ArlightChatClient 2.7.3
+
+- Corrige el render de bingo_world_preparation_notice.png.
+- La textura completa ahora se escala manteniendo su proporción.
+- Evita que solo se vea una esquina gigante o que el aviso quede cortado.
+- Escala base reducida a 0.28 para no tapar la pantalla.

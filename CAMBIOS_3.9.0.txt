@@ -1,0 +1,8 @@
+ArlightChatClient 3.9.0 — PODIUM PLACEMENT EMOTES FIX
+
+- Sustituye emotes personales aleatorios del podio por insignias dedicadas de 1.º, 2.º y 3.º puesto.
+- Añade las tres imágenes aprobadas por el usuario, recortadas y optimizadas para la interfaz.
+- Corrige iconos de estadísticas que aparecían como texto (trophy, check, warning, clock, etc.).
+- Mantiene alias de emotes dentro de nombres, subtítulos y valores cuando sí corresponden.
+- Mejora tamaño y posición de las insignias para evitar cortes o solapamiento con los modelos 3D.
+- El arreglo se aplica al podio universal de todos los minijuegos Arlight.

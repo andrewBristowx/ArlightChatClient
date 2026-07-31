@@ -1,0 +1,5 @@
+ArlightChatClient 4.4.0 - GIRO 360 REAL
+
+- El maniquí usa quaternion explícito y puede girar 360 grados sin límite.
+- La rotación se normaliza entre 0 y 360 grados.
+- Mantiene vista previa temporal y manos vacías.

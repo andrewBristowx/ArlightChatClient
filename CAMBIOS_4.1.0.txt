@@ -1,0 +1,8 @@
+ArlightChatClient 4.1.0 - GALERIA VISUAL DEL ROPERO
+
+- Reemplaza la navegación de un cosmético por vez por una galería completa.
+- Añade filtros TODOS, HEAD, CHEST, BACK, TAIL, AURA, FEET y PET.
+- Al pasar el mouse se muestra el cosmético señalado en el panel de detalle sin equiparlo.
+- Cada tarjeta muestra el icono real del objeto, rareza y estado equipado.
+- Clic selecciona; el botón Equipar confirma el cambio.
+- Rueda del mouse para recorrer colecciones grandes.

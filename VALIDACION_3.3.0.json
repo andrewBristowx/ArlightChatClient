@@ -1,0 +1,17 @@
+{
+  "version": "3.3.0",
+  "result": "source_validation_passed",
+  "checks": {
+    "json_parse": 40,
+    "geometry_models": 17,
+    "geometry_bones": 130,
+    "png_integrity": 34,
+    "required_parent_relations": "passed",
+    "tail_local_transform": "passed",
+    "modified_java_stub_compile_java21": "passed",
+    "full_gradle_build": "not_run_distribution_download_blocked"
+  },
+  "notes": [
+    "No se generaron imagenes nuevas. Se editaron las texturas existentes del mod para conservar el brillo con menos blanco saturado."
+  ]
+}

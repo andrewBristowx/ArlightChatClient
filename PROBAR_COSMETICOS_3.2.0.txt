@@ -1,0 +1,14 @@
+PRUEBA VISUAL 3.2.0
+
+1. Compila con gradlew.bat clean build.
+2. Sustituye solo ArlightChatClient por 3.2.0. El plugin ArlightCosmetics 1.2.0 sigue siendo compatible.
+3. Prueba en tercera persona frontal y trasera: caminar, correr, agacharse, saltar, nadar y usar modelo Alex.
+4. Verifica corona Pony0n, las tres ropas, axolote, murciélago, ojo de amatista y tres orbitales.
+5. Revisa con y sin shaders.
+
+Resultado esperado:
+- Solo dos cuernos en la corona Pony0n.
+- Ropa pegada al cuerpo, sin aspecto de armadura gigante.
+- Faldas pequeñas con movimiento leve.
+- Mascotas ligeramente más altas y sin piezas separadas.
+- Menos parpadeo en bordes y texturas emisivas.

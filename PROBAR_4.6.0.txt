@@ -1,0 +1,39 @@
+PRUEBA DE ARLIGHTCHATCLIENT 4.6.0
+
+Requisitos:
+- Instalar ArlightChatClient-4.6.0.jar en el cliente.
+- Usar ArlightBingo 1.37.0 o posterior en el servidor.
+- No dejar otra versión de ArlightChatClient en la carpeta mods.
+
+Comandos dentro de una partida Bingo:
+/bingo campaign somita show overworld
+/bingo campaign somita show nether
+/bingo campaign somita show end
+/bingo campaign somita show celebration
+
+/bingo campaign somita anim idle
+/bingo campaign somita anim wave
+/bingo campaign somita anim point
+/bingo campaign somita anim walk
+/bingo campaign somita anim look
+/bingo campaign somita anim bow
+/bingo campaign somita anim celebrate
+/bingo campaign somita anim vanish
+/bingo campaign somita anim hold
+/bingo campaign somita anim cross_arms
+
+/bingo campaign somita scene overworld
+/bingo campaign somita scene nether
+/bingo campaign somita scene end
+/bingo campaign somita scene altar
+/bingo campaign somita scene celebration
+
+/bingo campaign somita demo
+/bingo campaign somita hide
+/bingo campaign somita list
+
+Comprobar también que sigan funcionando:
+- Guardarropa visual.
+- Panel de permisos.
+- Podio y emotes.
+- Cosméticos y mascotas de la colección cute.

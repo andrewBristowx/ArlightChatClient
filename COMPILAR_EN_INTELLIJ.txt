@@ -1,0 +1,25 @@
+ARLIGHTCHATCLIENT 2.1.0 - NEOFORGE 1.21.1
+
+1. Instala o selecciona JDK 21 en IntelliJ IDEA.
+2. Abre la carpeta ArlightChatClient-2.1.0 como proyecto.
+3. Cuando IntelliJ pregunte, impórtalo como proyecto Gradle.
+4. Espera a que descargue NeoForge 21.1.235 y termine la sincronización.
+5. Abre el panel Gradle de la derecha.
+6. Ejecuta Tasks > build > build.
+7. El resultado estará en:
+   build/libs/ArlightChatClient-2.1.0.jar
+
+INSTALACIÓN
+
+- Copia el JAR en la carpeta mods de cada jugador.
+- No lo pongas en plugins.
+- Usa NeoForge y Minecraft 1.21.1.
+- Conserva instalado el resource pack de ArlightChat.
+
+PRUEBA
+
+1. Entra al servidor.
+2. Abre el chat con T.
+3. Pulsa Emotes, situado a la izquierda de Gestos.
+4. Elige un emote.
+5. Volverás al chat con el alias preparado para enviarlo.

@@ -1,0 +1,7 @@
+ArlightChatClient 2.8.1 SCOREBOARD-ICON-RENDER-FIX
+
+- Renderiza los iconos del scoreboard visual como texturas directas.
+- Ya no depende del orden ni de la carga del archivo assets/minecraft/font/default.json.
+- Corrige Parkour 1.1.0: timer/checkpoint/rank/fall dejan de aparecer como texto pegado a las etiquetas.
+- Reconoce los glifos estándar de Arlight para reloj, check, advertencia, trofeo, espadas, jugadores y estrella.
+- Añade colores propios para Parkour, TNTRun y Build Battle manteniendo el marco compatible del lobby.

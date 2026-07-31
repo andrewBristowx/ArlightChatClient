@@ -1,0 +1,53 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.pony_whale_tail.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "tail_base": {
+          "rotation": [
+            "18.0 + math.sin(query.life_time*95.0)*4.0",
+            "math.sin(query.life_time*70.0)*5.0",
+            0
+          ]
+        },
+        "tail_fin_left": {
+          "rotation": [
+            0,
+            -12,
+            "-30.0 + math.sin(query.life_time*120.0)*5.0"
+          ]
+        },
+        "tail_fin_right": {
+          "rotation": [
+            0,
+            12,
+            "30.0 - math.sin(query.life_time*120.0)*5.0"
+          ]
+        },
+        "tail_bow": {
+          "rotation": [
+            0,
+            "math.sin(query.life_time*80.0)*3.0",
+            0
+          ]
+        },
+        "tail_mid": {
+          "rotation": [
+            "8.0 + math.sin(query.life_time*95.0 + 0.7)*4.0",
+            0,
+            0
+          ]
+        },
+        "tail_tip": {
+          "rotation": [
+            "8.0 + math.sin(query.life_time*95.0 + 1.4)*5.0",
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

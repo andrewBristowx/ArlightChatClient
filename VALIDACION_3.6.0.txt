@@ -1,0 +1,11 @@
+VALIDACIÓN ARLIGHTCHATCLIENT 3.6.0
+
+- build.gradle y BUILD_VERSION sincronizados en 3.6.0.
+- 52 archivos Java con llaves/paréntesis balanceados.
+- Todos los JSON de modelos, animaciones y manifiestos son válidos.
+- Fuentes Blockbench sincronizadas con posiciones de mascotas, cola y alas.
+- Outfit armor-fit presente con anclajes BODY/LEFT_ARM/RIGHT_ARM/LEFT_LEG/RIGHT_LEG.
+- Panel H/C/L/B abre /cosmeticos armadura sin ocupar armadura vanilla.
+- Cola y aletas mantienen jerarquía continua con conector solapado.
+- Emotes se dibujan después del jugador en el podio universal.
+- javac 21 no detectó errores de sintaxis; el build completo requiere NeoForge/Gradle.

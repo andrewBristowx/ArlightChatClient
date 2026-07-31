@@ -1,0 +1,1 @@
+El ropero abre por el canal sync ya operativo y usa comandos vanilla para equipar/quitar, sin payload bidireccional frágil.

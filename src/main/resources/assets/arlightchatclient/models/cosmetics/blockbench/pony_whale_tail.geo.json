@@ -1,0 +1,386 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.arlight.pony_whale_tail",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 4.0,
+        "visible_bounds_height": 4.0,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "body_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "tail_base",
+          "parent": "body_anchor",
+          "pivot": [
+            0,
+            10.65,
+            2.05
+          ],
+          "rotation": [
+            14,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.4,
+                -0.65,
+                -0.25
+              ],
+              "size": [
+                2.8,
+                4.45,
+                2.8
+              ],
+              "uv": [
+                0,
+                0
+              ],
+              "inflate": 0.14
+            }
+          ]
+        },
+        {
+          "name": "tail_mid",
+          "parent": "tail_base",
+          "pivot": [
+            0,
+            3.45,
+            1.35
+          ],
+          "rotation": [
+            8,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.12,
+                -0.45,
+                -0.25
+              ],
+              "size": [
+                2.24,
+                4.25,
+                2.3
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.12
+            }
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "tail_mid",
+          "pivot": [
+            0,
+            3.45,
+            1.05
+          ],
+          "rotation": [
+            8,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.88,
+                -0.35,
+                -0.2
+              ],
+              "size": [
+                1.76,
+                3.65,
+                1.85
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.1
+            }
+          ]
+        },
+        {
+          "name": "tail_fluke_connector",
+          "parent": "tail_tip",
+          "pivot": [
+            0,
+            2.7,
+            0.62
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.6,
+                -1.35,
+                -1.02
+              ],
+              "size": [
+                3.2,
+                2.75,
+                2.04
+              ],
+              "uv": [
+                32,
+                64
+              ],
+              "inflate": 0.18
+            }
+          ]
+        },
+        {
+          "name": "tail_fin_left",
+          "parent": "tail_fluke_connector",
+          "pivot": [
+            -0.1,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -10,
+            -24
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.55,
+                -1.05,
+                -0.62
+              ],
+              "size": [
+                5.7,
+                2.5,
+                1.28
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.1
+            },
+            {
+              "origin": [
+                -4.65,
+                1.05,
+                -0.52
+              ],
+              "size": [
+                4.75,
+                1.75,
+                1.08
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.07
+            },
+            {
+              "origin": [
+                -3.2,
+                2.45,
+                -0.42
+              ],
+              "size": [
+                3.3,
+                1.2,
+                0.88
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.05
+            }
+          ]
+        },
+        {
+          "name": "tail_fin_right",
+          "parent": "tail_fluke_connector",
+          "pivot": [
+            0.1,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            10,
+            24
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.15,
+                -1.05,
+                -0.62
+              ],
+              "size": [
+                5.7,
+                2.5,
+                1.28
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.1
+            },
+            {
+              "origin": [
+                -0.1,
+                1.05,
+                -0.52
+              ],
+              "size": [
+                4.75,
+                1.75,
+                1.08
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.07
+            },
+            {
+              "origin": [
+                -0.1,
+                2.45,
+                -0.42
+              ],
+              "size": [
+                3.3,
+                1.2,
+                0.88
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.05
+            }
+          ]
+        },
+        {
+          "name": "tail_bow",
+          "parent": "tail_base",
+          "pivot": [
+            0,
+            0.35,
+            -0.25
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                -1,
+                -0.8
+              ],
+              "size": [
+                2,
+                2,
+                1.2
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.08
+            },
+            {
+              "origin": [
+                -4,
+                -1.6,
+                -0.5
+              ],
+              "size": [
+                3.2,
+                3.2,
+                0.9
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.05
+            },
+            {
+              "origin": [
+                0.8,
+                -1.6,
+                -0.5
+              ],
+              "size": [
+                3.2,
+                3.2,
+                0.9
+              ],
+              "uv": [
+                32,
+                32
+              ],
+              "inflate": 0.05
+            },
+            {
+              "origin": [
+                -2.6,
+                1,
+                -0.4
+              ],
+              "size": [
+                1.5,
+                3.3,
+                0.75
+              ],
+              "uv": [
+                32,
+                32
+              ],
+              "inflate": 0.04
+            },
+            {
+              "origin": [
+                1.1,
+                1,
+                -0.4
+              ],
+              "size": [
+                1.5,
+                3.3,
+                0.75
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.04
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

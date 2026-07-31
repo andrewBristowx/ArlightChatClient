@@ -1,0 +1,7 @@
+ArlightChatClient 2.4.3
+
+- Panel de emotes compacto con un máximo de 5 filas visibles.
+- Categorías apiladas sin superposición.
+- Paginación para conservar todos los emotes sin agrandar el panel.
+- Se eliminó el escalado del texto que convertía los glifos en cuadros vacíos.
+- El tamaño grande de criaturas y jefes ahora se controla desde el resource pack.

@@ -1,0 +1,21 @@
+{
+  "client_version": "3.1.0",
+  "server_version": "1.2.0",
+  "catalog_cosmetics": 20,
+  "visible_models": 17,
+  "particle_trails": 3,
+  "geometry_files": 17,
+  "animation_files": 17,
+  "diffuse_textures": 17,
+  "emissive_textures": 17,
+  "model_bones": 94,
+  "model_cubes": 313,
+  "json_valid": true,
+  "yaml_valid": true,
+  "xml_valid": true,
+  "png_128x128_valid": true,
+  "source_braces_valid": true,
+  "full_gradle_build": false,
+  "full_maven_build": false,
+  "build_note": "No se pudo descargar Gradle/Paper/NeoForge porque el entorno no tiene acceso de red para los gestores de dependencias."
+}

@@ -1,0 +1,12 @@
+ARLIGHTCHATCLIENT 4.8.0 - SOMITA EFFECTS & ANIMATION POLISH
+
+- Partículas personales de Somita renderizadas únicamente en el cliente.
+- Efectos distintos para Overworld, Nether, End y celebración.
+- Aparición y desaparición con escala, elevación y transparencia progresiva.
+- Nuevas animaciones celebrate_cute y celebrate_elegant.
+- Corrección adicional de brazos en wave, hold y cross_arms.
+- Efectos sincronizados con wave, point, hold, celebrate y vanish.
+- Límite de partículas enviado por el servidor.
+- Preferencia local en config/arlightchatclient-somita.properties:
+  effects=full, reduced u off.
+- Limpieza automática al cambiar de dimensión o recibir CLEAR.

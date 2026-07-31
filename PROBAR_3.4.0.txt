@@ -1,0 +1,7 @@
+PRUEBA RECOMENDADA 3.4.0
+
+1. Compila con gradlew.bat clean build.
+2. Prueba ajolote, murciélago y ojo en tercera persona: deben quedar arriba y al costado de la cabeza.
+3. Prueba las tres ropas caminando, agachado, nadando y con skin Alex/Steve.
+4. Mira la cola desde atrás y de lado; la punta y las aletas deben permanecer unidas.
+5. Termina una partida de Bingo, Parkour, TNTRun, BuildBattle, SkyWars y LuckyBlockIslands. Cada pantalla usa UniversalPodiumScreen y debe mostrar emotes junto a las posiciones.

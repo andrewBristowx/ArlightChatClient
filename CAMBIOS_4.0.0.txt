@@ -1,0 +1,1 @@
+Corrige protocolo de ArlightPermissions y añade ropero visual con modelo 3D, navegación y equipar/quitar.

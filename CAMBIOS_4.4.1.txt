@@ -1,0 +1,3 @@
+ArlightChatClient 4.4.1
+- Corrige la firma de InventoryScreen.renderEntityInInventory para Minecraft 1.21.1.
+- Conserva el giro completo de 360 grados mediante quaternion.

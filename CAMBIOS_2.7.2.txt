@@ -1,0 +1,4 @@
+ArlightChatClient 2.7.2
+- El aviso para jugadores ajenos al Bingo usa ajuste contain y ya no se corta.
+- Escala predeterminada reducida para conservar márgenes en distintas resoluciones.
+- Compatible con los comandos de prueba de Bingo 1.13.5 y LuckyBlock Islands 1.0.3.

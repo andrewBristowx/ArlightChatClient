@@ -1,0 +1,6 @@
+ArlightChatClient 2.7.0
+- Pantalla persistente de cola para LuckyBlock Islands.
+- Botón de información y botón para salir con /lucky leave.
+- Fondo Pony0n, icono Lucky Block y panel visual dorado/morado.
+- Nuevo payload arlightlucky:waiting.
+- Nuevo estilo de scoreboard visual: lucky.

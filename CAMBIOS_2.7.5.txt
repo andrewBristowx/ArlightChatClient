@@ -1,0 +1,4 @@
+ArlightChatClient 2.7.5
+- Aviso de preparación de Bingo reducido a escala base 0.20.
+- Límite máximo de escala reducido a 0.30 para evitar que tape gran parte de la pantalla.
+- Usa exactamente la misma imagen existente.

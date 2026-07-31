@@ -1,0 +1,20 @@
+{
+  "version": "3.9.0",
+  "status": "source-ready",
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1+",
+  "changes": {
+    "placement_emotes": ["place_1.png", "place_2.png", "place_3.png"],
+    "stat_icon_text_fix": true,
+    "universal_minigames": true,
+    "new_images_generated_after_approval": false
+  },
+  "checks": [
+    "RGBA placement textures are 256x256",
+    "placement badge no longer uses player pose emotes",
+    "structured stat icons render from textures/gui/icons",
+    "raw icon ids are no longer concatenated into stat labels"
+  ],
+  "compile": "not executed: Gradle distribution unavailable because the environment has no DNS access"
+}

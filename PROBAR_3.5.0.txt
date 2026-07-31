@@ -1,0 +1,6 @@
+1. Equipar Alas de Somita + Colita cachalote al mismo tiempo.
+2. Probar la cola caminando, corriendo, agachado, nadando y volando.
+3. Revisar las mascotas desde frente, espalda y ambos lados.
+4. Probar las tres ropas con skins Steve y Alex, con las capas de skin activadas.
+5. Revisar Alas de Somita de día/noche y con shaders para detectar parpadeo.
+6. Confirmar que los emotes siguen visibles en el podio universal.

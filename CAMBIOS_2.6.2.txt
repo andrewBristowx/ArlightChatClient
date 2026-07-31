@@ -1,0 +1,5 @@
+ArlightChatClient 2.6.2
+- Las barras de progreso de los paneles usan tapas tipo píldora realmente redondeadas.
+- Los textos de pie holy.gg/Pony0n Server suben para no tocar el borde inferior.
+- La preparación de Bingo imita F1: oculta chat, hotbar y Xaero's Minimap y restaura el HUD al terminar.
+- Nueva pantalla breve de espera de SkyWars, visible solo para quien entra a esa sala.

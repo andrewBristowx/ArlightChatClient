@@ -1,0 +1,5 @@
+ArlightChatClient 4.3.0
+- Previsualización real del cosmético seleccionado sin equiparlo.
+- Maniquí giratorio arrastrando el mouse.
+- Manos vacías durante la vista previa.
+- Conserva el conjunto real al cerrar el ropero.

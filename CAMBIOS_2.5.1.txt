@@ -1,0 +1,6 @@
+ARLIGHTCHATCLIENT 2.5.1 - AVISO DE PREPARACIÓN
+
+- Renderiza el cartel aprobado para jugadores ajenos al Bingo.
+- Se adapta a resolución y escala de GUI.
+- Posición, tamaño y fundidos enviados por ArlightBingo.
+- No se dibuja sobre la pantalla cinematográfica de participantes.

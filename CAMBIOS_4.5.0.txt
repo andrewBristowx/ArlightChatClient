@@ -1,0 +1,6 @@
+ArlightChatClient 4.5.0
+- Podio rediseñado sin bloques sólidos.
+- Ganadores completos, mirando al frente y con manos vacías.
+- Cosméticos visibles y pequeña animación de victoria.
+- Emotes aprobados de 1.º, 2.º y 3.º recortados y ampliados.
+- Nueva categoría PASOS en el ropero para partículas al caminar.

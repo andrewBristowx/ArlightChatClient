@@ -1,0 +1,9 @@
+ArlightChatClient 3.5.0 — TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL
+
+- Añade la ranura visual TAIL y permite usar la colita junto con alas cosméticas o élitros.
+- Baja la colita a la cintura y reconstruye su cadena base/medio/punta/conector/aletas.
+- Separa y eleva ajolote, murciélago y ojo de amatista para mostrarlos completos.
+- Eleva la deformación de las ropas por encima de la segunda capa de la skin, como armadura cosmética.
+- Mantiene torso, brazos y piernas en anclajes independientes para Steve y Alex.
+- Reconstruye las alas de Somita con membranas hijas de su marco y sin caras coplanares.
+- Mantiene los emotes del podio universal incorporados en 3.4.0.

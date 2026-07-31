@@ -1,0 +1,7 @@
+ArlightChatClient 2.6.5
+- Nueva sala persistente del Bingo con el fondo Pony0n aprobado.
+- Botón ¿Qué es Bingo? con explicación al pasar el cursor.
+- Botón Salir de la cola que ejecuta /bingo leave.
+- Jugadores y cuenta regresiva se actualizan sin cerrar la pantalla.
+- La sala cambia automáticamente a la pantalla de preparación de mundo.
+- Se ocultan HUD, chat y Xaero's Minimap mientras la sala está abierta.

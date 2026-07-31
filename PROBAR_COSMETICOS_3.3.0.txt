@@ -1,0 +1,8 @@
+PRUEBA RECOMENDADA 3.3.0
+
+1. Cola cachalote: caminar, correr, agacharse y girar; confirmar que las dos aletas no se separan.
+2. Ajolote, murciélago y ojo: comprobar vista frontal/lateral y que no se oculten dentro del cabello.
+3. Ropas Pony0n, Somita y Bingo: caminar y mover brazos; revisar hombros, falda, cintura y piernas.
+4. Probar de día y noche con shaders; el brillo debe seguir fuerte sin convertir toda la pieza en blanco sólido.
+5. Coronas y broche: mover la cabeza rápidamente; todas las piezas deben permanecer unidas.
+6. Orbitales/auras: correr en tercera persona y confirmar que fragmentos y aletas siguen al núcleo.

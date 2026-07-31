@@ -1,0 +1,13 @@
+ArlightChatClient 3.2.0 — SKIN-FIT-COSMETICS-POLISH
+
+- Ropa Pony0n, Somita y Bingo rehecha como segunda capa ajustada a la skin.
+- Volúmenes reducidos para torso, mangas, faldas, medias y botas.
+- Compatibilidad visual con brazos Steve y Alex/slim.
+- Corona Pony0n simplificada a dos cuernos continuos; eliminado el cuerno central.
+- Piezas de cuernos, mascotas y ojo de amatista enlazadas por jerarquía para evitar separaciones.
+- Mascotas elevadas aproximadamente dos píxeles.
+- Objetos orbitales reducidos y detalles anclados al núcleo.
+- Render difuso cambiado a cutout con escritura de profundidad para reducir parpadeo.
+- Texturas de ropa limpiadas: menos patrones repetidos y menos superficies emisivas.
+- Animaciones de faldas y tabardos suavizadas para evitar atravesar el jugador.
+- Import RenderLayerParent corregido para NeoForge 1.21.1.

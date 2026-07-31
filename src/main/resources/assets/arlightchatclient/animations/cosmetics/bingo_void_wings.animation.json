@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.bingo_void_wings.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "void_wing_left_base": {
+          "rotation": [
+            "-4.0 + math.sin(query.life_time*95.0)*2.0",
+            "14.0 + math.sin(query.life_time*145.0)*7.0",
+            "-8.0 - query.modified_move_speed*10.0"
+          ]
+        },
+        "void_wing_right_base": {
+          "rotation": [
+            "-4.0 - math.sin(query.life_time*95.0)*2.0",
+            "-14.0 - math.sin(query.life_time*145.0)*7.0",
+            "8.0 + query.modified_move_speed*10.0"
+          ]
+        },
+        "void_wing_left_crystals": {
+          "rotation": [
+            0,
+            0,
+            "-10.0 + math.sin(query.life_time*145.0)*4.0"
+          ]
+        },
+        "void_wing_right_crystals": {
+          "rotation": [
+            0,
+            0,
+            "10.0 - math.sin(query.life_time*145.0)*4.0"
+          ]
+        }
+      }
+    }
+  }
+}

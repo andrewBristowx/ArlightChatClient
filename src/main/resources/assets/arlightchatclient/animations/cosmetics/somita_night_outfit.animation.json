@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.somita_night_outfit.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "somita_skirt_front_left": {
+          "rotation": [
+            "-3.0 + math.sin(query.life_time*105.0)*1.4 + query.modified_move_speed*2.5",
+            0,
+            -4
+          ]
+        },
+        "somita_skirt_front_right": {
+          "rotation": [
+            "-3.0 + math.sin(query.life_time*105.0)*1.4 + query.modified_move_speed*2.5",
+            0,
+            4
+          ]
+        },
+        "somita_skirt_back_left": {
+          "rotation": [
+            "3.0 - math.sin(query.life_time*105.0)*1.2 - query.modified_move_speed*2.0",
+            0,
+            -4
+          ]
+        },
+        "somita_skirt_back_right": {
+          "rotation": [
+            "3.0 - math.sin(query.life_time*105.0)*1.2 - query.modified_move_speed*2.0",
+            0,
+            4
+          ]
+        }
+      }
+    }
+  }
+}

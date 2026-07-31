@@ -1,0 +1,6 @@
+1. Instala ArlightChatClient 4.3.0 y ArlightCosmeticsCurios 1.7.0 en el cliente.
+2. Abre /ropero.
+3. Pasa el mouse o selecciona una tarjeta: el modelo debe aparecer sin equiparse realmente.
+4. Arrastra el maniquí horizontalmente para girarlo.
+5. Comprueba que no sostiene objetos.
+6. Prueba Somita 67: debe verse unido y alejado.

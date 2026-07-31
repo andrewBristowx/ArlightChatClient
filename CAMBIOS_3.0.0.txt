@@ -1,0 +1,16 @@
+ARLIGHTCHATCLIENT 3.0.0 — COSMÉTICOS PONY0N / SOMITA / BINGO
+
+- Canal nuevo arlightcosmetics:sync.
+- Sincronización de equipamiento por UUID y seis ranuras.
+- Render voxel procedural sin resource pack adicional.
+- Colección Pony0n: corona caprina, conjunto pastel, colita cachalote,
+  ajolotito de hombro, aura cachalote y pasos pastel.
+- Colección Somita: broche murciélago, conjunto nocturno, alas,
+  compañero de hombro, aura carmesí y pasos nocturnos.
+- Colección Bingo: corona, ropa y alas corruptas, ojo de amatista,
+  auras orbitales de esmeralda/oro/amatista y rastro tridimensional.
+- Animación de órbita, balanceo, aleteo y flotación.
+- Partículas ajustables y distancia máxima enviada por el servidor.
+- Vista previa temporal desde /cosmeticos.
+- Ocultación automática en espectador, invisibilidad y podio universal.
+- Opción personal para ocultar cosméticos de otros jugadores.

@@ -1,0 +1,11 @@
+PRUEBA ARLIGHTCHATCLIENT 3.6.0
+
+1. Instala ArlightCosmetics 1.4.0 en servidor y ChatClient 3.6.0 en cliente.
+2. Abre inventario: deben aparecer H/C/L/B a la izquierda y abrir /cosmeticos armadura.
+3. Equipa cada uno de los tres conjuntos con armadura vanilla puesta y quitada.
+4. Prueba skins Steve y Alex: caminar, correr, agacharse, nadar y volar.
+5. Verifica que la skin no se dibuje por encima de la prenda ni aparezca por detrás de sus caras opacas.
+6. Equipa Alas de Somita + Colita cachalote al mismo tiempo y gira/salta.
+7. Revisa las alas de Somita de frente y detrás, de día y noche, sin parpadeos.
+8. Revisa mascotas desde frente/lado/espalda y en el inventario: deben verse completas.
+9. Finaliza una partida en los seis minijuegos y revisa los emotes de nombres, estadísticas y podio.

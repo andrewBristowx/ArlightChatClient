@@ -1,0 +1,9 @@
+ArlightChatClient 4.9.0 — WARDROBE UX POLISH
+
+- Categorías del ropero completamente visibles en español.
+- Botones de filtros adaptan su ancho al texto.
+- Tarjetas más grandes y nombres en dos líneas, sin cortes tipo “Mini T-Re...”.
+- Escala del maniquí adaptada para mascotas, cabeza y ropa.
+- Plataforma visual de preview.
+- Limpieza explícita de la preview al cerrar o retirar la pantalla.
+- Mantiene todas las funciones de Somita 4.8.0, permisos, podios y colecciones.

@@ -1,0 +1,5 @@
+ArlightChatClient 2.3.0
+- Recibe el canal arlightbingo:preparation.
+- Añade overlay de pantalla completa para preparación de Bingo.
+- Muestra ilustraciones, consejos, fase, porcentaje y cuenta regresiva.
+- Requiere el resource pack ArlightChat 1.6.0 para las ilustraciones.

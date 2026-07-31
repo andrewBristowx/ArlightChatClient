@@ -1,0 +1,16 @@
+ArlightChatClient 4.6.0 - SOMITA GUIDE MERGE
+
+Base utilizada:
+- ArlightChatClient 4.5.0 PODIUM CUTE COLLECTION.
+
+Cambios integrados sin eliminar funciones de 4.5.0:
+- Protocolo cliente arlightbingo:somita.
+- Somita personal renderizada con modelo de jugador slim.
+- Variantes de textura: overworld, nether, end y celebration.
+- Animaciones: idle, wave, point, walk, look, bow, celebrate, vanish, hold y cross_arms.
+- Movimiento interpolado, nombre flotante y cuadro de diálogo.
+- Limpieza automática al recibir HIDE/CLEAR, desconectarse o terminar la duración.
+- Registro adicional conservando permisos, guardarropa, podios, cosméticos y colección cute de 4.5.0.
+
+Nota:
+Las cuatro texturas incluidas son provisionales y conservan la skin base. Después se sustituirán por las versiones maid, vampiresa, astral y celebración.

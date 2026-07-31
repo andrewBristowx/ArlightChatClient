@@ -1,0 +1,219 @@
+{
+  "format": 3,
+  "namespace": "arlightchatclient",
+  "version": "3.7.0",
+  "render_profile": "tail_slot_armor_skin_layer_wings_v5",
+  "model_count": 17,
+  "models": {
+    "pony_horn_crown": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/pony_horn_crown.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/pony_horn_crown.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/pony_horn_crown.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/pony_horn_crown_emissive.png",
+      "anchors": [
+        "HEAD"
+      ],
+      "bones": 11,
+      "cubes": 18
+    },
+    "pony_pastel_outfit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/pony_pastel_outfit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/pony_pastel_outfit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/pony_pastel_outfit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/pony_pastel_outfit_emissive.png",
+      "anchors": [
+        "BODY",
+        "LEFT_ARM",
+        "LEFT_LEG",
+        "RIGHT_ARM",
+        "RIGHT_LEG"
+      ],
+      "bones": 13,
+      "cubes": 18
+    },
+    "pony_whale_tail": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/pony_whale_tail.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/pony_whale_tail.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/pony_whale_tail.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/pony_whale_tail_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 7,
+      "cubes": 15,
+      "slot": "TAIL"
+    },
+    "pony_axolotl_pal": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/pony_axolotl_pal.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/pony_axolotl_pal.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/pony_axolotl_pal.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/pony_axolotl_pal_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 6,
+      "cubes": 18
+    },
+    "pony_whale_stars": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/pony_whale_stars.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/pony_whale_stars.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/pony_whale_stars.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/pony_whale_stars_emissive.png",
+      "anchors": [
+        "ROOT"
+      ],
+      "bones": 6,
+      "cubes": 13
+    },
+    "somita_bat_clip": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_clip.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/somita_bat_clip.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/somita_bat_clip.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/somita_bat_clip_emissive.png",
+      "anchors": [
+        "HEAD"
+      ],
+      "bones": 3,
+      "cubes": 10
+    },
+    "somita_night_outfit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/somita_night_outfit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/somita_night_outfit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/somita_night_outfit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/somita_night_outfit_emissive.png",
+      "anchors": [
+        "BODY",
+        "LEFT_ARM",
+        "LEFT_LEG",
+        "RIGHT_ARM",
+        "RIGHT_LEG"
+      ],
+      "bones": 11,
+      "cubes": 16
+    },
+    "somita_bat_wings": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_wings.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/somita_bat_wings.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/somita_bat_wings.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/somita_bat_wings_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 6,
+      "cubes": 14
+    },
+    "somita_bat_pal": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_pal.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/somita_bat_pal.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/somita_bat_pal.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/somita_bat_pal_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 3,
+      "cubes": 13
+    },
+    "somita_crimson_hearts": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/somita_crimson_hearts.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/somita_crimson_hearts.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/somita_crimson_hearts.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/somita_crimson_hearts_emissive.png",
+      "anchors": [
+        "ROOT"
+      ],
+      "bones": 4,
+      "cubes": 12
+    },
+    "bingo_corrupted_crown": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_corrupted_crown.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_corrupted_crown.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_corrupted_crown.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_corrupted_crown_emissive.png",
+      "anchors": [
+        "HEAD"
+      ],
+      "bones": 6,
+      "cubes": 16
+    },
+    "bingo_corrupted_outfit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_corrupted_outfit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_corrupted_outfit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_corrupted_outfit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_corrupted_outfit_emissive.png",
+      "anchors": [
+        "BODY",
+        "LEFT_ARM",
+        "LEFT_LEG",
+        "RIGHT_ARM",
+        "RIGHT_LEG"
+      ],
+      "bones": 11,
+      "cubes": 15
+    },
+    "bingo_void_wings": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_void_wings.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_void_wings.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_void_wings.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_void_wings_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 6,
+      "cubes": 22
+    },
+    "bingo_amethyst_eye": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_amethyst_eye.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_amethyst_eye.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_amethyst_eye.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_amethyst_eye_emissive.png",
+      "anchors": [
+        "BODY"
+      ],
+      "bones": 6,
+      "cubes": 12
+    },
+    "bingo_emerald_orbit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_emerald_orbit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_emerald_orbit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_emerald_orbit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_emerald_orbit_emissive.png",
+      "anchors": [
+        "ROOT"
+      ],
+      "bones": 3,
+      "cubes": 9
+    },
+    "bingo_gold_orbit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_gold_orbit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_gold_orbit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_gold_orbit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_gold_orbit_emissive.png",
+      "anchors": [
+        "ROOT"
+      ],
+      "bones": 4,
+      "cubes": 10
+    },
+    "bingo_amethyst_orbit": {
+      "geometry": "assets/arlightchatclient/models/cosmetics/blockbench/bingo_amethyst_orbit.geo.json",
+      "animation": "assets/arlightchatclient/animations/cosmetics/bingo_amethyst_orbit.animation.json",
+      "texture": "assets/arlightchatclient/textures/cosmetics/bingo_amethyst_orbit.png",
+      "emissive": "assets/arlightchatclient/textures/cosmetics/bingo_amethyst_orbit_emissive.png",
+      "anchors": [
+        "ROOT"
+      ],
+      "bones": 4,
+      "cubes": 11
+    }
+  },
+  "notes": [
+    "Mascotas movidas al anclaje superior derecho junto a la cabeza.",
+    "Ropas divididas por torso, brazos y piernas como armadura cosmética.",
+    "Cola cachalote con conector de aleta central solapado.",
+    "Emotes directos en el podio universal de los seis minijuegos.",
+    "Panel de armadura cosmética H/C/L/B independiente de las ranuras vanilla.",
+    "Render armor-fit con profundidad/culling para impedir que la skin opaque las prendas.",
+    "Mascotas desplazadas hacia la zona superior exterior y cola con unión solapada reforzada."
+  ],
+  "profile": "armor_fit_pets_podium_emotes_v5"
+}

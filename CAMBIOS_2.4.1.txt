@@ -1,0 +1,5 @@
+ArlightChatClient 2.4.1
+- Ajustado el área de ilustración al nuevo marco central.
+- Eliminado el rectángulo que tapaba texto/barra del fondo anterior.
+- Reubicados texto dinámico y barra real debajo del marco.
+- Compatible con Resource Pack 1.8.0.

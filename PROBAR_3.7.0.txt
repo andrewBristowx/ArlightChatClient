@@ -1,0 +1,6 @@
+PRUEBA ARLIGHTCHATCLIENT 3.7.0
+
+- Con ArlightCosmeticsCurios instalado no debe aparecer el panel de armadura cosmética antiguo.
+- No debe renderizarse la capa cosmética legada detrás de la skin.
+- Las prendas deben venir únicamente de los objetos equipados en Curios.
+- Verificar emotes, scoreboards y pantalla final de cada minijuego.

@@ -1,0 +1,6 @@
+ArlightChatClient 3.8.0 — VISUAL PERMISSIONS PANEL
+- Añade pantalla administrativa personalizada para ArlightPermissions.
+- Panel sin texturas nuevas: dibujado con tarjetas, acentos, pestañas, búsqueda y botones nativos.
+- Soporta rangos, jugadores conectados y búsqueda de desconectados.
+- Acciones: permitir, negar, temporal 30 días y limpiar nodo.
+- Comunicación bidireccional arlightpermissions:panel.

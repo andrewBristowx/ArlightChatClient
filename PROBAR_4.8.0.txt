@@ -1,0 +1,25 @@
+REQUISITOS
+- ArlightBingo 1.37.1 en el servidor.
+- ArlightChatClient 4.8.0 en el cliente.
+
+PRUEBAS
+/bingo campaign somita show overworld
+/bingo campaign somita anim wave
+/bingo campaign somita anim celebrate_cute
+/bingo campaign somita anim celebrate_elegant
+/bingo campaign somita effect overworld_appear
+/bingo campaign somita effect nether_appear
+/bingo campaign somita effect end_appear
+/bingo campaign somita effect celebration_burst
+/bingo campaign somita demo overworld
+/bingo campaign somita demo nether
+/bingo campaign somita demo end
+/bingo campaign somita demo celebration
+/bingo campaign somita clear
+
+COMPROBAR
+- Los brazos no atraviesan la cabeza en ambas celebraciones.
+- Las partículas sólo aparecen para el jugador que ejecutó la prueba.
+- Cambiar de dimensión elimina la escena anterior.
+- effects=reduced reduce la cantidad tras reiniciar el cliente.
+- effects=off desactiva partículas pero conserva Somita y el diálogo.

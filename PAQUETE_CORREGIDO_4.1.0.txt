@@ -1,0 +1,3 @@
+Versión real: 4.1.0
+Carpeta raíz: ArlightChatClient-4.1.0-WARDROBE-GALLERY
+Todos los metadatos de compilación fueron sincronizados.

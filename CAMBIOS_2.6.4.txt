@@ -1,0 +1,10 @@
+ArlightChatClient 2.6.4
+
+- Se reemplazó el fondo de la sala de espera de SkyWars por el fondo aprobado de Pony0n.
+- Se conserva la pantalla persistente con:
+  * botón ¿Qué es SkyWars?
+  * botón Salir de la cola
+  * jugadores y mapa actualizados
+- No se modificó el protocolo de red ni la lógica del plugin SkyWars.
+- La imagen está incluida dentro del mod cliente en:
+  assets/arlightchatclient/textures/loading/skywars_waiting_background.png

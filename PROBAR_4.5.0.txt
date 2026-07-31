@@ -1,0 +1,7 @@
+ARLIGHTCHATCLIENT 4.5.0 - PRUEBAS
+
+1. Entra a Parkour, SkyWars o Bingo y termina una partida con tres jugadores.
+2. Comprueba que 1.º, 2.º y 3.º muestran sus trofeos aprobados.
+3. Comprueba que cada jugador se ve de cuerpo completo, de frente y sin objetos en las manos.
+4. Comprueba que se ven los cosméticos y la pequeña animación de celebración.
+5. Abre /ropero y verifica el filtro PASOS.

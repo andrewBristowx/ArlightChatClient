@@ -1,0 +1,6 @@
+ArlightChatClient 2.4.4
+
+- Panel de emotes reducido a 3 filas visibles para que empiece debajo del marcador lateral.
+- Paginación automática para categorías con más de 15 emotes.
+- Coordenadas de las ilustraciones del Bingo ajustadas al interior real del marco 1920x1080.
+- Se evita cubrir los bordes morados o deformar las imágenes.

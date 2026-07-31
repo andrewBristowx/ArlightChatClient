@@ -1,0 +1,12 @@
+ArlightChatClient 3.6.0 — COSMETIC-ARMOR-SLOTS-PETS-PODIUM-FIX
+
+- Panel H/C/L/B junto al inventario, estilo Curios, que abre directamente los conjuntos cosméticos.
+- La armadura cosmética no usa ni sustituye ranuras vanilla.
+- Prendas renderizadas con culling y profundidad como armadura, por encima de la segunda capa de skin.
+- Torso, mangas, piernas, medias y botas copian por separado las poses del PlayerModel Steve/Alex.
+- Pase emisivo separado una fracción de píxel para conservar brillo sin z-fighting.
+- Ajolote, murciélago y ojo de amatista más altos, exteriores y adelantados para verse completos.
+- Cola de cachalote más baja y con conector solapado entre base, punta y aletas; compatible con alas.
+- Membranas de las alas de Somita separadas de sus marcos para eliminar parpadeos/caras coplanares.
+- Emotes del podio dibujados después del modelo 3D y desde texturas internas.
+- Cobertura del podio universal: Bingo, Parkour, TNTRun, BuildBattle, SkyWars y LuckyBlock Islands.

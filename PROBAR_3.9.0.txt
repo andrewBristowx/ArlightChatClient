@@ -1,0 +1,14 @@
+PRUEBA ARLIGHTCHATCLIENT 3.9.0
+
+1. Compilar con Java 21: gradlew build
+2. Instalar el JAR nuevo en el cliente y retirar el JAR anterior de ArlightChatClient.
+3. Iniciar cualquier minijuego compatible con el podio universal.
+4. Terminar la partida con tres jugadores o datos de tres posiciones.
+5. Verificar:
+   - 1.er puesto muestra el trofeo dorado con 1.
+   - 2.º puesto muestra el trofeo plateado con 2.
+   - 3.er puesto muestra la medalla de bronce con 3.
+   - Ninguna insignia queda cortada por el modelo del jugador.
+   - En "TU PUESTO", trophy/check/warning/clock no aparecen escritos.
+   - En su lugar se ven los iconos correspondientes.
+6. Repetir en Parkour, SkyWars, Bingo, TNT Run, Build Battle y LuckyBlockIslands.

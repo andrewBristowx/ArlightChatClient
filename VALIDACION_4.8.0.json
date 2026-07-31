@@ -1,0 +1,26 @@
+{
+  "version": "4.8.0",
+  "project": "ArlightChatClient",
+  "status": "source_validated_full_build_not_available_in_this_environment",
+  "checks": {
+    "somita_changed_classes_stub_compile": "passed",
+    "java_brace_balance_all_sources": "passed",
+    "four_dimension_skins_rgba_64x64": "passed",
+    "existing_validation_json_parse": "passed",
+    "forbidden_runtime_files_absent": "passed",
+    "zip_integrity": "passed"
+  },
+  "full_build": {
+    "executed": false,
+    "reason": "Gradle wrapper requires services.gradle.org, unavailable in this environment (UnknownHostException)."
+  },
+  "validated_features": [
+    "celebrate_cute",
+    "celebrate_elegant",
+    "appearance_and_vanish_transitions",
+    "dimension_particle_effects",
+    "effect_intensity_full_reduced_off",
+    "world_change_cleanup",
+    "show_animate_effect_settings_hide_clear_protocol"
+  ]
+}

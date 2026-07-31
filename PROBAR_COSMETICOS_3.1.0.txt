@@ -1,0 +1,22 @@
+PRUEBA DE ARLIGHTCHATCLIENT 3.1.0
+
+1. Sustituye el mod anterior por el JAR 3.1.0 y reinicia Minecraft.
+2. Instala ArlightCosmetics 1.2.0 en el servidor.
+3. Usa /cosmeticos y prueba cada ranura.
+4. Camina, corre, salta, agáchate, nada, monta una entidad y usa élitros.
+5. Comprueba vista frontal, lateral y trasera con F5.
+6. Revisa modelos Steve y Alex.
+7. Prueba casco y élitros para las reglas de ocultación.
+8. Usa /cosmeticos diagnostico <id> como operador.
+
+RESULTADO ESPERADO
+- Los accesorios no se retrasan ni se separan del jugador.
+- La ropa acompaña cada brazo y pierna.
+- Las alas y compañeros permanecen unidos al torso.
+- Las órbitas son suaves y las texturas emisivas brillan en oscuridad.
+- Ningún modelo desaparece por escala, ruta de textura o anclaje.
+
+REPORTAR
+Captura en F5, ID del cosmético, tipo de skin Steve/Alex, acción realizada y
+si se usa shader. Los ajustes visuales finos deben hacerse tras la primera
+prueba real en Minecraft.

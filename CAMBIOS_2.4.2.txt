@@ -1,0 +1,7 @@
+ArlightChatClient 2.4.2
+
+- Categorías del menú de emotes colocadas verticalmente, una debajo de otra.
+- Los nombres largos ya no se superponen.
+- Altura compacta de los botones para evitar que el panel crezca demasiado.
+- Emotes de Criaturas y Jefes ampliados al 165%.
+- Emotes normales ampliados ligeramente al 125%.

@@ -1,0 +1,28 @@
+PRUEBA DE ARLIGHTCHATCLIENT 4.7.0
+
+Instalación:
+1. Compilar con Gradle > Tasks > build > build.
+2. Dejar únicamente ArlightChatClient-4.7.0.jar en mods.
+3. Reiniciar Minecraft por completo.
+4. Usar ArlightBingo 1.37.0 o posterior.
+
+Prueba de skins:
+/bingo campaign somita show overworld
+/bingo campaign somita show nether
+/bingo campaign somita show end
+/bingo campaign somita show celebration
+
+Prueba de celebración corregida:
+/bingo campaign somita show celebration
+/bingo campaign somita anim celebrate
+
+Prueba automática:
+/bingo campaign somita demo
+
+Verificar:
+- Cada variante muestra una ropa distinta.
+- La cara y el cabello siguen identificando a Somita.
+- El modelo usa brazos slim.
+- La capa exterior no crea rectángulos negros.
+- En celebrate las manos quedan fuera de la cabeza.
+- Siguen funcionando guardarropa, permisos, podio, emotes y cosméticos.

@@ -1,0 +1,40 @@
+{
+  "version": "3.4.0",
+  "base": "3.3.0",
+  "pets": {
+    "pony_axolotl_pal": [
+      7.2,
+      -7.1,
+      -0.35
+    ],
+    "somita_bat_pal": [
+      7.25,
+      -7.25,
+      -0.35
+    ],
+    "bingo_amethyst_eye": [
+      7.55,
+      -7.15,
+      -0.4
+    ]
+  },
+  "armor_fit_outfits": [
+    "pony_pastel_outfit",
+    "somita_night_outfit",
+    "bingo_corrupted_outfit"
+  ],
+  "tail_connector": "tail_fluke_connector",
+  "podium_emotes": {
+    "direct_textures": 13,
+    "supported_games": [
+      "bingo",
+      "parkour",
+      "tntrun",
+      "buildbattle",
+      "skywars",
+      "luckyblockislands"
+    ],
+    "screen": "UniversalPodiumScreen"
+  },
+  "note": "Validación estructural; no sustituye una prueba dentro de NeoForge."
+}

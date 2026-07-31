@@ -1,0 +1,2149 @@
+{
+  "status": "static_validation_passed",
+  "errors": [],
+  "checks_ok": 427,
+  "checks_total": 427,
+  "build_status": {
+    "chatclient": "blocked_no_dns",
+    "curios": "blocked_missing_wrapper_jar",
+    "cosmetics": "blocked_maven_not_installed"
+  },
+  "version": "4.5.0",
+  "checks": [
+    {
+      "check": "JSON client",
+      "ok": true,
+      "detail": "45 archivos válidos"
+    },
+    {
+      "check": "JSON curios",
+      "ok": true,
+      "detail": "115 archivos válidos"
+    },
+    {
+      "check": "Catálogo total",
+      "ok": true,
+      "detail": "59 cosméticos"
+    },
+    {
+      "check": "Catálogo dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Catálogo mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión plugin.yml",
+      "ok": true,
+      "detail": "1.12.0"
+    },
+    {
+      "check": "Permiso declarado dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Permiso declarado mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión ChatClient build.gradle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión ChatClient BUILD_VERSION",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión ChatClient mods.toml",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión Cosmetics pom.xml",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión Cosmetics BUILD_VERSION",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión Curios build.gradle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión Curios BUILD_VERSION",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Versión Curios mods.toml",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Emote de puesto 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño emote 1",
+      "ok": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "check": "Alpha emote 1",
+      "ok": true,
+      "detail": "(6, 12, 122, 116)"
+    },
+    {
+      "check": "Emote de puesto 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño emote 2",
+      "ok": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "check": "Alpha emote 2",
+      "ok": true,
+      "detail": "(7, 6, 120, 122)"
+    },
+    {
+      "check": "Emote de puesto 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño emote 3",
+      "ok": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "check": "Alpha emote 3",
+      "ok": true,
+      "detail": "(14, 6, 114, 122)"
+    },
+    {
+      "check": "Podio sin objetos en manos",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Podio cuerpo completo con rotación",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación de victoria",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Insignias de puestos usadas",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ruta de emotes de puesto",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Emote sin duplicado fantasma",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Cosméticos visibles en podio",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Filtro PASOS en ropero",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono dino_pajama_hat",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva dino_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono dino_pajama_chest",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva dino_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono dino_pajama_legs",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva dino_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono dino_pajama_feet",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva dino_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono axolotl_pajama_hat",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva axolotl_pajama_hat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono axolotl_pajama_chest",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva axolotl_pajama_chest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono axolotl_pajama_legs",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva axolotl_pajama_legs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono axolotl_pajama_feet",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva axolotl_pajama_feet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono pastel_heart_backpack",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva pastel_heart_backpack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono bunny_ear_hood",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva bunny_ear_hood",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono moon_star_cardigan",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva moon_star_cardigan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono cloud_skirt",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva cloud_skirt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono cloud_slippers",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva cloud_slippers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono floating_pastel_ribbon",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva floating_pastel_ribbon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono dino_footprints",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono axolotl_bubbles",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono pastel_star_steps",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono flower_petals_steps",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_chicken",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_fox",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_frog",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_allay",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_zombie",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Registro Curios mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Ítem registrado mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre ES mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Nombre EN mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo ítem mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Icono ítem mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Tamaño icono mobchibi_skeleton",
+      "ok": true,
+      "detail": "(32, 32)"
+    },
+    {
+      "check": "Icono no vacío mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo profesional mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Animación mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura cosmético mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Textura emisiva mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_creeper",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_creeper.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_creeper.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_creeper_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_creeper.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_creeper.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_enderman",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_enderman.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_enderman.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_enderman_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_enderman.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_enderman.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_bee",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_bee.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_bee.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_bee_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_bee.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_bee.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_axolotl",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_axolotl.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_axolotl.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_axolotl_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_axolotl.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_axolotl.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_slime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_slime.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_slime.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_slime_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_slime.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_slime.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_warden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_warden.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_warden.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_warden_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_warden.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_warden.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_chicken",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_chicken.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_chicken.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_chicken_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_chicken.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_chicken.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_fox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_fox.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_fox.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_fox_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_fox.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_fox.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_frog",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_frog.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_frog.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_frog_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_frog.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_frog.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_allay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_allay.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_allay.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_allay_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_allay.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_allay.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_zombie",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_zombie.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_zombie.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_zombie_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_zombie.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_zombie.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Modelo minimob mobchibi_skeleton",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_skeleton.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/cosmetics/mobchibi_skeleton.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/cosmetics/mobchibi_skeleton_emissive.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob textures/item/mobchibi_skeleton.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Recurso minimob no vacío textures/item/mobchibi_skeleton.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Partículas al caminar axolotl_bubbles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Partículas al caminar pastel_star_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Partículas al caminar flower_petals_steps",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Partículas al caminar dino_footprints",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Partículas compatibles 1.21.1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "Escaneo sintáctico Java",
+      "ok": true,
+      "detail": "{}"
+    }
+  ]
+}

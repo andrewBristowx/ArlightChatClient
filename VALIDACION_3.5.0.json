@@ -1,0 +1,731 @@
+{
+  "project": "ArlightChatClient",
+  "version": "3.5.0",
+  "status": "source_validated_not_full_neoforge_build",
+  "checks": [
+    {
+      "name": "client_version_build_gradle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "server_version_pom",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "server_version_plugin_yml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog_count",
+      "passed": true,
+      "detail": "20"
+    },
+    {
+      "name": "tail_catalog_slot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "server_tail_enum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "client_tail_enum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu_tail_category",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu_tail_equipped",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "profile_legacy_migration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog_file_migration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tail_render_independent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest_version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest_model_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "pony_horn_crown_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/pony_horn_crown.geo.json"
+    },
+    {
+      "name": "pony_horn_crown_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/pony_horn_crown.animation.json"
+    },
+    {
+      "name": "pony_horn_crown_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_horn_crown.png"
+    },
+    {
+      "name": "pony_horn_crown_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_horn_crown_emissive.png"
+    },
+    {
+      "name": "pony_horn_crown_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_horn_crown_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_pastel_outfit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/pony_pastel_outfit.geo.json"
+    },
+    {
+      "name": "pony_pastel_outfit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/pony_pastel_outfit.animation.json"
+    },
+    {
+      "name": "pony_pastel_outfit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_pastel_outfit.png"
+    },
+    {
+      "name": "pony_pastel_outfit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_pastel_outfit_emissive.png"
+    },
+    {
+      "name": "pony_pastel_outfit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_pastel_outfit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_whale_tail_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/pony_whale_tail.geo.json"
+    },
+    {
+      "name": "pony_whale_tail_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/pony_whale_tail.animation.json"
+    },
+    {
+      "name": "pony_whale_tail_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_whale_tail.png"
+    },
+    {
+      "name": "pony_whale_tail_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_whale_tail_emissive.png"
+    },
+    {
+      "name": "pony_whale_tail_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_whale_tail_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_axolotl_pal_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/pony_axolotl_pal.geo.json"
+    },
+    {
+      "name": "pony_axolotl_pal_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/pony_axolotl_pal.animation.json"
+    },
+    {
+      "name": "pony_axolotl_pal_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_axolotl_pal.png"
+    },
+    {
+      "name": "pony_axolotl_pal_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_axolotl_pal_emissive.png"
+    },
+    {
+      "name": "pony_axolotl_pal_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_axolotl_pal_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_whale_stars_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/pony_whale_stars.geo.json"
+    },
+    {
+      "name": "pony_whale_stars_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/pony_whale_stars.animation.json"
+    },
+    {
+      "name": "pony_whale_stars_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_whale_stars.png"
+    },
+    {
+      "name": "pony_whale_stars_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/pony_whale_stars_emissive.png"
+    },
+    {
+      "name": "pony_whale_stars_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "pony_whale_stars_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_clip_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_clip.geo.json"
+    },
+    {
+      "name": "somita_bat_clip_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/somita_bat_clip.animation.json"
+    },
+    {
+      "name": "somita_bat_clip_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_clip.png"
+    },
+    {
+      "name": "somita_bat_clip_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_clip_emissive.png"
+    },
+    {
+      "name": "somita_bat_clip_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_clip_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_night_outfit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/somita_night_outfit.geo.json"
+    },
+    {
+      "name": "somita_night_outfit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/somita_night_outfit.animation.json"
+    },
+    {
+      "name": "somita_night_outfit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_night_outfit.png"
+    },
+    {
+      "name": "somita_night_outfit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_night_outfit_emissive.png"
+    },
+    {
+      "name": "somita_night_outfit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_night_outfit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_wings_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_wings.geo.json"
+    },
+    {
+      "name": "somita_bat_wings_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/somita_bat_wings.animation.json"
+    },
+    {
+      "name": "somita_bat_wings_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_wings.png"
+    },
+    {
+      "name": "somita_bat_wings_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_wings_emissive.png"
+    },
+    {
+      "name": "somita_bat_wings_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_wings_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_pal_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/somita_bat_pal.geo.json"
+    },
+    {
+      "name": "somita_bat_pal_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/somita_bat_pal.animation.json"
+    },
+    {
+      "name": "somita_bat_pal_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_pal.png"
+    },
+    {
+      "name": "somita_bat_pal_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_bat_pal_emissive.png"
+    },
+    {
+      "name": "somita_bat_pal_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_bat_pal_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_crimson_hearts_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/somita_crimson_hearts.geo.json"
+    },
+    {
+      "name": "somita_crimson_hearts_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/somita_crimson_hearts.animation.json"
+    },
+    {
+      "name": "somita_crimson_hearts_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_crimson_hearts.png"
+    },
+    {
+      "name": "somita_crimson_hearts_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/somita_crimson_hearts_emissive.png"
+    },
+    {
+      "name": "somita_crimson_hearts_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "somita_crimson_hearts_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_corrupted_crown_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_corrupted_crown.geo.json"
+    },
+    {
+      "name": "bingo_corrupted_crown_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_corrupted_crown.animation.json"
+    },
+    {
+      "name": "bingo_corrupted_crown_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_corrupted_crown.png"
+    },
+    {
+      "name": "bingo_corrupted_crown_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_corrupted_crown_emissive.png"
+    },
+    {
+      "name": "bingo_corrupted_crown_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_corrupted_crown_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_corrupted_outfit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_corrupted_outfit.geo.json"
+    },
+    {
+      "name": "bingo_corrupted_outfit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_corrupted_outfit.animation.json"
+    },
+    {
+      "name": "bingo_corrupted_outfit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_corrupted_outfit.png"
+    },
+    {
+      "name": "bingo_corrupted_outfit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_corrupted_outfit_emissive.png"
+    },
+    {
+      "name": "bingo_corrupted_outfit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_corrupted_outfit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_void_wings_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_void_wings.geo.json"
+    },
+    {
+      "name": "bingo_void_wings_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_void_wings.animation.json"
+    },
+    {
+      "name": "bingo_void_wings_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_void_wings.png"
+    },
+    {
+      "name": "bingo_void_wings_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_void_wings_emissive.png"
+    },
+    {
+      "name": "bingo_void_wings_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_void_wings_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_amethyst_eye_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_amethyst_eye.geo.json"
+    },
+    {
+      "name": "bingo_amethyst_eye_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_amethyst_eye.animation.json"
+    },
+    {
+      "name": "bingo_amethyst_eye_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_amethyst_eye.png"
+    },
+    {
+      "name": "bingo_amethyst_eye_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_amethyst_eye_emissive.png"
+    },
+    {
+      "name": "bingo_amethyst_eye_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_amethyst_eye_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_emerald_orbit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_emerald_orbit.geo.json"
+    },
+    {
+      "name": "bingo_emerald_orbit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_emerald_orbit.animation.json"
+    },
+    {
+      "name": "bingo_emerald_orbit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_emerald_orbit.png"
+    },
+    {
+      "name": "bingo_emerald_orbit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_emerald_orbit_emissive.png"
+    },
+    {
+      "name": "bingo_emerald_orbit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_emerald_orbit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_gold_orbit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_gold_orbit.geo.json"
+    },
+    {
+      "name": "bingo_gold_orbit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_gold_orbit.animation.json"
+    },
+    {
+      "name": "bingo_gold_orbit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_gold_orbit.png"
+    },
+    {
+      "name": "bingo_gold_orbit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_gold_orbit_emissive.png"
+    },
+    {
+      "name": "bingo_gold_orbit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_gold_orbit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_amethyst_orbit_geometry_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/models/cosmetics/blockbench/bingo_amethyst_orbit.geo.json"
+    },
+    {
+      "name": "bingo_amethyst_orbit_animation_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/animations/cosmetics/bingo_amethyst_orbit.animation.json"
+    },
+    {
+      "name": "bingo_amethyst_orbit_texture_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_amethyst_orbit.png"
+    },
+    {
+      "name": "bingo_amethyst_orbit_emissive_exists",
+      "passed": true,
+      "detail": "/mnt/data/ArlightChatClient-3.5.0-TAIL-SLOT-ARMOR-LAYER-PETS-WINGS-OVERHAUL-SOURCE/src/main/resources/assets/arlightchatclient/textures/cosmetics/bingo_amethyst_orbit_emissive.png"
+    },
+    {
+      "name": "bingo_amethyst_orbit_texture_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "bingo_amethyst_orbit_emissive_png",
+      "passed": true,
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "tail_parent_tail_mid",
+      "passed": true,
+      "detail": "tail_base"
+    },
+    {
+      "name": "tail_parent_tail_tip",
+      "passed": true,
+      "detail": "tail_mid"
+    },
+    {
+      "name": "tail_parent_tail_fluke_connector",
+      "passed": true,
+      "detail": "tail_tip"
+    },
+    {
+      "name": "tail_parent_tail_fin_left",
+      "passed": true,
+      "detail": "tail_fluke_connector"
+    },
+    {
+      "name": "tail_parent_tail_fin_right",
+      "passed": true,
+      "detail": "tail_fluke_connector"
+    },
+    {
+      "name": "tail_lower_waist_anchor",
+      "passed": true,
+      "detail": "[0, 9.45, 2.15]"
+    },
+    {
+      "name": "manifest_tail_slot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wings_parent_wing_left_membrane_top",
+      "passed": true,
+      "detail": "wing_left_base"
+    },
+    {
+      "name": "wings_parent_wing_left_membrane_low",
+      "passed": true,
+      "detail": "wing_left_base"
+    },
+    {
+      "name": "wings_parent_wing_right_membrane_top",
+      "passed": true,
+      "detail": "wing_right_base"
+    },
+    {
+      "name": "wings_parent_wing_right_membrane_low",
+      "passed": true,
+      "detail": "wing_right_base"
+    },
+    {
+      "name": "wing_membrane_depth_separation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "pony_axolotl_pal_outward",
+      "passed": true,
+      "detail": "[10.2, -9.1, -2.0]"
+    },
+    {
+      "name": "pony_axolotl_pal_raised",
+      "passed": true,
+      "detail": "[10.2, -9.1, -2.0]"
+    },
+    {
+      "name": "somita_bat_pal_outward",
+      "passed": true,
+      "detail": "[10.0, -9.3, -1.9]"
+    },
+    {
+      "name": "somita_bat_pal_raised",
+      "passed": true,
+      "detail": "[10.0, -9.3, -1.9]"
+    },
+    {
+      "name": "bingo_amethyst_eye_outward",
+      "passed": true,
+      "detail": "[10.6, -8.9, -2.1]"
+    },
+    {
+      "name": "bingo_amethyst_eye_raised",
+      "passed": true,
+      "detail": "[10.6, -8.9, -2.1]"
+    },
+    {
+      "name": "pony_pastel_outfit_armor_deformation",
+      "passed": true,
+      "detail": "0.31"
+    },
+    {
+      "name": "somita_night_outfit_armor_deformation",
+      "passed": true,
+      "detail": "0.31"
+    },
+    {
+      "name": "bingo_corrupted_outfit_armor_deformation",
+      "passed": true,
+      "detail": "0.31"
+    },
+    {
+      "name": "pony_whale_tail_animation_bones",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "somita_bat_wings_animation_bones",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "pony_axolotl_pal_animation_bones",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "somita_bat_pal_animation_bones",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "bingo_amethyst_eye_animation_bones",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "java_brace_balance",
+      "passed": true,
+      "detail": "65"
+    }
+  ],
+  "build_attempt": {
+    "command": "./gradlew compileJava --offline --no-daemon",
+    "result": "failed_before_compile",
+    "reason": "Gradle 9.6.0 distribution unavailable because the runtime has no network access"
+  },
+  "notes": [
+    "Java syntax was checked with javac parsing; missing Minecraft/NeoForge symbols were expected without dependencies.",
+    "ProfessionalCosmeticModels was compiled and initialized against a structural stub; all 17 models and parent chains were valid."
+  ]
+}

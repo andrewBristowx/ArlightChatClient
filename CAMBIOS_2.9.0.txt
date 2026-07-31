@@ -1,0 +1,7 @@
+ArlightChatClient 2.9.0 - UNIVERSAL 3D PODIUM
+- Pantalla común para TNTRun, Parkour, Build Battle, Bingo, SkyWars y LuckyBlock Islands.
+- Modelos 3D con skins reales de los tres primeros puestos.
+- Poses/animaciones de victoria, plataformas, medallas y confeti.
+- Estadísticas específicas de cada minijuego.
+- Botones Volver a jugar y Salir al lobby.
+- Todos los resultados son individuales; no existe interfaz de equipos.

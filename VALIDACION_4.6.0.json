@@ -1,0 +1,78 @@
+{
+  "project": "ArlightChatClient",
+  "version": "4.6.0",
+  "base": "4.5.0-PODIUM-CUTE-COLLECTION",
+  "feature": "SOMITA-GUIDE-MERGE",
+  "preserved_features": [
+    "visual wardrobe",
+    "permissions panel",
+    "universal podium",
+    "cute collection cosmetics",
+    "emotes and minigame overlays"
+  ],
+  "added_features": [
+    "arlightbingo:somita payload",
+    "slim player renderer",
+    "four skin variants",
+    "ten testable animations",
+    "floating name and dialogue"
+  ],
+  "compile_status": "Not compiled in this environment: Gradle distribution download unavailable (DNS/network).",
+  "files": [
+    {
+      "path": "build.gradle",
+      "size": 789,
+      "sha256": "122a8b986a2c9311c0173436d6e1a5b923e81a29cdb4cbbe20e1723b4f46b764"
+    },
+    {
+      "path": "BUILD_VERSION.txt",
+      "size": 6,
+      "sha256": "656cd3a27fe3b73475a1fc9becaf4a4d06d25b482904d8dab14429787a23657d"
+    },
+    {
+      "path": "src/main/resources/META-INF/neoforge.mods.toml",
+      "size": 559,
+      "sha256": "f50b4e4d8a458fc0a89e98419c0dc6b346a9e9c6a21652aae57d9ddd66ada25a"
+    },
+    {
+      "path": "src/main/java/com/arlight/chatclient/ArlightChatClient.java",
+      "size": 1341,
+      "sha256": "17444a2653c3ede5e7a033cab7d7bd2056ce2bc57c3337bc9c0b87effb14db66"
+    },
+    {
+      "path": "src/main/java/com/arlight/chatclient/ClientNetworking.java",
+      "size": 4627,
+      "sha256": "f7be7600977a96e7c998ecd8fc7f527b2750a720c4305d9aa175b67e06921fa8"
+    },
+    {
+      "path": "src/main/java/com/arlight/chatclient/SomitaGuidePayload.java",
+      "size": 830,
+      "sha256": "eef8ad7f030aef41a20ba4bbcdc1226dd9f88205b77508cb693ffacefdb353e1"
+    },
+    {
+      "path": "src/main/java/com/arlight/chatclient/SomitaGuideRenderer.java",
+      "size": 15019,
+      "sha256": "7760139a5da8c50cfc3fe244b82d73ee12c8d893b4fc570b1b323aef11457665"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/overworld.png",
+      "size": 822,
+      "sha256": "a9b4923c078ed75b667bf058b99667a38f146840a11a6d3a1e888662d2d741dd"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/nether.png",
+      "size": 822,
+      "sha256": "a9b4923c078ed75b667bf058b99667a38f146840a11a6d3a1e888662d2d741dd"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/end.png",
+      "size": 822,
+      "sha256": "a9b4923c078ed75b667bf058b99667a38f146840a11a6d3a1e888662d2d741dd"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/celebration.png",
+      "size": 822,
+      "sha256": "a9b4923c078ed75b667bf058b99667a38f146840a11a6d3a1e888662d2d741dd"
+    }
+  ]
+}

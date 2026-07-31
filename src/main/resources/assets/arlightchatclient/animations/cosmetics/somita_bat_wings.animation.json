@@ -1,0 +1,53 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.somita_bat_wings.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "wing_left_base": {
+          "rotation": [
+            "4.0 + math.sin(query.life_time*120.0)*2.0",
+            "18.0 + math.sin(query.life_time*160.0)*8.0",
+            "-10.0 - query.modified_move_speed*8.0"
+          ]
+        },
+        "wing_right_base": {
+          "rotation": [
+            "4.0 - math.sin(query.life_time*120.0)*2.0",
+            "-18.0 - math.sin(query.life_time*160.0)*8.0",
+            "10.0 + query.modified_move_speed*8.0"
+          ]
+        },
+        "wing_left_membrane_top": {
+          "rotation": [
+            0,
+            0,
+            "math.sin(query.life_time*160.0)*1.5"
+          ]
+        },
+        "wing_right_membrane_top": {
+          "rotation": [
+            0,
+            0,
+            "-math.sin(query.life_time*160.0)*1.5"
+          ]
+        },
+        "wing_left_membrane_low": {
+          "rotation": [
+            0,
+            0,
+            "math.sin(query.life_time*160.0)*1.0"
+          ]
+        },
+        "wing_right_membrane_low": {
+          "rotation": [
+            0,
+            0,
+            "-math.sin(query.life_time*160.0)*1.0"
+          ]
+        }
+      }
+    }
+  }
+}

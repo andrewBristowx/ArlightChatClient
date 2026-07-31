@@ -1,0 +1,74 @@
+{
+  "project": "ArlightChatClient",
+  "version": "4.7.0",
+  "base": "4.6.0-SOMITA-GUIDE-MERGE",
+  "feature": "SOMITA-DIMENSION-SKINS",
+  "skin_format": {
+    "width": 64,
+    "height": 64,
+    "model": "slim",
+    "variants": [
+      "overworld",
+      "nether",
+      "end",
+      "celebration"
+    ]
+  },
+  "animation_fix": "celebrate arms moved to an open V pose to prevent head clipping",
+  "preserved_features": [
+    "visual wardrobe",
+    "permissions panel",
+    "universal podium",
+    "cute collection cosmetics",
+    "emotes and minigame overlays",
+    "arlightbingo:somita protocol"
+  ],
+  "compile_status": "Gradle build not executed: wrapper attempted to download Gradle 9.6.0 but services.gradle.org was unavailable in this environment.",
+  "files": [
+    {
+      "path": "build.gradle",
+      "size": 789,
+      "sha256": "f04cb10cd1c54beb28212e247b20e5bc2414d43451f63c366e0d38b29cfd7c4e"
+    },
+    {
+      "path": "BUILD_VERSION.txt",
+      "size": 6,
+      "sha256": "ef3193df6d68bc7ef70fda62056eba15f0ef668fc9c21b487ae7fd56a562bfd6"
+    },
+    {
+      "path": "src/main/java/com/arlight/chatclient/SomitaGuideRenderer.java",
+      "size": 15272,
+      "sha256": "8f1ab1a8c3dc9333cb54734c3b933959f52475c4a06ff3da9816999dc75b8109"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/overworld.png",
+      "size": 7994,
+      "sha256": "c0c9b5142869b0ad3273d3d80530549ce1076878a5556eb0a7828567e24e1db7"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/nether.png",
+      "size": 8432,
+      "sha256": "c80767127362f2387fea814a46c631e2dd5ef7d1fb921b98e240150f6f8a125d"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/end.png",
+      "size": 8332,
+      "sha256": "23e65131d9ba1a4fef408cad2ccf57a2949b921c730856496dff04871f17d003"
+    },
+    {
+      "path": "src/main/resources/assets/arlightchatclient/textures/entity/somita/celebration.png",
+      "size": 8145,
+      "sha256": "0154965249df85d8d07fc3bcc27dd8bd6ea7e455f0403c02455327f0075149ee"
+    },
+    {
+      "path": "CAMBIOS_4.7.0.txt",
+      "size": 888,
+      "sha256": "3ea7e9ac5700f02f2aa7c8dc6f777679e44e783e1511260aad4a6cb87293b988"
+    },
+    {
+      "path": "PROBAR_4.7.0.txt",
+      "size": 869,
+      "sha256": "c4fce82608b0bc726894e78b425ace1d6d7f2f586b789ce96d2e96243b1511bd"
+    }
+  ]
+}

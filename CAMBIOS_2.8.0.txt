@@ -1,0 +1,10 @@
+ARLIGHTCHATCLIENT 2.8.0 - NEW MINIGAMES LOBBY UI
+
+- Añade salas visuales completas para TNTRun, Parkour y Build Battle.
+- Integra los tres fondos aprobados de Pony0n.
+- Muestra lista de jugadores en cola, capacidad, estado y cuenta regresiva.
+- Añade botones visuales ¿Cómo jugar? y Salir.
+- El botón de ayuda cambia el panel entre instrucciones y jugadores.
+- Permite abrir chat/comandos sin abandonar la cola.
+- Añade canales arlighttntrun:waiting, arlightparkour:waiting y arlightbuildbattle:waiting.
+- Mantiene compatibilidad con Bingo, SkyWars, LuckyBlock Islands y scoreboards anteriores.

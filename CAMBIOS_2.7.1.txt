@@ -1,0 +1,5 @@
+ArlightChatClient 2.7.1
+- T abre el chat desde la pantalla de espera LuckyBlock Islands.
+- / abre directamente el chat de comandos.
+- La pantalla sigue bloqueando ESC para evitar cerrarla por accidente.
+- Preparado para el nuevo fondo de Pony0n sorprendida sosteniendo un Lucky Block.

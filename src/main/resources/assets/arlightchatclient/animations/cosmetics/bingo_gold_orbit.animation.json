@@ -1,0 +1,82 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.bingo_gold_orbit.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "gem_core": {
+          "rotation": [
+            "query.life_time*90.0",
+            "query.life_time*150.0",
+            "query.life_time*55.0"
+          ],
+          "position": [
+            0,
+            "math.sin(query.life_time*120.0)*0.8",
+            0
+          ]
+        },
+        "gold_core": {
+          "rotation": [
+            "query.life_time*55.0",
+            "query.life_time*130.0",
+            "query.life_time*35.0"
+          ],
+          "position": [
+            0,
+            "math.sin(query.life_time*120.0)*0.8",
+            0
+          ]
+        },
+        "amethyst_core": {
+          "rotation": [
+            "query.life_time*75.0",
+            "query.life_time*145.0",
+            "query.life_time*45.0"
+          ],
+          "position": [
+            0,
+            "math.sin(query.life_time*120.0)*0.8",
+            0
+          ]
+        },
+        "corrupt_ring": {
+          "rotation": [
+            "65.0 + query.life_time*40.0",
+            "query.life_time*95.0",
+            "query.life_time*60.0"
+          ]
+        },
+        "gold_flame_one": {
+          "rotation": [
+            0,
+            0,
+            "-15.0 + math.sin(query.life_time*180.0)*8.0"
+          ]
+        },
+        "gold_flame_two": {
+          "rotation": [
+            0,
+            0,
+            "20.0 - math.sin(query.life_time*180.0)*8.0"
+          ]
+        },
+        "shard_left": {
+          "rotation": [
+            0,
+            0,
+            "-28.0 + math.sin(query.life_time*140.0)*5.0"
+          ]
+        },
+        "shard_right": {
+          "rotation": [
+            0,
+            0,
+            "28.0 - math.sin(query.life_time*140.0)*5.0"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.arlight.pony_whale_stars",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 4.0,
+        "visible_bounds_height": 4.0,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "orbit_whale",
+          "parent": "root_anchor",
+          "pivot": [
+            0,
+            10,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                9.0,
+                -2.0,
+                -2.0
+              ],
+              "size": [
+                5.0,
+                4.0,
+                4.0
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.15
+            },
+            {
+              "origin": [
+                7.0,
+                -1.4,
+                -1.5
+              ],
+              "size": [
+                2.7,
+                2.8,
+                3.0
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.1
+            },
+            {
+              "origin": [
+                13.1,
+                -1.0,
+                -1.4
+              ],
+              "size": [
+                2.2,
+                2.0,
+                2.8
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.08
+            },
+            {
+              "origin": [
+                8.3,
+                -0.4,
+                -2.35
+              ],
+              "size": [
+                0.5,
+                0.5,
+                0.4
+              ],
+              "uv": [
+                96,
+                96
+              ],
+              "inflate": 0.01
+            },
+            {
+              "origin": [
+                8.4,
+                0.4,
+                -2.35
+              ],
+              "size": [
+                0.4,
+                0.25,
+                0.35
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.01
+            }
+          ]
+        },
+        {
+          "name": "whale_tail_left",
+          "parent": "orbit_whale",
+          "pivot": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            -25
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                -1.4,
+                -0.6
+              ],
+              "size": [
+                3.2,
+                1.8,
+                1.2
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.06
+            }
+          ]
+        },
+        {
+          "name": "whale_tail_right",
+          "parent": "orbit_whale",
+          "pivot": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0,
+            0,
+            25
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                -0.4,
+                -0.6
+              ],
+              "size": [
+                3.2,
+                1.8,
+                1.2
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.06
+            }
+          ]
+        },
+        {
+          "name": "star_one",
+          "parent": "root_anchor",
+          "pivot": [
+            -10,
+            6,
+            -3
+          ],
+          "rotation": [
+            0,
+            0,
+            45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.0,
+                -1.0,
+                -0.35
+              ],
+              "size": [
+                2.0,
+                2.0,
+                0.7
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.05
+            },
+            {
+              "origin": [
+                -0.35,
+                -1.7,
+                -0.3
+              ],
+              "size": [
+                0.7,
+                3.4,
+                0.6
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "star_two",
+          "parent": "root_anchor",
+          "pivot": [
+            -6,
+            14,
+            7
+          ],
+          "rotation": [
+            0,
+            0,
+            45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.8,
+                -0.8,
+                -0.3
+              ],
+              "size": [
+                1.6,
+                1.6,
+                0.6
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.04
+            },
+            {
+              "origin": [
+                -0.3,
+                -1.35,
+                -0.25
+              ],
+              "size": [
+                0.6,
+                2.7,
+                0.5
+              ],
+              "uv": [
+                0,
+                32
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "star_three",
+          "parent": "root_anchor",
+          "pivot": [
+            2,
+            3,
+            10
+          ],
+          "rotation": [
+            0,
+            0,
+            45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.7,
+                -0.7,
+                -0.25
+              ],
+              "size": [
+                1.4,
+                1.4,
+                0.5
+              ],
+              "uv": [
+                0,
+                64
+              ],
+              "inflate": 0.04
+            },
+            {
+              "origin": [
+                -0.25,
+                -1.2,
+                -0.22
+              ],
+              "size": [
+                0.5,
+                2.4,
+                0.44
+              ],
+              "uv": [
+                0,
+                64
+              ],
+              "inflate": 0.03
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

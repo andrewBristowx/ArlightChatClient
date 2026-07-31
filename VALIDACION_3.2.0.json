@@ -1,0 +1,20 @@
+{
+  "version": "3.2.0",
+  "status": "source-static-validation-passed",
+  "models": 17,
+  "bones": 101,
+  "cubes": 275,
+  "changes": [
+    "skin-fit outfits",
+    "hierarchical pets",
+    "two-horn Pony0n crown",
+    "cutout depth render",
+    "slim arm fit",
+    "compact orbital models"
+  ],
+  "limitations": [
+    "No full NeoForge runtime test in this environment."
+  ],
+  "java21_stub_compile": "passed",
+  "gradle_compile": "not-run: wrapper attempted network download and services.gradle.org was unavailable"
+}

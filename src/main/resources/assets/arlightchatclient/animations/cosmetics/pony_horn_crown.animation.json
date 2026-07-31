@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.pony_horn_crown.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "ear_left": {
+          "rotation": [
+            0,
+            0,
+            "-10.0 + math.sin(query.life_time*120.0)*2.0"
+          ]
+        },
+        "ear_right": {
+          "rotation": [
+            0,
+            0,
+            "10.0 - math.sin(query.life_time*120.0)*2.0"
+          ]
+        },
+        "ribbon_left": {
+          "rotation": [
+            "12.0 + math.sin(query.life_time*95.0)*2.0",
+            0,
+            -8
+          ]
+        },
+        "ribbon_right": {
+          "rotation": [
+            "12.0 - math.sin(query.life_time*95.0)*2.0",
+            0,
+            8
+          ]
+        }
+      }
+    }
+  }
+}

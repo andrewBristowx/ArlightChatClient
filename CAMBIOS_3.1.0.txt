@@ -1,0 +1,31 @@
+ARLIGHTCHATCLIENT 3.1.0 — PROFESSIONAL BLOCKBENCH / BONE OVERHAUL
+
+OBJETIVO
+- Sustituye el prototipo de cubos sueltos por modelos cosméticos profesionales,
+  anclados a las partes reales del PlayerModel.
+
+CAMBIOS
+- 17 modelos visibles rediseñados con fuentes Blockbench compatibles.
+- 3 rastros de partículas para completar los 20 cosméticos del catálogo.
+- 94 huesos y 313 cubos detallados.
+- Ropa separada en torso, brazos y piernas.
+- Anclajes HEAD, BODY, LEFT_ARM, RIGHT_ARM, LEFT_LEG, RIGHT_LEG y ROOT.
+- Modelos que siguen caminar, correr, agacharse, nadar, volar y girar la cabeza.
+- Interpolación visual por frame mediante ageInTicks y partialTick.
+- Animaciones secundarias: orejas, lazos, faldas, colas, alas, mascotas,
+  auras y cristales orbitales.
+- Texturas difusas 128x128 y máscaras emisivas dedicadas.
+- Capa oficial de render de jugador registrada mediante AddLayers.
+- Casco oculta accesorios de cabeza y élitros ocultan alas cosméticas.
+- El podio universal oculta temporalmente cosméticos para evitar duplicados.
+- El renderizador procedural antiguo queda como compatibilidad vacía.
+
+FUENTES EDITABLES
+assets/arlightchatclient/models/cosmetics/blockbench/*.geo.json
+assets/arlightchatclient/animations/cosmetics/*.animation.json
+assets/arlightchatclient/textures/cosmetics/*.png
+
+NOTA
+Los .geo.json y .animation.json se pueden importar y editar en Blockbench.
+La geometría horneada en Java procede del mismo diseño para no depender de un
+loader de modelos externo durante la partida.

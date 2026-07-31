@@ -1,0 +1,5 @@
+ArlightChatClient 2.7.4
+
+- Se reemplazó únicamente el fondo de LuckyBlock Islands.
+- Se usa exactamente la imagen aprobada por el usuario, sin regenerarla ni modificar Bingo/SkyWars.
+- Se mantienen título, datos de jugadores, mapa y botones renderizados por el cliente.

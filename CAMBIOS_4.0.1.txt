@@ -1,0 +1,5 @@
+ArlightChatClient 4.0.1 - PERMISSIONS BIDIRECTIONAL CHANNEL FIX
+
+- arlightpermissions:panel ahora se registra con playBidirectional.
+- Corrige desconexión de NeoForge: el cliente no admitía el flujo negociado.
+- Mantiene panel visual y ropero 4.0.0.

@@ -1,0 +1,18 @@
+ArlightChatClient 4.7.0 - SOMITA DIMENSION SKINS
+
+Base:
+- ArlightChatClient 4.6.0 SOMITA GUIDE MERGE.
+
+Cambios:
+- Se reemplazaron las cuatro texturas provisionales por skins reales 64x64 slim.
+- Overworld: maid aventurera con broche esmeralda.
+- Nether: vampiresa elegante con detalles borgoña, negros y dorados.
+- End: atuendo astral ceremonial con amatista y diadema.
+- Celebration: atuendo festivo blanco, rosa, morado y dorado.
+- Se conservaron el rostro, cabello y paleta visual reconocible de Somita.
+- Se corrigió la animación celebrate: los brazos forman una V abierta y ya no atraviesan la cabeza.
+- Se mantienen guardarropa, permisos, podio, emotes, mascotas, cosméticos y colección cute de 4.5.0/4.6.0.
+
+Compatibilidad:
+- Requiere ArlightBingo 1.37.0 o posterior para las escenas de Somita.
+- No requiere cambios nuevos en el plugin para seleccionar las cuatro variantes.

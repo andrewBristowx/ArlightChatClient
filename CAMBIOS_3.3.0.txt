@@ -1,0 +1,11 @@
+ArlightChatClient 3.3.0 — CONNECTED-GEOMETRY-EMISSIVE-POLISH
+
+- Cola cachalote: aletas y lazo ahora son hijos de tail_base; tamaño conservado.
+- Aura cachalote: aletas de la mini ballena unidas a orbit_whale.
+- Broche murciélago: alas unidas al cuerpo del broche.
+- Coronas: orejas, cuernos, cristales y runas ligados a sus bandas.
+- Ropas: faldas, capucha, tabardos y cristales ligados al cuerpo/prenda correspondiente.
+- Mascotas: ajolote, murciélago y ojo elevados y separados de la cabeza.
+- Brillo: se conserva la emisión fuerte; solo se reducen un 6% los blancos saturados y se tintan según la colección.
+- Ajuste de ropa: carcasa principal ligeramente más cercana a la skin para reducir intersecciones.
+- IDs, permisos y protocolo sin cambios; compatible con ArlightCosmetics 1.2.0.

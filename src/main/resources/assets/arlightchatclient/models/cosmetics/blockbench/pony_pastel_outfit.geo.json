@@ -1,0 +1,540 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.arlight.pony_pastel_outfit",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 4.0,
+        "visible_bounds_height": 4.0,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "body_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "left_arm_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "right_arm_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "left_leg_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "right_leg_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jacket_body",
+          "parent": "body_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                -0.02,
+                -2
+              ],
+              "size": [
+                8,
+                12.02,
+                4
+              ],
+              "uv": [
+                0,
+                0
+              ],
+              "inflate": 0.56
+            }
+          ]
+        },
+        {
+          "name": "pony_corset",
+          "parent": "jacket_body",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2.55,
+                1.0,
+                -2.2
+              ],
+              "size": [
+                5.1,
+                6.8,
+                0.22
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.015
+            },
+            {
+              "origin": [
+                -0.18,
+                1.2,
+                -2.26
+              ],
+              "size": [
+                0.36,
+                6.1,
+                0.16
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.008
+            }
+          ]
+        },
+        {
+          "name": "pony_belt",
+          "parent": "jacket_body",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.08,
+                8.25,
+                -2.08
+              ],
+              "size": [
+                8.16,
+                1.05,
+                4.16
+              ],
+              "uv": [
+                64,
+                16
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "hood_left",
+          "parent": "jacket_body",
+          "pivot": [
+            -1.45,
+            -0.05,
+            2.08
+          ],
+          "rotation": [
+            10,
+            0,
+            7
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.55,
+                -0.35,
+                -0.12
+              ],
+              "size": [
+                1.7,
+                1.95,
+                0.4
+              ],
+              "uv": [
+                96,
+                16
+              ],
+              "inflate": 0.025
+            }
+          ]
+        },
+        {
+          "name": "hood_right",
+          "parent": "jacket_body",
+          "pivot": [
+            1.45,
+            -0.05,
+            2.08
+          ],
+          "rotation": [
+            10,
+            0,
+            -7
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.15,
+                -0.35,
+                -0.12
+              ],
+              "size": [
+                1.7,
+                1.95,
+                0.4
+              ],
+              "uv": [
+                96,
+                16
+              ],
+              "inflate": 0.025
+            }
+          ]
+        },
+        {
+          "name": "skirt_front_left",
+          "parent": "jacket_body",
+          "pivot": [
+            -2.05,
+            9.25,
+            -2.06
+          ],
+          "rotation": [
+            -3,
+            0,
+            -3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2.05,
+                0,
+                -0.2
+              ],
+              "size": [
+                4.0,
+                3.45,
+                0.42
+              ],
+              "uv": [
+                64,
+                24
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "skirt_front_right",
+          "parent": "jacket_body",
+          "pivot": [
+            2.05,
+            9.25,
+            -2.06
+          ],
+          "rotation": [
+            -3,
+            0,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.95,
+                0,
+                -0.2
+              ],
+              "size": [
+                4.0,
+                3.45,
+                0.42
+              ],
+              "uv": [
+                64,
+                24
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "skirt_back_left",
+          "parent": "jacket_body",
+          "pivot": [
+            -2.05,
+            9.25,
+            2.06
+          ],
+          "rotation": [
+            3,
+            0,
+            -3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2.05,
+                0,
+                -0.22
+              ],
+              "size": [
+                4.0,
+                3.45,
+                0.42
+              ],
+              "uv": [
+                80,
+                24
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "skirt_back_right",
+          "parent": "jacket_body",
+          "pivot": [
+            2.05,
+            9.25,
+            2.06
+          ],
+          "rotation": [
+            3,
+            0,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.95,
+                0,
+                -0.22
+              ],
+              "size": [
+                4.0,
+                3.45,
+                0.42
+              ],
+              "uv": [
+                80,
+                24
+              ],
+              "inflate": 0.03
+            }
+          ]
+        },
+        {
+          "name": "left_sleeve",
+          "parent": "left_arm_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                -2,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.55
+            },
+            {
+              "origin": [
+                -2.08,
+                8.55,
+                -2.08
+              ],
+              "size": [
+                4.16,
+                1.5,
+                4.16
+              ],
+              "uv": [
+                96,
+                32
+              ],
+              "inflate": 0.3
+            }
+          ]
+        },
+        {
+          "name": "right_sleeve",
+          "parent": "right_arm_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                -2,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                48,
+                0
+              ],
+              "inflate": 0.55
+            },
+            {
+              "origin": [
+                -2.08,
+                8.55,
+                -2.08
+              ],
+              "size": [
+                4.16,
+                1.5,
+                4.16
+              ],
+              "uv": [
+                96,
+                32
+              ],
+              "inflate": 0.3
+            }
+          ]
+        },
+        {
+          "name": "left_stocking",
+          "parent": "left_leg_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                24
+              ],
+              "inflate": 0.54
+            },
+            {
+              "origin": [
+                -2.08,
+                8.0,
+                -2.2
+              ],
+              "size": [
+                4.16,
+                4.1,
+                4.4
+              ],
+              "uv": [
+                32,
+                24
+              ],
+              "inflate": 0.04
+            }
+          ]
+        },
+        {
+          "name": "right_stocking",
+          "parent": "right_leg_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                16,
+                24
+              ],
+              "inflate": 0.54
+            },
+            {
+              "origin": [
+                -2.08,
+                8.0,
+                -2.2
+              ],
+              "size": [
+                4.16,
+                4.1,
+                4.4
+              ],
+              "uv": [
+                48,
+                24
+              ],
+              "inflate": 0.04
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+ARLIGHTCHATCLIENT 2.5.0 — CARTÓN DE BINGO MODERNO
+
+- Nuevo canal arlightbingo:card.
+- Panel lateral 5x5 con ItemStack reales de Minecraft y mods.
+- Progreso y marca visual al completar casillas.
+- Pantalla completa abierta desde el objeto del cartón o /bingo card.
+- Tooltip nativo: el nombre del objeto aparece en el idioma configurado en Minecraft.
+- La interfaz se oculta durante la pantalla cinematográfica de preparación.
+- Conserva los ajustes del menú de emotes 2.4.5.

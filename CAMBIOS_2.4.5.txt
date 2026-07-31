@@ -1,0 +1,8 @@
+ArlightChatClient 2.4.5 - PANEL BAJO SCOREBOARD
+
+- Se redujo la altura total del menú de emotes.
+- El borde superior del panel queda más abajo para no tapar el scoreboard.
+- Se mantienen tres filas visibles de emotes.
+- Se conserva el tamaño de 28 px de los iconos.
+- Categorías y paginación usan espacios más compactos.
+- No requiere cambios en el resource pack 1.8.2.

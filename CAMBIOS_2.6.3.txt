@@ -1,0 +1,7 @@
+ArlightChatClient 2.6.3
+
+- La pantalla de sala de SkyWars permanece abierta hasta iniciar o salir.
+- Botón ¿Qué es SkyWars? con explicación al pasar el cursor.
+- Botón Salir de la cola que ejecuta /sw leave.
+- La pantalla cubre HUD, chat y minimapa mientras está activa.
+- Jugadores y mapa se actualizan sin cerrar la pantalla.

@@ -1,0 +1,8 @@
+ArlightChatClient 3.4.0 — ARMOR-FIT-PETS-PODIUM-EMOTES-FIX
+
+- Mascotas elevadas a la zona superior derecha marcada por el usuario.
+- Pony, Somita y Bingo: ropa rehecha en piezas tipo armadura cosmética.
+- Texturas de ropa con atlas detallado y UV separados para torso, brazos y piernas.
+- Cola cachalote con conector físico entre punta y aletas.
+- Podio universal convierte alias/glifos y muestra badges de emotes directos.
+- Cobertura central: Bingo, Parkour, TNTRun, BuildBattle, SkyWars y LuckyBlockIslands.

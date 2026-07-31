@@ -1,0 +1,9 @@
+ArlightChatClient 2.6.1 - Overlay stability fix
+
+- El scoreboard visual ya no caduca a los 6.5 segundos; permanece hasta recibir CLEAR.
+- Limpieza automática al cambiar/desconectarse de servidor para evitar GUI de Bingo residual.
+- Los iconos/emotes del scoreboard se dibujan en blanco y conservan sus colores originales.
+- Footer "Gracias holy.gg", texto del pase y barra tienen líneas separadas sin superposición.
+- Barra de progreso con extremos redondeados.
+- Pantalla de preparación se dibuja con prioridad final para cubrir mejor chat, HUD y minimapas.
+- El cartón lateral se borra al reconectar y no reaparece si no hay partida válida.

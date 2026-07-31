@@ -1,0 +1,3 @@
+package com.arlight.chatclient;
+import io.netty.buffer.ByteBuf;import net.minecraft.network.codec.ByteBufCodecs;import net.minecraft.network.codec.StreamCodec;import net.minecraft.network.protocol.common.custom.CustomPacketPayload;import net.minecraft.resources.ResourceLocation;
+public record WardrobePayload(String command) implements CustomPacketPayload {public static final Type<WardrobePayload> TYPE=new Type<>(ResourceLocation.fromNamespaceAndPath("arlightcosmetics","wardrobe"));public static final StreamCodec<ByteBuf,WardrobePayload> STREAM_CODEC=StreamCodec.composite(ByteBufCodecs.STRING_UTF8,WardrobePayload::command,WardrobePayload::new);@Override public Type<? extends CustomPacketPayload> type(){return TYPE;}}

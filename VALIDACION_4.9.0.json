@@ -1,0 +1,15 @@
+{
+  "version": "4.9.0",
+  "base": "4.8.0",
+  "java_braces": "ok",
+  "json_resources": "ok",
+  "png_resources": 91,
+  "full_build": "blocked_services.gradle.org_dns",
+  "syntax_scan": "no_syntax_patterns_detected",
+  "notes": [
+    "categorías en español",
+    "nombres en dos líneas",
+    "preview adaptada",
+    "limpieza al cerrar"
+  ]
+}

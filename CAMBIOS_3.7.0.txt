@@ -1,0 +1,4 @@
+ARLIGHTCHATCLIENT 3.7.0
+- Desactiva el render cosmético legado al detectar ArlightCosmeticsCurios.
+- Evita ropa duplicada detrás de la skin.
+- Conserva emotes, scoreboards, podios y pantallas de minijuegos.

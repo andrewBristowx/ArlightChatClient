@@ -1,0 +1,58 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.pony_whale_stars.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "orbit_whale": {
+          "rotation": [
+            0,
+            "query.life_time*55.0",
+            0
+          ],
+          "position": [
+            0,
+            "math.sin(query.life_time*115.0)*0.8",
+            0
+          ]
+        },
+        "whale_tail_left": {
+          "rotation": [
+            0,
+            0,
+            "-25.0 + math.sin(query.life_time*180.0)*8.0"
+          ]
+        },
+        "whale_tail_right": {
+          "rotation": [
+            0,
+            0,
+            "25.0 - math.sin(query.life_time*180.0)*8.0"
+          ]
+        },
+        "star_one": {
+          "rotation": [
+            0,
+            "query.life_time*90.0",
+            45
+          ]
+        },
+        "star_two": {
+          "rotation": [
+            0,
+            "-query.life_time*110.0",
+            45
+          ]
+        },
+        "star_three": {
+          "rotation": [
+            0,
+            "query.life_time*130.0",
+            45
+          ]
+        }
+      }
+    }
+  }
+}

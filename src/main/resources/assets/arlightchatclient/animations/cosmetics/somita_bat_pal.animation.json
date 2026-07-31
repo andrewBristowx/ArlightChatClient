@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.arlight.somita_bat_pal.idle": {
+      "loop": true,
+      "animation_length": 8.0,
+      "bones": {
+        "bat_pal_body": {
+          "position": [
+            0,
+            "math.sin(query.life_time*150.0)*0.35",
+            0
+          ],
+          "rotation": [
+            0,
+            "10.0 + math.sin(query.life_time*65.0)*5.0",
+            0
+          ]
+        },
+        "bat_pal_wing_left": {
+          "rotation": [
+            0,
+            0,
+            "-25.0 + math.sin(query.life_time*300.0)*18.0"
+          ]
+        },
+        "bat_pal_wing_right": {
+          "rotation": [
+            0,
+            0,
+            "25.0 - math.sin(query.life_time*300.0)*18.0"
+          ]
+        }
+      }
+    }
+  }
+}

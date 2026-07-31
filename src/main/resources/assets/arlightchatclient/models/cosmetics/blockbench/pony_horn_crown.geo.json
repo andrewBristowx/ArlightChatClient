@@ -1,0 +1,506 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.arlight.pony_horn_crown",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 4.0,
+        "visible_bounds_height": 4.0,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "head_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "band",
+          "parent": "head_anchor",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.25,
+                -8.35,
+                -4.22
+              ],
+              "size": [
+                8.5,
+                0.55,
+                0.42
+              ],
+              "uv": [
+                0,
+                0
+              ],
+              "inflate": 0.02
+            },
+            {
+              "origin": [
+                -4.25,
+                -8.35,
+                3.8
+              ],
+              "size": [
+                8.5,
+                0.55,
+                0.42
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.02
+            },
+            {
+              "origin": [
+                -4.25,
+                -8.35,
+                -3.8
+              ],
+              "size": [
+                0.42,
+                0.55,
+                7.6
+              ],
+              "uv": [
+                0,
+                0
+              ],
+              "inflate": 0.02
+            },
+            {
+              "origin": [
+                3.83,
+                -8.35,
+                -3.8
+              ],
+              "size": [
+                0.42,
+                0.55,
+                7.6
+              ],
+              "uv": [
+                32,
+                0
+              ],
+              "inflate": 0.02
+            },
+            {
+              "origin": [
+                -0.75,
+                -8.75,
+                -4.48
+              ],
+              "size": [
+                1.5,
+                0.8,
+                0.3
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.02
+            },
+            {
+              "origin": [
+                -0.28,
+                -8.58,
+                -4.73
+              ],
+              "size": [
+                0.56,
+                0.48,
+                0.2
+              ],
+              "uv": [
+                0,
+                64
+              ],
+              "inflate": 0.01
+            }
+          ]
+        },
+        {
+          "name": "ear_left",
+          "parent": "band",
+          "pivot": [
+            3.85,
+            -7.55,
+            0.15
+          ],
+          "rotation": [
+            0,
+            0,
+            -10
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                -2.45,
+                -0.95
+              ],
+              "size": [
+                1.05,
+                2.55,
+                1.9
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.04
+            },
+            {
+              "origin": [
+                0.13,
+                -2.05,
+                -0.58
+              ],
+              "size": [
+                0.82,
+                1.65,
+                1.16
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.02
+            }
+          ]
+        },
+        {
+          "name": "ear_right",
+          "parent": "band",
+          "pivot": [
+            -3.85,
+            -7.55,
+            0.15
+          ],
+          "rotation": [
+            0,
+            0,
+            10
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.05,
+                -2.45,
+                -0.95
+              ],
+              "size": [
+                1.05,
+                2.55,
+                1.9
+              ],
+              "uv": [
+                64,
+                0
+              ],
+              "inflate": 0.04
+            },
+            {
+              "origin": [
+                -0.95,
+                -2.05,
+                -0.58
+              ],
+              "size": [
+                0.82,
+                1.65,
+                1.16
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.02
+            }
+          ]
+        },
+        {
+          "name": "horn_left_base",
+          "parent": "band",
+          "pivot": [
+            2.25,
+            -8.15,
+            0.45
+          ],
+          "rotation": [
+            -12,
+            -4,
+            -11
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.66,
+                -3.1,
+                -0.66
+              ],
+              "size": [
+                1.32,
+                3.2,
+                1.32
+              ],
+              "uv": [
+                32,
+                32
+              ],
+              "inflate": 0.04
+            }
+          ]
+        },
+        {
+          "name": "horn_left_mid",
+          "parent": "horn_left_base",
+          "pivot": [
+            0,
+            -3.0,
+            0
+          ],
+          "rotation": [
+            8,
+            3,
+            12
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.52,
+                -2.45,
+                -0.52
+              ],
+              "size": [
+                1.04,
+                2.55,
+                1.04
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.025
+            }
+          ]
+        },
+        {
+          "name": "horn_left_tip",
+          "parent": "horn_left_mid",
+          "pivot": [
+            0,
+            -2.35,
+            0
+          ],
+          "rotation": [
+            14,
+            4,
+            12
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.34,
+                -1.55,
+                -0.34
+              ],
+              "size": [
+                0.68,
+                1.65,
+                0.68
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.01
+            }
+          ]
+        },
+        {
+          "name": "horn_right_base",
+          "parent": "band",
+          "pivot": [
+            -2.25,
+            -8.15,
+            0.45
+          ],
+          "rotation": [
+            -12,
+            4,
+            11
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.66,
+                -3.1,
+                -0.66
+              ],
+              "size": [
+                1.32,
+                3.2,
+                1.32
+              ],
+              "uv": [
+                32,
+                32
+              ],
+              "inflate": 0.04
+            }
+          ]
+        },
+        {
+          "name": "horn_right_mid",
+          "parent": "horn_right_base",
+          "pivot": [
+            0,
+            -3.0,
+            0
+          ],
+          "rotation": [
+            8,
+            -3,
+            -12
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.52,
+                -2.45,
+                -0.52
+              ],
+              "size": [
+                1.04,
+                2.55,
+                1.04
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.025
+            }
+          ]
+        },
+        {
+          "name": "horn_right_tip",
+          "parent": "horn_right_mid",
+          "pivot": [
+            0,
+            -2.35,
+            0
+          ],
+          "rotation": [
+            14,
+            -4,
+            -12
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.34,
+                -1.55,
+                -0.34
+              ],
+              "size": [
+                0.68,
+                1.65,
+                0.68
+              ],
+              "uv": [
+                64,
+                32
+              ],
+              "inflate": 0.01
+            }
+          ]
+        },
+        {
+          "name": "ribbon_left",
+          "parent": "band",
+          "pivot": [
+            3.45,
+            -8.0,
+            3.95
+          ],
+          "rotation": [
+            12,
+            0,
+            -8
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.05,
+                -0.1,
+                -0.16
+              ],
+              "size": [
+                1.15,
+                1.75,
+                0.32
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.015
+            }
+          ]
+        },
+        {
+          "name": "ribbon_right",
+          "parent": "band",
+          "pivot": [
+            -3.45,
+            -8.0,
+            3.95
+          ],
+          "rotation": [
+            12,
+            0,
+            8
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.1,
+                -0.1,
+                -0.16
+              ],
+              "size": [
+                1.15,
+                1.75,
+                0.32
+              ],
+              "uv": [
+                96,
+                0
+              ],
+              "inflate": 0.015
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
