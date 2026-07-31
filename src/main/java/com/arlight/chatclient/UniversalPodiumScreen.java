@@ -119,10 +119,12 @@ public final class UniversalPodiumScreen extends Screen {
             entity.setItemSlot(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
             entity.setItemSlot(EquipmentSlot.OFFHAND, ItemStack.EMPTY);
             entity.setShiftKeyDown(false);
-            entity.setYRot(0.0F);
+            // El renderer de inventario considera 180 grados como la pose frontal.
+            // Con cero grados el jugador enseñaba la espalda en el podio.
+            entity.setYRot(180.0F);
             entity.setXRot(-2.0F);
-            entity.yBodyRot = 0.0F;
-            entity.yHeadRot = 0.0F;
+            entity.yBodyRot = 180.0F;
+            entity.yHeadRot = 180.0F;
 
             float animation = ticks + partialTick + place * 5.0F;
             float bob = (float) Math.sin(animation * 0.12F) * (place == 1 ? 3.0F : 1.6F);

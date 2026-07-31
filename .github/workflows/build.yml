@@ -5,10 +5,12 @@ on:
   push:
     paths:
       - '.github/workflows/build.yml'
-      - '.github/patches/chatclient-5.0.0-final/overlay.b64'
+      - 'build.gradle'
+      - 'gradle/**'
+      - 'src/**'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -19,40 +21,11 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Registrar ejecución
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .github/run-info
-          printf '%s\n' "$GITHUB_RUN_ID" > .github/run-info/LAST_RUN_ID.txt
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/run-info/LAST_RUN_ID.txt
-          if ! git diff --cached --quiet; then
-            git commit -m "Registrar build ${GITHUB_RUN_ID}"
-            git push origin HEAD:main
-          fi
-
       - name: Configurar Java 21
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
-
-      - name: Aplicar actualización ArlightChatClient 5.0.0
-        shell: bash
-        run: |
-          set -euo pipefail
-          base64 --decode .github/patches/chatclient-5.0.0-final/overlay.b64 > /tmp/overlay.zip
-          unzip -t /tmp/overlay.zip
-          unzip -oq /tmp/overlay.zip -d .
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m 'Actualizar ArlightChatClient a 5.0.0 - Wardrobe Pet Position Editor'
-            git push origin HEAD:main
-          fi
 
       - name: Configurar Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -76,7 +49,7 @@ jobs:
       - name: Subir JAR compilado
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightChatClient-5.0.0-JAR
+          name: ArlightChatClient-5.0.1-JAR
           path: dist/*.jar
           if-no-files-found: error
           retention-days: 30

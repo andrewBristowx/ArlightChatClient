@@ -1,1 +1,1 @@
-ArlightChatClient 4.9.0 WARDROBE-UX-POLISH
+ArlightChatClient 5.0.1 PODIUM-FRONT-EMOTES-FIX

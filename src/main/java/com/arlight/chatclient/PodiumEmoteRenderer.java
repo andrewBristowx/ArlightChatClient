@@ -83,8 +83,12 @@ public final class PodiumEmoteRenderer {
                 cursor += font.width(plain.text());
             } else if (token instanceof SpriteToken icon) {
                 Sprite sprite = icon.sprite();
+                // El overload de blit usa width/height también como tamaño del
+                // recorte UV. Pasar aquí 64/128 como atlas recortaba únicamente
+                // la esquina superior izquierda del emote. Un atlas lógico del
+                // tamaño de destino mapea la textura completa al cuadro.
                 graphics.blit(sprite.texture(), cursor, y - 3, 0, 0,
-                        iconSize, iconSize, sprite.sourceWidth(), sprite.sourceHeight());
+                        iconSize, iconSize, iconSize, iconSize);
                 cursor += iconSize + 1;
             }
         }
@@ -110,7 +114,7 @@ public final class PodiumEmoteRenderer {
         // Fondo mínimo: la ilustración conserva su transparencia y deja de verse
         // como un emote gigante pegado encima del jugador.
         graphics.fill(left - padding, y - padding, left + size + padding, y + size + padding, 0x42090A18);
-        graphics.blit(texture, left, y, 0, 0, size, size, 128, 128);
+        graphics.blit(texture, left, y, 0, 0, size, size, size, size);
     }
 
     /** Dibuja el icono estructurado de una estadística y evita mostrar su id como texto. */
