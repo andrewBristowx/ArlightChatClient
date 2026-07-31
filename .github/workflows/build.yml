@@ -38,20 +38,20 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Aplicar parche ArlightChatClient 4.9.1
+      - name: Importar actualización ArlightChatClient 5.0.0
         shell: bash
         run: |
           set -euo pipefail
-          PATCH='.github/patches/ArlightChatClient-4.9.1.patch.zip'
-          test -f "$PATCH"
-          unzip -t "$PATCH"
-          unzip -oq "$PATCH" -d .
-          rm -f "$PATCH"
+          FILE_ID='1lYztlfcZQ51plcW987TnUINDK4iHrik5'
+          curl -L --fail --retry 3 "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" -o /tmp/overlay.zip
+          unzip -t /tmp/overlay.zip
+          unzip -oq /tmp/overlay.zip -d .
+          rm -rf .github/patches/chatclient-5.0.0
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m 'Actualizar ArlightChatClient a 4.9.1 - Podium Badge Fix'
+            git commit -m 'Actualizar ArlightChatClient a 5.0.0 - Wardrobe Pet Position Editor'
             git push origin HEAD:main
           fi
 
@@ -77,7 +77,7 @@ jobs:
       - name: Subir JAR compilado
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightChatClient-4.9.1-JAR
+          name: ArlightChatClient-5.0.0-JAR
           path: dist/*.jar
           if-no-files-found: error
           retention-days: 30
