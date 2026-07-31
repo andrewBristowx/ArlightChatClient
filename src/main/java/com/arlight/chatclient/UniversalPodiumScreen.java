@@ -88,7 +88,9 @@ public final class UniversalPodiumScreen extends Screen {
         graphics.fill(x + frameW / 2 - 3, frameTop, x + frameW / 2, bottomY + 43, medal);
         graphics.fill(x - frameW / 2 + 9, bottomY + 1, x + frameW / 2 - 9, bottomY + 5, medal);
 
-        drawEntryBadge(graphics, x, frameTop + 8, place);
+        // Medalla compacta en la esquina: identifica el puesto sin cubrir la cabeza,
+        // el nombre ni los emotes/cosméticos del ganador.
+        drawEntryBadge(graphics, x - frameW / 2 + 22, frameTop + 12, place);
 
         if (entry != null && entry.uuid() != null && minecraft.level != null) {
             Player entity = minecraft.level.getPlayerByUUID(entry.uuid());
@@ -146,7 +148,7 @@ public final class UniversalPodiumScreen extends Screen {
     }
 
     private void drawEntryBadge(GuiGraphics graphics, int x, int y, int place) {
-        int size = place == 1 ? 70 : 58;
+        int size = place == 1 ? 34 : 30;
         PodiumEmoteRenderer.drawEntryBadge(graphics, "", place, x, y, size);
     }
 

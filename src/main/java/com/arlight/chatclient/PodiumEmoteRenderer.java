@@ -105,10 +105,12 @@ public final class PodiumEmoteRenderer {
         int safePlace = Math.max(1, Math.min(3, place));
         ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(
                 ArlightChatClient.MOD_ID, "textures/gui/podium/place_" + safePlace + ".png");
-        int padding = Math.max(2, size / 12);
-        graphics.fill(centerX - size / 2 - padding, y - padding,
-                centerX + size / 2 + padding, y + size + padding, 0x56090A18);
-        graphics.blit(texture, centerX - size / 2, y, 0, 0, size, size, 128, 128);
+        int padding = 2;
+        int left = centerX - size / 2;
+        // Fondo mínimo: la ilustración conserva su transparencia y deja de verse
+        // como un emote gigante pegado encima del jugador.
+        graphics.fill(left - padding, y - padding, left + size + padding, y + size + padding, 0x42090A18);
+        graphics.blit(texture, left, y, 0, 0, size, size, 128, 128);
     }
 
     /** Dibuja el icono estructurado de una estadística y evita mostrar su id como texto. */

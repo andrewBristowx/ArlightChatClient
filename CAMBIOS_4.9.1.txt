@@ -1,0 +1,7 @@
+ArlightChatClient 4.9.1 - PODIUM BADGE FIX
+
+- Reduce las insignias de 1.er, 2.º y 3.er puesto.
+- Las mueve a la esquina superior izquierda de cada tarjeta del podio.
+- Evita que las medallas tapen la cabeza, la skin, los cosméticos o las mascotas.
+- Mantiene las texturas directas y no depende del font provider del resource pack.
+- Conserva las mejoras del ropero 4.9.0.
