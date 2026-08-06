@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - build/parkour-1.6.0-client-5.5.0
+  pull_request:
 
 permissions:
   contents: read
@@ -105,7 +106,7 @@ jobs:
           set -euo pipefail
           JAR="$(find "$SOURCE_ROOT/build/libs" -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
           test -n "$JAR"
-          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep 'version="5.5.0"'
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E 'version="5\.5\.0"|version="\$\{file\.jarVersion\}"'
           javap -classpath "$JAR" -p com.arlight.chatclient.ParkourHubState | grep 'accept'
           javap -classpath "$JAR" -p com.arlight.chatclient.ParkourGalleryRenderer | grep 'fallbackX'
           mkdir -p "$GITHUB_WORKSPACE/dist-client"
