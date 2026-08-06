@@ -37,7 +37,8 @@ jobs:
           unzip -q /tmp/parkour-source.zip -d /tmp/parkour-source
           SOURCE_ROOT="$(find /tmp/parkour-source -type f -name pom.xml -printf '%h\n' | head -n 1)"
           test -n "$SOURCE_ROOT"
-          python3 .github/parkour-build/patch_1_5_3.py "$SOURCE_ROOT"
+          cd "$SOURCE_ROOT"
+          git apply "$GITHUB_WORKSPACE/.github/parkour-build/arlightparkour-1.5.3.patch"
           echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
 
       - name: Download ArlightCore 1.25.4
