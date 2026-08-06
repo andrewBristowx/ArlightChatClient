@@ -1,4 +1,4 @@
-name: Compilar ArlightChatClient Parkour 5.4.0
+name: Compilar ArlightChatClient Parkour 5.4.1
 
 on:
   workflow_dispatch:
@@ -40,6 +40,15 @@ jobs:
           tar -xzf /tmp/parkour-client-patch.tar.gz -C "$GITHUB_WORKSPACE"
           sed -i 's#gradle-[0-9.]*-bin.zip#gradle-8.14.3-bin.zip#' gradle/wrapper/gradle-wrapper.properties
 
+      - name: Aplicar hotfix de arranque 5.4.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp .github/hotfix/ParkourObbyState-5.4.1.java src/main/java/com/arlight/chatclient/ParkourObbyState.java
+          sed -i 's/version = "5.4.0"/version = "5.4.1"/' build.gradle
+          grep -n 'SubscribeEvent\|void tick' src/main/java/com/arlight/chatclient/ParkourObbyState.java
+          grep -n 'version =' build.gradle
+
       - name: Configurar Java 21
         uses: actions/setup-java@v4
         with:
@@ -56,6 +65,15 @@ jobs:
           chmod +x ./gradlew
           ./gradlew --no-daemon clean build
 
+      - name: Verificar hotfix
+        shell: bash
+        run: |
+          set -euo pipefail
+          JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' -print -quit)"
+          test -n "$JAR"
+          javap -classpath "$JAR" -v com.arlight.chatclient.ParkourObbyState | grep -A3 'RuntimeVisibleAnnotations' | grep 'SubscribeEvent'
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep 'version="5.4.1"'
+
       - name: Reunir JAR
         shell: bash
         run: |
@@ -68,7 +86,7 @@ jobs:
       - name: Subir JAR compilado
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightChatClient-5.4.0-PARKOUR-VISUALS-JAR
+          name: ArlightChatClient-5.4.1-PARKOUR-STARTUP-FIX-JAR
           path: dist/*.jar
           if-no-files-found: error
           retention-days: 30
