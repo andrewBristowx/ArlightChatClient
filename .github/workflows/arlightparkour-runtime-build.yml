@@ -1,6 +1,9 @@
 name: Build ArlightParkour Runtime API
 
 on:
+  push:
+    branches:
+      - fix/arlightparkour-1.5.3-runtime-api-void-hub
   pull_request:
     branches:
       - main
@@ -17,7 +20,7 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      - name: Checkout pull request
+      - name: Checkout source branch
         uses: actions/checkout@v4
 
       - name: Configure Java 21
@@ -27,14 +30,18 @@ jobs:
           java-version: '21'
           cache: maven
 
-      - name: Restore ArlightParkour source
+      - name: Restore and patch ArlightParkour source
         shell: bash
         run: |
           set -euo pipefail
-          base64 --decode .github/parkour-build/ArlightParkour-1.5.3-source.zip.b64 > /tmp/parkour-source.zip
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=19ZL-u4fjIqDVg-hRCyLfoi4KreGPj7PW&export=download&confirm=t' \
+            --output /tmp/parkour-source.zip
           unzip -q /tmp/parkour-source.zip -d /tmp/parkour-source
           SOURCE_ROOT="$(find /tmp/parkour-source -type f -name pom.xml -printf '%h\n' | head -n 1)"
           test -n "$SOURCE_ROOT"
+          cd "$SOURCE_ROOT"
+          git apply "$GITHUB_WORKSPACE/.github/parkour-build/arlightparkour-1.5.3.patch"
           echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
 
       - name: Download ArlightCore 1.25.4
