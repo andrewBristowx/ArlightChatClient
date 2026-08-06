@@ -1,0 +1,4 @@
+https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+https://repo.stellardrift.ca/maven/snapshots/io/papermc/paper/paper-api/1.21.1-R0.1-SNAPSHOT/paper-api-1.21.1-R0.1-20241121.101634-127.jar
+https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+https://api.github.com/repos/andrewBristowx/ArlightChatClient/actions/runs?per_page=20
