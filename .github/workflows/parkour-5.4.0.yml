@@ -1,4 +1,4 @@
-name: Compilar ArlightChatClient Parkour 5.4.1
+name: Compilar ArlightParkour 1.5.2 Scoreboard Ownership Fix
 
 on:
   workflow_dispatch:
@@ -13,80 +13,81 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 70
+    timeout-minutes: 60
 
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
-
-      - name: Recuperar fuente completa 5.3.0
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/arlight-source
-          curl --fail --location --retry 4 --retry-delay 3 \
-            'https://drive.usercontent.google.com/download?id=1Kd-P2yF40ZqLuvrD883exz4NSPO45WNy&export=download&confirm=t' \
-            --output /tmp/arlight-source.zip
-          unzip -q /tmp/arlight-source.zip -d /tmp/arlight-source
-          SOURCE_ROOT="$(find /tmp/arlight-source -type f -name build.gradle -printf '%h\n' | head -n 1)"
-          test -n "$SOURCE_ROOT"
-          rsync -a --delete --exclude '.git' --exclude '.github' "$SOURCE_ROOT/" "$GITHUB_WORKSPACE/"
-
-      - name: Aplicar adaptación Parkour 5.4.0
-        shell: bash
-        run: |
-          set -euo pipefail
-          base64 --decode .github/parkour-client-5.4.0-patch.tar.gz.b64 > /tmp/parkour-client-patch.tar.gz
-          tar -xzf /tmp/parkour-client-patch.tar.gz -C "$GITHUB_WORKSPACE"
-          sed -i 's#gradle-[0-9.]*-bin.zip#gradle-8.14.3-bin.zip#' gradle/wrapper/gradle-wrapper.properties
-
-      - name: Aplicar hotfix de arranque 5.4.1
-        shell: bash
-        run: |
-          set -euo pipefail
-          cp .github/hotfix/ParkourObbyState-5.4.1.java src/main/java/com/arlight/chatclient/ParkourObbyState.java
-          sed -i 's/version = "5.4.0"/version = "5.4.1"/' build.gradle
-          grep -n 'SubscribeEvent\|void tick' src/main/java/com/arlight/chatclient/ParkourObbyState.java
-          grep -n 'version =' build.gradle
 
       - name: Configurar Java 21
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
+          cache: maven
 
-      - name: Configurar Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Compilar con Gradle
+      - name: Descargar fuente 1.5.2 y ArlightCore
         shell: bash
         run: |
           set -euo pipefail
-          chmod +x ./gradlew
-          ./gradlew --no-daemon clean build
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=14dOKtTMfwi_bTj3ssHQ0cSuk0dD7mktf&export=download&confirm=t' \
+            --output /tmp/parkour-source.zip
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=1b7JV5Y8ymeKdIZIGXwoFQA2JOB9izFqK&export=download&confirm=t' \
+            --output /tmp/ArlightCore-1.25.4.jar
+          unzip -q /tmp/parkour-source.zip -d /tmp/parkour-src
+          SOURCE_ROOT="$(find /tmp/parkour-src -type f -name pom.xml -printf '%h\n' | head -n 1)"
+          test -n "$SOURCE_ROOT"
+          echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
+          ls -lh /tmp/parkour-source.zip /tmp/ArlightCore-1.25.4.jar
 
-      - name: Verificar hotfix
+      - name: Instalar ArlightCore local
+        shell: bash
+        run: |
+          mvn -B -ntp install:install-file \
+            -Dfile=/tmp/ArlightCore-1.25.4.jar \
+            -DgroupId=com.arlight \
+            -DartifactId=ArlightCore \
+            -Dversion=1.25.4 \
+            -Dpackaging=jar
+
+      - name: Compilar con Paper API real
         shell: bash
         run: |
           set -euo pipefail
-          JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' -print -quit)"
+          cd "$SOURCE_ROOT"
+          mvn -B -ntp clean package
+
+      - name: Verificar bytecode y versión
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$SOURCE_ROOT"
+          JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name 'original-*' -print -quit)"
           test -n "$JAR"
-          javap -classpath "$JAR" -v com.arlight.chatclient.ParkourObbyState | grep -A3 'RuntimeVisibleAnnotations' | grep 'SubscribeEvent'
-          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep 'version="5.4.1"'
+          unzip -p "$JAR" plugin.yml | grep "version: '1.5.2'"
+          if jar tf "$JAR" | grep -q '^org/bukkit/'; then
+            echo 'ERROR: el JAR incluye clases org.bukkit' >&2
+            exit 1
+          fi
+          javap -classpath "$JAR" -c -p com.arlight.parkour.ArlightParkourPlugin > /tmp/parkour-javap.txt
+          grep -q 'PlayerChangedWorldEvent' /tmp/parkour-javap.txt
+          grep -q 'isParkourHubOwner' /tmp/parkour-javap.txt
+          grep -q 'exitParkourToMainLobby' /tmp/parkour-javap.txt
+          if grep -q 'invokevirtual.*org/bukkit/inventory/meta/ItemMeta' /tmp/parkour-javap.txt; then
+            echo 'ERROR: ItemMeta volvió a compilarse como clase' >&2
+            exit 1
+          fi
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX.jar"
+          sha256sum "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX.jar" > "$GITHUB_WORKSPACE/dist/SHA256.txt"
+          grep -A45 'private boolean isParkourHubOwner' /tmp/parkour-javap.txt > "$GITHUB_WORKSPACE/dist/SCOREBOARD-BYTECODE-VALIDATION.txt" || true
 
-      - name: Reunir JAR
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p dist
-          find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' -exec cp {} dist/ \;
-          test -n "$(find dist -maxdepth 1 -type f -name '*.jar' -print -quit)"
-          ls -lh dist
-
-      - name: Subir JAR compilado
+      - name: Subir artefacto
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightChatClient-5.4.1-PARKOUR-STARTUP-FIX-JAR
-          path: dist/*.jar
+          name: ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX
+          path: dist/*
           if-no-files-found: error
           retention-days: 30
