@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - fix/arlightparkour-1.5.1-paper-api-v3
+  pull_request:
 
 permissions:
   contents: read
