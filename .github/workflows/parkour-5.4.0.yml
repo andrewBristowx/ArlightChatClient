@@ -1,4 +1,4 @@
-name: Compilar ArlightParkour 1.5.2 Scoreboard Ownership Fix
+name: Compilar ArlightParkour 1.5.3 Runtime API y Void Hub
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
         run: |
           set -euo pipefail
           curl --fail --location --retry 5 --retry-delay 3 \
-            'https://drive.usercontent.google.com/download?id=14dOKtTMfwi_bTj3ssHQ0cSuk0dD7mktf&export=download&confirm=t' \
+            'https://drive.usercontent.google.com/download?id=19ZL-u4fjIqDVg-hRCyLfoi4KreGPj7PW&export=download&confirm=t' \
             --output /tmp/parkour-source.zip
           curl --fail --location --retry 5 --retry-delay 3 \
             'https://drive.usercontent.google.com/download?id=1b7JV5Y8ymeKdIZIGXwoFQA2JOB9izFqK&export=download&confirm=t' \
@@ -39,6 +39,8 @@ jobs:
           unzip -q /tmp/parkour-source.zip -d /tmp/parkour-src
           SOURCE_ROOT="$(find /tmp/parkour-src -type f -name pom.xml -printf '%h\n' | head -n 1)"
           test -n "$SOURCE_ROOT"
+          cd "$SOURCE_ROOT"
+          git apply "$GITHUB_WORKSPACE/.github/parkour-build/arlightparkour-1.5.3.patch"
           echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
           ls -lh /tmp/parkour-source.zip /tmp/ArlightCore-1.25.4.jar
 
@@ -59,35 +61,40 @@ jobs:
           cd "$SOURCE_ROOT"
           mvn -B -ntp clean package
 
-      - name: Verificar bytecode y versión
+      - name: Verificar firmas, mundo vacío y versión
         shell: bash
         run: |
           set -euo pipefail
           cd "$SOURCE_ROOT"
           JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name 'original-*' -print -quit)"
           test -n "$JAR"
-          unzip -p "$JAR" plugin.yml | grep "version: '1.5.2'"
+          unzip -p "$JAR" plugin.yml | grep "version: '1.5.3'"
           if jar tf "$JAR" | grep -q '^org/bukkit/'; then
             echo 'ERROR: el JAR incluye clases org.bukkit' >&2
             exit 1
           fi
-          javap -classpath "$JAR" -c -p com.arlight.parkour.ArlightParkourPlugin > /tmp/parkour-javap.txt
-          grep -q 'PlayerChangedWorldEvent' /tmp/parkour-javap.txt
-          grep -q 'isParkourHubOwner' /tmp/parkour-javap.txt
-          grep -q 'exitParkourToMainLobby' /tmp/parkour-javap.txt
-          if grep -q 'invokevirtual.*org/bukkit/inventory/meta/ItemMeta' /tmp/parkour-javap.txt; then
-            echo 'ERROR: ItemMeta volvió a compilarse como clase' >&2
+          javap -classpath "$JAR" -c -p com.arlight.parkour.ArlightParkourPlugin > /tmp/plugin-javap.txt
+          javap -classpath "$JAR" -c -p com.arlight.parkour.ParkourHubManager > /tmp/hub-javap.txt
+          grep -A35 'private org.bukkit.inventory.ItemStack icon' /tmp/plugin-javap.txt > /tmp/icon-bytecode.txt
+          grep 'ItemStack.setItemMeta:(Lorg/bukkit/inventory/meta/ItemMeta;)Z' /tmp/icon-bytecode.txt
+          if grep -q 'ItemStack.setItemMeta:(Lorg/bukkit/inventory/meta/ItemMeta;)V' /tmp/icon-bytecode.txt; then
+            echo 'ERROR: permanece la firma void incorrecta de setItemMeta' >&2
             exit 1
           fi
+          grep 'invokeinterface.*ItemMeta.setDisplayName' /tmp/icon-bytecode.txt
+          grep -q 'getDefaultWorldGenerator' /tmp/plugin-javap.txt
+          grep -q 'recreateVoidWorld' /tmp/plugin-javap.txt
+          grep -q 'Bukkit.unloadWorld' /tmp/hub-javap.txt
+          grep -q 'generateStructures' /tmp/hub-javap.txt
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX.jar"
-          sha256sum "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX.jar" > "$GITHUB_WORKSPACE/dist/SHA256.txt"
-          grep -A45 'private boolean isParkourHubOwner' /tmp/parkour-javap.txt > "$GITHUB_WORKSPACE/dist/SCOREBOARD-BYTECODE-VALIDATION.txt" || true
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX.jar"
+          cp /tmp/icon-bytecode.txt "$GITHUB_WORKSPACE/dist/ICON-BYTECODE-VALIDATION.txt"
+          sha256sum "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX.jar" > "$GITHUB_WORKSPACE/dist/SHA256.txt"
 
       - name: Subir artefacto
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX
+          name: ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX
           path: dist/*
           if-no-files-found: error
           retention-days: 30
