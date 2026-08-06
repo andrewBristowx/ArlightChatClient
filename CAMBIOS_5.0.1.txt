@@ -1,0 +1,6 @@
+ArlightChatClient 5.0.1 - PODIUM FRONT + EMOTES FIX
+
+- Corrige la orientación de los tres jugadores del podio para que miren a la cámara.
+- Corrige el recorte UV de las insignias de primer, segundo y tercer puesto.
+- Corrige el mismo recorte en los emotes insertados en nombres, subtítulos y estadísticas.
+- Conserva el ropero y el editor de posición de mascotas de la versión 5.0.0.
