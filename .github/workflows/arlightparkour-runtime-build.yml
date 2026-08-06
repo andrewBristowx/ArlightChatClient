@@ -1,0 +1,92 @@
+name: Build ArlightParkour Runtime API
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/parkour-build/**'
+      - '.github/workflows/arlightparkour-runtime-build.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v4
+
+      - name: Configure Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Restore ArlightParkour source
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode .github/parkour-build/ArlightParkour-1.5.3-source.zip.b64 > /tmp/parkour-source.zip
+          unzip -q /tmp/parkour-source.zip -d /tmp/parkour-source
+          SOURCE_ROOT="$(find /tmp/parkour-source -type f -name pom.xml -printf '%h\n' | head -n 1)"
+          test -n "$SOURCE_ROOT"
+          echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
+
+      - name: Download ArlightCore 1.25.4
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=1b7JV5Y8ymeKdIZIGXwoFQA2JOB9izFqK&export=download&confirm=t' \
+            --output /tmp/ArlightCore-1.25.4.jar
+          mvn -B -ntp install:install-file \
+            -Dfile=/tmp/ArlightCore-1.25.4.jar \
+            -DgroupId=com.arlight \
+            -DartifactId=ArlightCore \
+            -Dversion=1.25.4 \
+            -Dpackaging=jar
+
+      - name: Build against real Paper API
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$SOURCE_ROOT"
+          mvn -B -ntp clean package
+
+      - name: Validate runtime signatures
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$SOURCE_ROOT"
+          JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name 'original-*' -print -quit)"
+          test -n "$JAR"
+          javap -classpath "$JAR" -c -p com.arlight.parkour.ArlightParkourPlugin > /tmp/plugin-javap.txt
+          grep -A30 'private org.bukkit.inventory.ItemStack icon' /tmp/plugin-javap.txt > /tmp/icon-bytecode.txt
+          grep 'ItemStack.setItemMeta:(Lorg/bukkit/inventory/meta/ItemMeta;)Z' /tmp/icon-bytecode.txt
+          if grep -q 'ItemStack.setItemMeta:(Lorg/bukkit/inventory/meta/ItemMeta;)V' /tmp/icon-bytecode.txt; then
+            echo 'Invalid void ItemStack#setItemMeta signature remains' >&2
+            exit 1
+          fi
+          grep 'invokeinterface.*ItemMeta.setDisplayName' /tmp/icon-bytecode.txt
+          if jar tf "$JAR" | grep -q '^org/bukkit/'; then
+            echo 'Plugin must not bundle Bukkit classes' >&2
+            exit 1
+          fi
+          unzip -p "$JAR" plugin.yml | grep "version: '1.5.3'"
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX.jar"
+          cp /tmp/icon-bytecode.txt "$GITHUB_WORKSPACE/dist/ICON-BYTECODE-VALIDATION.txt"
+          sha256sum "$GITHUB_WORKSPACE/dist/ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX.jar" > "$GITHUB_WORKSPACE/dist/SHA256.txt"
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 30
