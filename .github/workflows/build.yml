@@ -11,6 +11,7 @@ on:
 permissions:
   contents: write
 
+# Cambio intencional para disparar la compilación al fusionar este pull request.
 jobs:
   build:
     runs-on: ubuntu-latest
