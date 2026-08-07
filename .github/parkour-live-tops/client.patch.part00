@@ -1,0 +1,472 @@
+--- a/BUILD_VERSION.txt
++++ b/BUILD_VERSION.txt
+@@ -1 +1 @@
+-5.6.0
++5.7.0
+--- a/SOURCE_VERSION.txt
++++ b/SOURCE_VERSION.txt
+@@ -1 +1 @@
+-5.6.0-BINGO-LOBBY-TOPS
++ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS
+--- a/build.gradle
++++ b/build.gradle
+@@ -3,7 +3,7 @@
+     id 'net.neoforged.gradle.userdev' version '7.1.38'
+ }
+ 
+-version = "5.6.0"
++version = "5.7.0"
+ group = 'com.arlight.chatclient'
+ 
+ base {
+--- a/src/main/java/com/arlight/chatclient/ParkourHubState.java
++++ b/src/main/java/com/arlight/chatclient/ParkourHubState.java
+@@ -24,7 +24,7 @@
+    public static void accept(byte[] bytes) {
+       try (DataInputStream in = new DataInputStream(new ByteArrayInputStream(bytes))) {
+          int protocol = in.readInt();
+-         if (protocol < 2 || protocol > 3) return;
++         if (protocol < 2 || protocol > 4) return;
+          String type = in.readUTF();
+          switch (type) {
+             case "OPEN_MAIN" -> openMain(in);
+@@ -99,7 +99,15 @@
+          for (int j = 0; j < count; j++) {
+             entries.add(new TopEntry(in.readInt(), parseUuid(in.readUTF()), in.readUTF(), in.readLong(), in.readUTF(), in.readUTF()));
+          }
+-         GALLERY.put(id, new GalleryGroup(id, world, x, y, z, yaw, List.copyOf(entries)));
++         long statA = 0L;
++         long statB = 0L;
++         long statC = 0L;
++         if (protocol >= 4) {
++            statA = in.readLong();
++            statB = in.readLong();
++            statC = in.readLong();
++         }
++         GALLERY.put(id, new GalleryGroup(id, world, x, y, z, yaw, List.copyOf(entries), statA, statB, statC));
+       }
+    }
+ 
+@@ -168,5 +176,6 @@
+    public record ProfileData(String playerName, String selectedMode, int matches, int wins, int finishes, int falls, String personalBest, int infiniteModules, int currentWinStreak, int bestWinStreak) { }
+    public record TopData(String id, String title, List<TopEntry> entries) { }
+    public record TopEntry(int place, UUID uuid, String name, long value, String formatted, String pose) { }
+-   public record GalleryGroup(String id, String world, double x, double y, double z, float yaw, List<TopEntry> entries) { }
++   public record GalleryGroup(String id, String world, double x, double y, double z, float yaw,
++                              List<TopEntry> entries, long statA, long statB, long statC) { }
+ }
+--- a/src/main/java/com/arlight/chatclient/ParkourGalleryRenderer.java
++++ b/src/main/java/com/arlight/chatclient/ParkourGalleryRenderer.java
+@@ -7,153 +7,390 @@
+ import java.util.Map;
+ import net.minecraft.client.Minecraft;
+ import net.minecraft.client.gui.Font;
+-import net.minecraft.client.gui.Font.DisplayMode;
+-import net.minecraft.client.model.PlayerModel;
+-import net.minecraft.client.model.geom.ModelLayers;
+-import net.minecraft.client.renderer.MultiBufferSource.BufferSource;
++import net.minecraft.client.renderer.MultiBufferSource;
+ import net.minecraft.client.renderer.RenderType;
+ import net.minecraft.client.renderer.texture.OverlayTexture;
+ import net.minecraft.client.resources.PlayerSkin;
+-import net.minecraft.core.BlockPos;
+-import net.minecraft.network.chat.Component;
+-import net.minecraft.util.Mth;
+-import net.minecraft.world.entity.LivingEntity;
++import net.minecraft.resources.ResourceLocation;
++import net.minecraft.world.phys.Vec3;
+ import net.neoforged.bus.api.SubscribeEvent;
+ import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
+-import org.joml.Matrix4f;
+-
++
++/**
++ * Pantallas vivas del lobby de Parkour.
++ *
++ * La imagen PNG solamente contiene el marco y la decoración. Skins, nombres,
++ * posiciones y valores se dibujan en tiempo real a partir de los datos que
++ * envía ArlightParkour. De esta forma nunca hay siluetas o récords falsos
++ * incrustados en el fondo.
++ */
+ public final class ParkourGalleryRenderer {
+-   private static PlayerModel<LivingEntity> wideModel;
+-   private static PlayerModel<LivingEntity> slimModel;
++   private static final ResourceLocation RACE = texture("top_race.png");
++   private static final ResourceLocation TIME_TRIAL = texture("top_time_trial.png");
++   private static final ResourceLocation DAILY = texture("top_daily.png");
++   private static final ResourceLocation WINS = texture("top_wins.png");
++   private static final ResourceLocation INFINITE = texture("infinite_farthest.png");
++
++   private static final int TEXTURE_WIDTH = 1672;
++   private static final int TEXTURE_HEIGHT = 941;
++   private static final float PANEL_WIDTH = 16.0F;
++   private static final float PANEL_HEIGHT = PANEL_WIDTH * TEXTURE_HEIGHT / TEXTURE_WIDTH;
++   private static final int FULL_BRIGHT = 0x00F000F0;
++   private static final int WHITE = 0xFFFFFFFF;
++   private static final int GOLD = 0xFFFFD23A;
++   private static final int SILVER = 0xFFD8F2FF;
++   private static final int BRONZE = 0xFFFF9138;
++   private static final int LIME = 0xFF9CFF35;
++   private static final int CYAN = 0xFF42E7FF;
++   private static final int MAGENTA = 0xFFFF59F7;
+ 
+    private ParkourGalleryRenderer() { }
++
++   private static ResourceLocation texture(String file) {
++      return ResourceLocation.fromNamespaceAndPath("arlightchatclient", "textures/parkour/lobby/" + file);
++   }
+ 
+    @SubscribeEvent
+    public static void render(RenderLevelStageEvent event) {
+-      if (event.getStage() != RenderLevelStageEvent.Stage.AFTER_ENTITIES) return;
++      if (event.getStage() != RenderLevelStageEvent.Stage.AFTER_PARTICLES) return;
+       Minecraft mc = Minecraft.getInstance();
+       if (mc.level == null || mc.player == null) return;
+-      BlockPos spawn = mc.level.getSharedSpawnPos();
+-      ensureModels(mc);
+-      float partial = event.getPartialTick().getGameTimeDeltaPartialTick(false);
+-      double cameraX = event.getCamera().getPosition().x;
+-      double cameraY = event.getCamera().getPosition().y;
+-      double cameraZ = event.getCamera().getPosition().z;
+-      Map<String, ParkourHubState.GalleryGroup> gallery = ParkourHubState.gallery();
++      Map<String, ParkourHubState.GalleryGroup> groups = ParkourHubState.gallery();
++      if (groups.isEmpty()) return;
++
+       String currentWorld = mc.level.dimension().location().getPath();
+-      for (ParkourHubState.GalleryGroup group : gallery.values()) {
+-         if (group == null || group.entries().isEmpty()) continue;
+-         if (!group.world().isBlank() && !group.world().equalsIgnoreCase(currentWorld)) continue;
+-         double baseX = Double.isFinite(group.x()) ? group.x() : fallbackX(group.id(), spawn);
+-         double baseY = Double.isFinite(group.y()) ? group.y() : spawn.getY();
+-         double baseZ = Double.isFinite(group.z()) ? group.z() : fallbackZ(group.id(), spawn);
+-         float yaw = Double.isFinite(group.x()) ? group.yaw() : fallbackYaw(group.id());
+-         if (mc.player.distanceToSqr(baseX, baseY, baseZ) > 14400.0D) continue;
+-         renderGroup(event.getPoseStack(), mc.renderBuffers().bufferSource(), group,
+-               baseX, baseY, baseZ, yaw, cameraX, cameraY, cameraZ, partial);
+-      }
+-      ParkourObbyState.Champion champion = ParkourObbyState.champion();
+-      if (champion != null && !gallery.containsKey("infinite_champion")) {
+-         ParkourHubState.TopEntry entry = new ParkourHubState.TopEntry(1, champion.uuid(), champion.name(), champion.modules(), "Checkpoint " + champion.checkpoint() + " · " + champion.modules() + " módulos", "INFINITE_EXPLORER");
+-         ParkourHubState.GalleryGroup fallback = new ParkourHubState.GalleryGroup("infinite_champion", currentWorld,
+-               spawn.getX() + 25.0D, spawn.getY() + 0.08D, spawn.getZ() + 18.0D, 135.0F, List.of(entry));
+-         renderGroup(event.getPoseStack(), mc.renderBuffers().bufferSource(), fallback,
+-               fallback.x(), fallback.y(), fallback.z(), fallback.yaw(), cameraX, cameraY, cameraZ, partial);
+-      }
+-   }
+-
+-   private static double fallbackX(String id, BlockPos spawn) {
++      PoseStack pose = event.getPoseStack();
++      Vec3 camera = event.getCamera().getPosition();
++      MultiBufferSource.BufferSource buffers = mc.renderBuffers().bufferSource();
++      boolean rendered = false;
++      for (ParkourHubState.GalleryGroup group : groups.values()) {
++         if (group == null) continue;
++         if (!group.world().isBlank() && !worldMatches(group.world(), currentWorld)) continue;
++         if (!Double.isFinite(group.x()) || !Double.isFinite(group.y()) || !Double.isFinite(group.z())) continue;
++         if (mc.player.distanceToSqr(group.x(), group.y(), group.z()) > 32400.0D) continue;
++         renderGroup(pose, buffers, camera, group);
++         rendered = true;
++      }
++      if (rendered) buffers.endBatch();
++   }
++
++   private static boolean worldMatches(String expected, String current) {
++      if (expected.equalsIgnoreCase(current)) return true;
++      int colon = expected.indexOf(':');
++      return colon >= 0 && expected.substring(colon + 1).equalsIgnoreCase(current);
++   }
++
++   private static void renderGroup(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                   Vec3 camera, ParkourHubState.GalleryGroup group) {
++      pose.pushPose();
++      try {
++         pose.translate(group.x() - camera.x, group.y() - camera.y, group.z() - camera.z);
++         pose.mulPose(Axis.YP.rotationDegrees(group.yaw()));
++         drawPanelQuad(pose, buffers, textureFor(group.id()));
++         if ("infinite_champion".equals(group.id())) {
++            drawInfinite(pose, buffers, group);
++         } else {
++            drawRanking(pose, buffers, group);
++         }
++      } finally {
++         pose.popPose();
++      }
++   }
++
++   private static ResourceLocation textureFor(String id) {
+       return switch (id) {
+-         case "race" -> spawn.getX() - 22.0D;
+-         case "daily" -> spawn.getX() + 22.0D;
+-         case "infinite_champion" -> spawn.getX() + 25.0D;
+-         default -> spawn.getX();
++         case "race" -> RACE;
++         case "time_trial" -> TIME_TRIAL;
++         case "daily" -> DAILY;
++         case "wins" -> WINS;
++         default -> INFINITE;
+       };
+    }
+ 
+-   private static double fallbackZ(String id, BlockPos spawn) {
+-      return switch (id) {
+-         case "race", "daily" -> spawn.getZ() - 27.8D;
+-         case "time_trial" -> spawn.getZ() - 32.0D;
+-         case "wins" -> spawn.getZ() + 27.8D;
+-         case "infinite_champion" -> spawn.getZ() + 18.0D;
+-         default -> spawn.getZ();
++   private static void drawRanking(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                   ParkourHubState.GalleryGroup group) {
++      List<ParkourHubState.TopEntry> entries = group.entries();
++      ParkourHubState.TopEntry first = at(entries, 0);
++      ParkourHubState.TopEntry second = at(entries, 1);
++      ParkourHubState.TopEntry third = at(entries, 2);
++
++      // Los números también se dibujan dinámicamente: las plantillas no contienen datos de jugador.
++      drawText(pose, buffers, 836, 202, "#1", GOLD, 1.08F);
++      drawText(pose, buffers, 372, 225, "#2", SILVER, 0.92F);
++      drawText(pose, buffers, 1305, 225, "#3", BRONZE, 0.92F);
++
++      drawRankSlot(pose, buffers, first, 1, 836, 588, 310, 652, 697, GOLD);
++      drawRankSlot(pose, buffers, second, 2, 375, 582, 245, 650, 695, SILVER);
++      drawRankSlot(pose, buffers, third, 3, 1303, 582, 245, 650, 695, BRONZE);
++
++      int[] starts = {75, 380, 685, 990, 1295};
++      int[] colors = {LIME, CYAN, MAGENTA, GOLD, LIME};
++      for (int i = 0; i < 5; i++) {
++         int place = i + 4;
++         ParkourHubState.TopEntry entry = at(entries, i + 3);
++         int x0 = starts[i];
++         int color = colors[i];
++         drawText(pose, buffers, x0 + 24, 804, "#" + place, color, 0.58F);
++         if (entry == null) {
++            drawText(pose, buffers, x0 + 190, 828, "Sin registro", 0xFF80788B, 0.48F);
++            continue;
++         }
++         PlayerSkin skin = ParkourSkinResolver.get(entry.uuid(), entry.name());
++         if (skin != null && skin.texture() != null) {
++            drawMiniSkin(pose, buffers, skin.texture(), x0 + 118, 834, 75, color);
++         }
++         drawText(pose, buffers, x0 + 190, 813, trim(entry.name(), 12), color, 0.48F);
++         drawText(pose, buffers, x0 + 190, 848, trim(formatValue(group.id(), entry), 15), WHITE, 0.42F);
++      }
++   }
++
++   private static void drawRankSlot(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                    ParkourHubState.TopEntry entry, int place,
++                                    int centerX, int feetY, int skinHeight,
++                                    int nameY, int valueY, int color) {
++      if (entry == null) {
++         drawText(pose, buffers, centerX, nameY, "Sin registro", 0xFF887E91, 0.66F);
++         return;
++      }
++      PlayerSkin skin = ParkourSkinResolver.get(entry.uuid(), entry.name());
++      if (skin != null && skin.texture() != null) {
++         drawFullSkin(pose, buffers, skin.texture(), centerX, feetY, skinHeight, place, color);
++      }
++      drawText(pose, buffers, centerX, nameY, trim(entry.name(), 18), color, place == 1 ? 0.83F : 0.72F);
++      drawText(pose, buffers, centerX, valueY, trim(formatValue("", entry), 22), WHITE, 0.60F);
++   }
++
++   private static void drawInfinite(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                    ParkourHubState.GalleryGroup group) {
++      ParkourHubState.TopEntry hero = at(group.entries(), 0);
++      if (hero == null) {
++         drawText(pose, buffers, 836, 720, "Aún no hay explorador", 0xFF9489A1, 0.72F);
++         return;
++      }
++      PlayerSkin skin = ParkourSkinResolver.get(hero.uuid(), hero.name());
++      if (skin != null && skin.texture() != null) {
++         drawFullSkin(pose, buffers, skin.texture(), 836, 678, 410, 1, GOLD);
++      }
++      drawText(pose, buffers, 836, 720, trim(hero.name(), 20), GOLD, 0.90F);
++      drawText(pose, buffers, 836, 770, "Progreso más lejano", WHITE, 0.55F);
++
++      long checkpoint = group.statA() > 0 ? group.statA() : Math.max(0L, hero.value());
++      long totalTime = Math.max(0L, group.statB());
++      long falls = Math.max(0L, group.statC());
++      long modules = parseModules(hero.formatted());
++      drawStat(pose, buffers, 300, 330, "CHECKPOINT", String.valueOf(checkpoint), MAGENTA);
++      drawStat(pose, buffers, 300, 500, "MÓDULOS", modules >= 0 ? String.valueOf(modules) : "—", CYAN);
++      drawStat(pose, buffers, 300, 665, "CAÍDAS", String.valueOf(falls), LIME);
++      drawStat(pose, buffers, 1370, 330, "TIEMPO TOTAL", formatDuration(totalTime), BRONZE);
++      drawStat(pose, buffers, 1370, 500, "MEJOR CHECKPOINT", String.valueOf(checkpoint), CYAN);
++      drawStat(pose, buffers, 1370, 665, "PROGRESO", modules >= 0 ? modules + " módulos" : trim(hero.formatted(), 18), LIME);
++   }
++
++   private static void drawStat(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                int x, int y, String label, String value, int color) {
++      drawText(pose, buffers, x, y - 25, label, WHITE, 0.44F);
++      drawText(pose, buffers, x, y + 22, value, color, 0.70F);
++   }
++
++   private static ParkourHubState.TopEntry at(List<ParkourHubState.TopEntry> entries, int index) {
++      return index >= 0 && index < entries.size() ? entries.get(index) : null;
++   }
++
++   private static String formatValue(String groupId, ParkourHubState.TopEntry entry) {
++      if (entry == null) return "—";
++      if ("wins".equals(groupId) || entry.formatted().toLowerCase().contains("victoria")) {
++         return entry.formatted().isBlank() ? entry.value() + " victorias" : entry.formatted();
++      }
++      return entry.formatted().isBlank() ? formatMillis(entry.value()) : entry.formatted();
++   }
++
++   private static String formatMillis(long millis) {
++      if (millis <= 0) return "Sin registro";
++      long minutes = millis / 60000L;
++      long seconds = (millis % 60000L) / 1000L;
++      long hundredths = (millis % 1000L) / 10L;
++      return String.format(java.util.Locale.ROOT, "%02d:%02d.%02d", minutes, seconds, hundredths);
++   }
++
++   private static String formatDuration(long millis) {
++      if (millis <= 0) return "00:00:00";
++      long totalSeconds = millis / 1000L;
++      long hours = totalSeconds / 3600L;
++      long minutes = (totalSeconds % 3600L) / 60L;
++      long seconds = totalSeconds % 60L;
++      return String.format(java.util.Locale.ROOT, "%02d:%02d:%02d", hours, minutes, seconds);
++   }
++
++   private static long parseModules(String formatted) {
++      if (formatted == null) return -1L;
++      java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("(\\d+)\\s*módulos", java.util.regex.Pattern.CASE_INSENSITIVE).matcher(formatted);
++      return matcher.find() ? Long.parseLong(matcher.group(1)) : -1L;
++   }
++
++   private static String trim(String text, int max) {
++      if (text == null || text.isBlank()) return "—";
++      return text.length() <= max ? text : text.substring(0, Math.max(1, max - 1)) + "…";
++   }
++
++   private static void drawPanelQuad(PoseStack pose, MultiBufferSource.BufferSource buffers, ResourceLocation texture) {
++      Matrix4f matrix = pose.last().pose();
++      var consumer = buffers.getBuffer(RenderType.entityTranslucent(texture));
++      float left = -PANEL_WIDTH * 0.5F;
++      float right = PANEL_WIDTH * 0.5F;
++      float bottom = 0.0F;
++      float top = PANEL_HEIGHT;
++      float z = 0.003F;
++      consumer.addVertex(matrix, left, bottom, z).setColor(255,255,255,255).setUv(0.0F, 1.0F).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, right, bottom, z).setColor(255,255,255,255).setUv(1.0F, 1.0F).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, right, top, z).setColor(255,255,255,255).setUv(1.0F, 0.0F).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, left, top, z).setColor(255,255,255,255).setUv(0.0F, 0.0F).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++   }
++
++   private static void drawFullSkin(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                    ResourceLocation skin, int centerX, int feetY, int targetHeight,
++                                    int place, int glowColor) {
++      float bob = (float)Math.sin((System.currentTimeMillis() / 1000.0D) * 2.3D + place * 0.7D) * 3.0F;
++      float swing = (float)Math.sin((System.currentTimeMillis() / 1000.0D) * 1.85D + place) * 5.0F;
++      float scale = targetHeight / 32.0F;
++      float x = centerX - 8.0F * scale;
++      float y = feetY - 32.0F * scale + bob;
++      drawSkinParts(pose, buffers, skin, x, y, scale, swing, place == 1, glowColor);
++   }
++
++   private static void drawMiniSkin(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                    ResourceLocation skin, int centerX, int feetY, int targetHeight, int glowColor) {
++      float scale = targetHeight / 32.0F;
++      float x = centerX - 8.0F * scale;
++      float y = feetY - 32.0F * scale;
++      drawSkinParts(pose, buffers, skin, x, y, scale, 0.0F, false, glowColor);
++   }
++
++   private static void drawSkinParts(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                     ResourceLocation skin, float x, float y, float scale,
++                                     float swingDegrees, boolean champion, int glowColor) {
++      // halo sutil, separado de la skin para no tapar la capa exterior
++      if (champion) drawGlow(pose, buffers, x + 8 * scale, y + 17 * scale, 10 * scale, glowColor);
++
++      // Piernas (base y segunda capa)
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y + 20*scale, 4*scale, 12*scale, 4,20,4,12, false, 0.030F);
++      drawSkinRegion(pose, buffers, skin, x + 8*scale, y + 20*scale, 4*scale, 12*scale, 20,52,4,12, false, 0.030F);
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y + 20*scale, 4*scale, 12*scale, 4,36,4,12, false, 0.035F);
++      drawSkinRegion(pose, buffers, skin, x + 8*scale, y + 20*scale, 4*scale, 12*scale, 4,52,4,12, false, 0.035F);
++
++      // torso
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y + 8*scale, 8*scale, 12*scale, 20,20,8,12, false, 0.040F);
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y + 8*scale, 8*scale, 12*scale, 20,36,8,12, false, 0.045F);
++
++      // brazos con pequeño swing de pose
++      pose.pushPose();
++      try {
++         float pivotY = y + 10*scale;
++         float leftPivotX = x + 4*scale;
++         pose.translate(toWorldX(leftPivotX), toWorldY(pivotY), 0.0F);
++         pose.mulPose(Axis.ZP.rotationDegrees(-8.0F - swingDegrees));
++         pose.translate(-toWorldX(leftPivotX), -toWorldY(pivotY), 0.0F);
++         drawSkinRegion(pose, buffers, skin, x, y + 8*scale, 4*scale, 12*scale, 44,20,4,12, false, 0.050F);
++         drawSkinRegion(pose, buffers, skin, x, y + 8*scale, 4*scale, 12*scale, 44,36,4,12, false, 0.055F);
++      } finally { pose.popPose(); }
++      pose.pushPose();
++      try {
++         float pivotY = y + 10*scale;
++         float rightPivotX = x + 12*scale;
++         pose.translate(toWorldX(rightPivotX), toWorldY(pivotY), 0.0F);
++         pose.mulPose(Axis.ZP.rotationDegrees(8.0F + swingDegrees));
++         pose.translate(-toWorldX(rightPivotX), -toWorldY(pivotY), 0.0F);
++         drawSkinRegion(pose, buffers, skin, x + 12*scale, y + 8*scale, 4*scale, 12*scale, 36,52,4,12, false, 0.050F);
++         drawSkinRegion(pose, buffers, skin, x + 12*scale, y + 8*scale, 4*scale, 12*scale, 52,52,4,12, false, 0.055F);
++      } finally { pose.popPose(); }
++
++      // cabeza y sombrero al final
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y, 8*scale, 8*scale, 8,8,8,8, false, 0.060F);
++      drawSkinRegion(pose, buffers, skin, x + 4*scale, y, 8*scale, 8*scale, 40,8,8,8, false, 0.065F);
++   }
++
++   private static void drawGlow(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                float px, float py, float radius, int color) {
++      // El fondo ya trae el aro/brillo principal. Este halo solo añade una luz suave usando texto Unicode.
++      drawText(pose, buffers, Math.round(px), Math.round(py), "✦", (color & 0x00FFFFFF) | 0x55000000, Math.max(0.4F, radius / 80F));
++   }
++
++   private static void drawSkinRegion(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                      ResourceLocation skin, float xPx, float yPx, float wPx, float hPx,
++                                      int u, int v, int uw, int vh, boolean mirror, float z) {
++      float x1 = toWorldX(xPx);
++      float y1 = toWorldY(yPx + hPx);
++      float x2 = toWorldX(xPx + wPx);
++      float y2 = toWorldY(yPx);
++      float u1 = u / 64.0F;
++      float v1 = v / 64.0F;
++      float u2 = (u + uw) / 64.0F;
++      float v2 = (v + vh) / 64.0F;
++      if (mirror) { float tmp = u1; u1 = u2; u2 = tmp; }
++      Matrix4f matrix = pose.last().pose();
++      var consumer = buffers.getBuffer(RenderType.entityTranslucent(skin));
++      consumer.addVertex(matrix, x1, y1, z).setColor(255,255,255,255).setUv(u1,v2).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, x2, y1, z).setColor(255,255,255,255).setUv(u2,v2).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, x2, y2, z).setColor(255,255,255,255).setUv(u2,v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++      consumer.addVertex(matrix, x1, y2, z).setColor(255,255,255,255).setUv(u1,v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(FULL_BRIGHT).setNormal(0,0,1);
++   }
++
++   private static void drawText(PoseStack pose, MultiBufferSource.BufferSource buffers,
++                                int pixelX, int pixelY, String text, int color, float scale) {
++      if (text == null || text.isBlank()) return;
++      Minecraft mc = Minecraft.getInstance();
++      Font font = mc.font;
++      float pxScale = PANEL_WIDTH / TEXTURE_WIDTH;
++      float worldScale = pxScale * scale * 3.4F;
++      pose.pushPose();
++      try {
++         float worldX = toWorldX(pixelX);
++         float worldY = toWorldY(pixelY);
++         pose.translate(worldX, worldY, 0.080F);
++         pose.scale(worldScale, -worldScale, worldScale);
++         float width = font.width(text);
++         font.drawInBatch(text, -width * 0.5F, -4.0F, color, false, pose.last().pose(), buffers,
++               Font.DisplayMode.POLYGON_OFFSET, 0x66000000, FULL_BRIGHT);
++      } finally {
++         pose.popPose();
++      }
++   }
++
++   private static float toWorldX(float pixelX) {
++      return (pixelX / TEXTURE_WIDTH - 0.5F) * PANEL_WIDTH;
++   }
++
++   private static float toWorldY(float pixelY) {
++      return (1.0F - pixelY / TEXTURE_HEIGHT) * PANEL_HEIGHT;
++   }
++}
