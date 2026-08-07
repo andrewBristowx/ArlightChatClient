@@ -1,4 +1,4 @@
-name: Compilar Parkour Live Tops
+name: Compilar Parkour Tops 1.8.0 / Client 5.7.0 / Assets 1.2.0
 
 on:
   workflow_dispatch:
@@ -51,10 +51,10 @@ jobs:
               "https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t" \
               --output "$out"
           }
-          download '1EG4yifuiujLFUjnUacEPAlrsEDo8zdLd' /tmp/client.zip
-          download '1O0FMkO3yPNtNcNtsFfmxgDbVZdxKL7yP' /tmp/parkour.zip
-          download '1PAd2BUK7h3YQSZYLBEJ7C0ElzqqBq5wK' /tmp/assets.zip
-          download '1d9sjeHwVDOB1hxVubQg_jOZ6CwKh_y60' /tmp/ArlightCore-1.25.4.jar
+          download '1uUweOtKITi1nbbttZMuhBJt1d-m_lhkW' /tmp/client.zip
+          download '1HBeYo0O3tb3rds-f-IEf_RlpP3KJlf21' /tmp/parkour.zip
+          download '1a8TahrxA1bZtI2o_0thqgfIcruCcunzx' /tmp/assets.zip
+          download '1btR-7rUQChWC8yod4aKB_3UC3rWdHsa4' /tmp/ArlightCore-1.25.4.jar
           unzip -t /tmp/ArlightCore-1.25.4.jar >/dev/null
           mkdir -p /tmp/client /tmp/parkour /tmp/assets
           unzip -q /tmp/client.zip -d /tmp/client
@@ -87,8 +87,9 @@ jobs:
             echo 'ERROR: Bukkit embebido en plugin'
             exit 1
           fi
+          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ParkourStatsManager | grep 'topInfiniteByCheckpoint'
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.8.0-LIVE-TOPS.jar"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.8.0-TETRIS-TOP-PANELS.jar"
 
       - name: Compilar ArlightParkourAssets 1.2.0
         shell: bash
@@ -100,7 +101,8 @@ jobs:
           JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
           test -n "$JAR"
           unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '1\.2\.0|version'
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkourAssets-1.2.0-TEXTURE-UPGRADE.jar"
+          unzip -l "$JAR" | grep 'textures/block/fan.png'
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkourAssets-1.2.0-TEXTURE-PASS.jar"
 
       - name: Compilar ArlightChatClient 5.7.0
         shell: bash
@@ -112,9 +114,13 @@ jobs:
           JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
           test -n "$JAR"
           unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '5\.7\.0|version'
-          unzip -l "$JAR" | grep 'textures/parkour/lobby/top_race.png'
+          for t in top_race top_time_trial top_daily top_wins top_infinite; do
+            unzip -l "$JAR" | grep "textures/parkour/${t}.png"
+          done
+          # Confirma que no perdimos la actualización 5.6.0 de Bingo.
           unzip -l "$JAR" | grep 'com/arlight/chatclient/BingoLobbyTopRenderer.class'
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar"
+          javap -classpath "$JAR" -p com.arlight.chatclient.ParkourGalleryRenderer >/dev/null
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightChatClient-5.7.0-PARKOUR-TOP-PANELS.jar"
 
       - name: Verificación final
         shell: bash
@@ -122,8 +128,6 @@ jobs:
           set -euo pipefail
           ls -lh dist
           sha256sum dist/* | tee dist/SHA256.txt
-          javap -classpath dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar -p com.arlight.chatclient.ParkourGalleryRenderer >/dev/null
-          javap -classpath dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar -p com.arlight.chatclient.BingoLobbyTopRenderer >/dev/null
 
       - name: Subir entrega compilada
         uses: actions/upload-artifact@v4
