@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "emilyemotes",
+  "version": "${version}",
+  "name": "EmilyEmotes",
+  "description": "Selector visual rosa/blanco para los emotes cargados por Streamotes.",
+  "authors": ["EmilyExtacy"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.emilyextacy.emotes.EmilyEmotesClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "1.20.1",
+    "fabric-api": "*",
+    "streamotes": "*"
+  }
+}
