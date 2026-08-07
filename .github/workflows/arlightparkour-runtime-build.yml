@@ -1,6 +1,9 @@
 name: Build ArlightParkour Runtime API
 
 on:
+  push:
+    branches:
+      - fix/arlightparkour-1.5.3-runtime-api-void-hub
   pull_request:
     branches:
       - main
@@ -17,7 +20,7 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      - name: Checkout pull request
+      - name: Checkout source branch
         uses: actions/checkout@v4
 
       - name: Configure Java 21
