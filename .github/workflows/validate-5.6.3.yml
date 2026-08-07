@@ -1,0 +1,54 @@
+name: Validar ArlightChatClient 5.6.3
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Gradle 9.6.0
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.6.0'
+      - name: Descargar fuente exacta 5.6.3
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 3 'https://drive.usercontent.google.com/download?id=1r5IXfyG8u6olRpS5FLRK0negznn4pv6p&export=download&confirm=t' -o /tmp/source.zip
+          unzip -t /tmp/source.zip | tail -1
+          mkdir -p /tmp/buildsrc
+          unzip -q /tmp/source.zip -d /tmp/buildsrc
+          shopt -s dotglob nullglob
+          entries=(/tmp/buildsrc/*)
+          if [ ${#entries[@]} -eq 1 ] && [ -d "${entries[0]}" ]; then
+            mv "${entries[0]}"/* /tmp/buildsrc/
+            rmdir "${entries[0]}" || true
+          fi
+      - name: Compilar
+        working-directory: /tmp/buildsrc
+        run: gradle --no-daemon clean jar
+      - name: Validar JAR
+        run: |
+          set -euo pipefail
+          test -f /tmp/buildsrc/build/libs/ArlightChatClient-5.6.3.jar
+          jar tf /tmp/buildsrc/build/libs/ArlightChatClient-5.6.3.jar >/dev/null
+          unzip -p /tmp/buildsrc/build/libs/ArlightChatClient-5.6.3.jar META-INF/neoforge.mods.toml | grep -F 'version="5.6.3"'
+      - name: Subir JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArlightChatClient-5.6.3
+          path: /tmp/buildsrc/build/libs/ArlightChatClient-5.6.3.jar
+          if-no-files-found: error
+          retention-days: 3
