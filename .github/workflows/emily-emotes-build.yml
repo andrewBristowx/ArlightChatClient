@@ -1,0 +1,42 @@
+name: Build EmilyEmotes Fabric 1.20.1
+
+on:
+  push:
+    branches:
+      - emily-emotes-fabric-1.20.1
+    paths:
+      - 'EmilyEmotes/**'
+      - '.github/workflows/emily-emotes-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Gradle 8.4
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.4'
+
+      - name: Build
+        working-directory: EmilyEmotes
+        run: gradle build --stacktrace
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: EmilyEmotes-1.0.0-Fabric-1.20.1
+          path: EmilyEmotes/build/libs/EmilyEmotes-1.0.0.jar
+          if-no-files-found: error
