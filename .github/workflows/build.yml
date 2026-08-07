@@ -1,4 +1,4 @@
-name: Compilar ArlightCore
+name: Compilar Parkour Live Tops
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
 
     steps:
       - name: Descargar repositorio
@@ -37,24 +37,97 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-          cache: maven
 
-      - name: Compilar con Maven
-        run: mvn -B -U -DskipTests clean install
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Reunir JAR
+      - name: Descargar fuentes finales
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p dist
-          find target -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' -exec cp {} dist/ \;
-          test -n "$(find dist -maxdepth 1 -type f -name '*.jar' -print -quit)"
-          ls -lh dist
+          download() {
+            local id="$1" out="$2"
+            curl --fail --location --retry 5 --retry-delay 3 \
+              "https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t" \
+              --output "$out"
+          }
+          download '1EG4yifuiujLFUjnUacEPAlrsEDo8zdLd' /tmp/client.zip
+          download '1O0FMkO3yPNtNcNtsFfmxgDbVZdxKL7yP' /tmp/parkour.zip
+          download '1PAd2BUK7h3YQSZYLBEJ7C0ElzqqBq5wK' /tmp/assets.zip
+          download '1GWGRONAAaZW85ecIevQOEJ35kdG_e3B4' /tmp/ArlightCore-1.25.4.jar
+          mkdir -p /tmp/client /tmp/parkour /tmp/assets
+          unzip -q /tmp/client.zip -d /tmp/client
+          unzip -q /tmp/parkour.zip -d /tmp/parkour
+          unzip -q /tmp/assets.zip -d /tmp/assets
+          echo "CLIENT_ROOT=$(find /tmp/client -type f -name build.gradle -printf '%h\n' | head -n1)" >> "$GITHUB_ENV"
+          echo "PARKOUR_ROOT=$(find /tmp/parkour -type f -name pom.xml -printf '%h\n' | head -n1)" >> "$GITHUB_ENV"
+          echo "ASSETS_ROOT=$(find /tmp/assets -type f -name build.gradle -printf '%h\n' | head -n1)" >> "$GITHUB_ENV"
 
-      - name: Subir JAR compilado
+      - name: Instalar ArlightCore local
+        shell: bash
+        run: |
+          mvn -B -ntp install:install-file \
+            -Dfile=/tmp/ArlightCore-1.25.4.jar \
+            -DgroupId=com.arlight \
+            -DartifactId=ArlightCore \
+            -Dversion=1.25.4 \
+            -Dpackaging=jar
+
+      - name: Compilar ArlightParkour 1.8.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$PARKOUR_ROOT"
+          mvn -B -ntp clean test package
+          JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name 'original-*' -print -quit)"
+          test -n "$JAR"
+          unzip -p "$JAR" plugin.yml | grep "version: '1.8.0'"
+          if unzip -Z1 "$JAR" | grep -q '^org/bukkit/'; then
+            echo 'ERROR: Bukkit embebido en plugin'
+            exit 1
+          fi
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.8.0-LIVE-TOPS.jar"
+
+      - name: Compilar ArlightParkourAssets 1.2.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$ASSETS_ROOT"
+          chmod +x ./gradlew
+          ./gradlew --no-daemon clean build
+          JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
+          test -n "$JAR"
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '1\.2\.0|version'
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkourAssets-1.2.0-TEXTURE-UPGRADE.jar"
+
+      - name: Compilar ArlightChatClient 5.7.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$CLIENT_ROOT"
+          chmod +x ./gradlew
+          ./gradlew --no-daemon clean build
+          JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
+          test -n "$JAR"
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '5\.7\.0|version'
+          unzip -l "$JAR" | grep 'textures/parkour/lobby/top_race.png'
+          unzip -l "$JAR" | grep 'com/arlight/chatclient/BingoLobbyTopRenderer.class'
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar"
+
+      - name: Verificación final
+        shell: bash
+        run: |
+          set -euo pipefail
+          ls -lh dist
+          sha256sum dist/* | tee dist/SHA256.txt
+          javap -classpath dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar -p com.arlight.chatclient.ParkourGalleryRenderer >/dev/null
+          javap -classpath dist/ArlightChatClient-5.7.0-PARKOUR-LIVE-TOPS.jar -p com.arlight.chatclient.BingoLobbyTopRenderer >/dev/null
+
+      - name: Subir entrega compilada
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightCore-1.20.0-JAR
-          path: dist/*.jar
+          name: ArlightParkour-1.8.0-Assets-1.2.0-ChatClient-5.7.0
+          path: dist/*
           if-no-files-found: error
           retention-days: 30
