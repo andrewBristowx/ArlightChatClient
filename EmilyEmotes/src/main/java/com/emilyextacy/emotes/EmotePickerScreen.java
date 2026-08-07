@@ -9,8 +9,10 @@ import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class EmotePickerScreen extends Screen {
     private static final int PINK = 0xFFFF78BC;
@@ -26,8 +28,14 @@ public class EmotePickerScreen extends Screen {
     private static final int TILE_H = 54;
     private static final int GAP = 6;
 
+    // Mantener una cantidad moderada de previews simultáneos evita que
+    // decenas de emotes animados saturen el render del cliente.
+    private static final int MAX_COLUMNS = 7;
+    private static final int MAX_VISIBLE_ROWS = 4;
+
     private final Screen parent;
     private final FavoritesConfig favorites = FavoritesConfig.get();
+    private final Map<String, Integer> previewWidthCache = new HashMap<>();
 
     private TextFieldWidget searchBox;
     private List<StreamotesBridge.EmoteRef> allEmotes = new ArrayList<>();
@@ -76,6 +84,7 @@ public class EmotePickerScreen extends Screen {
 
     private void reloadFromStreamotes() {
         allEmotes = StreamotesBridge.snapshot();
+        previewWidthCache.clear();
         applyFilter();
     }
 
@@ -165,11 +174,18 @@ public class EmotePickerScreen extends Screen {
             if (over) hovered = emote;
 
             drawPanel(context, x, y, TILE_W, TILE_H, over ? PANEL_HOVER : PANEL, over ? PINK : BORDER);
-            emote.requestTexture();
 
+            /*
+             * IMPORTANTE: no llamar requestTexture() manualmente aquí.
+             * Streamotes ya comprueba durante el render si la textura está
+             * cargada y solo la solicita cuando hace falta. La v1.0.0 la
+             * solicitaba cada frame y podía volver a encolar el mismo emote
+             * después de cada upload, causando una caída fuerte de FPS.
+             */
             Text preview = emote.preview();
-            int previewWidth = Math.max(1, textRenderer.getWidth(preview));
-            float scale = 2.0f;
+            int previewWidth = previewWidthCache.computeIfAbsent(
+                    emote.name(), ignored -> Math.max(1, textRenderer.getWidth(preview)));
+            float scale = 1.75f;
             context.getMatrices().push();
             context.getMatrices().translate(x + TILE_W / 2.0f, y + 7.0f, 0.0f);
             context.getMatrices().scale(scale, scale, 1.0f);
@@ -177,12 +193,13 @@ public class EmotePickerScreen extends Screen {
             context.getMatrices().pop();
 
             String name = compact(emote.name(), 10);
-            int nameColor = favorites.isFavorite(emote.name()) ? PINK : WHITE;
+            boolean favorite = favorites.isFavorite(emote.name());
+            int nameColor = favorite ? PINK : WHITE;
             context.drawCenteredTextWithShadow(textRenderer, Text.literal(name), x + TILE_W / 2, y + TILE_H - 13, nameColor);
 
             String tag = sourceTag(emote.sourceKey());
             context.drawTextWithShadow(textRenderer, Text.literal(tag), x + 3, y + 3, 0xFFBDA7B6);
-            if (favorites.isFavorite(emote.name())) {
+            if (favorite) {
                 context.drawTextWithShadow(textRenderer, Text.literal("♥"), x + TILE_W - 10, y + 3, PINK);
             }
         }
@@ -261,11 +278,12 @@ public class EmotePickerScreen extends Screen {
     }
 
     private int columns() {
-        return Math.max(3, Math.min(9, (width - 28) / (TILE_W + GAP)));
+        return Math.max(3, Math.min(MAX_COLUMNS, (width - 28) / (TILE_W + GAP)));
     }
 
     private int visibleRows() {
-        return Math.max(1, (height - GRID_TOP - BOTTOM_SPACE) / (TILE_H + GAP));
+        int byHeight = Math.max(1, (height - GRID_TOP - BOTTOM_SPACE) / (TILE_H + GAP));
+        return Math.min(MAX_VISIBLE_ROWS, byHeight);
     }
 
     private static String compact(String value, int max) {
