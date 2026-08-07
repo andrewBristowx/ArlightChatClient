@@ -1,0 +1,120 @@
+name: Compilar Parkour 1.6.0 y Client 5.5.0
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/parkour-visuals-5.4.0
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  parkour-server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Descargar fuente y ArlightCore
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=1vTxy9apAAwkYmrTQXNwJQ_RYbuUHFibv&export=download&confirm=t' \
+            -o /tmp/parkour-source.zip
+          mkdir -p /tmp/parkour-source
+          unzip -q /tmp/parkour-source.zip -d /tmp/parkour-source
+          SOURCE_ROOT="$(find /tmp/parkour-source -type f -name pom.xml -printf '%h\n' | head -n 1)"
+          test -n "$SOURCE_ROOT"
+          echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=1b7JV5Y8ymeKdIZIGXwoFQA2JOB9izFqK&export=download&confirm=t' \
+            -o /tmp/ArlightCore-1.25.4.jar
+          mvn -B -ntp install:install-file \
+            -Dfile=/tmp/ArlightCore-1.25.4.jar \
+            -DgroupId=com.arlight -DartifactId=ArlightCore \
+            -Dversion=1.25.4 -Dpackaging=jar
+      - name: Compilar ArlightParkour
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$SOURCE_ROOT"
+          mvn -B -ntp clean test package
+      - name: Validar JAR del servidor
+        shell: bash
+        run: |
+          set -euo pipefail
+          JAR="$(find "$SOURCE_ROOT/target" -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name 'original-*' -print -quit)"
+          test -n "$JAR"
+          unzip -p "$JAR" plugin.yml | grep "version: '1.6.0'"
+          if unzip -Z1 "$JAR" | grep -q '^org/bukkit/'; then
+            echo 'ERROR: el plugin contiene clases org.bukkit'
+            exit 1
+          fi
+          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ArlightParkourPlugin | grep 'generateSafeFallbackCourse'
+          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ParkourHubManager | grep 'identifyHubItem'
+          mkdir -p "$GITHUB_WORKSPACE/dist-server"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist-server/ArlightParkour-1.6.0-HUB-ARENA-REWORK.jar"
+      - name: Subir ArlightParkour
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArlightParkour-1.6.0-HUB-ARENA-REWORK
+          path: dist-server/*.jar
+          if-no-files-found: error
+          retention-days: 30
+
+  parkour-client:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Descargar fuente del cliente
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://drive.usercontent.google.com/download?id=17Yrj_TFhvHD4DtRVCnZbAJUl1YkspQgy&export=download&confirm=t' \
+            -o /tmp/client-source.zip
+          mkdir -p /tmp/client-source
+          unzip -q /tmp/client-source.zip -d /tmp/client-source
+          SOURCE_ROOT="$(find /tmp/client-source -type f -name build.gradle -printf '%h\n' | head -n 1)"
+          test -n "$SOURCE_ROOT"
+          echo "SOURCE_ROOT=$SOURCE_ROOT" >> "$GITHUB_ENV"
+      - name: Compilar ArlightChatClient
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$SOURCE_ROOT"
+          chmod +x ./gradlew
+          ./gradlew --no-daemon clean build
+      - name: Validar JAR del cliente
+        shell: bash
+        run: |
+          set -euo pipefail
+          JAR="$(find "$SOURCE_ROOT/build/libs" -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
+          test -n "$JAR"
+          javap -classpath "$JAR" -p com.arlight.chatclient.ParkourHubState | grep 'accept'
+          javap -classpath "$JAR" -p com.arlight.chatclient.ParkourGalleryRenderer | grep 'fallbackX'
+          mkdir -p "$GITHUB_WORKSPACE/dist-client"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist-client/ArlightChatClient-5.5.0-PARKOUR-HUB-REWORK.jar"
+      - name: Subir ArlightChatClient
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArlightChatClient-5.5.0-PARKOUR-HUB-REWORK
+          path: dist-client/*.jar
+          if-no-files-found: error
+          retention-days: 30

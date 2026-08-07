@@ -1,0 +1,203 @@
+diff --git a/BUILD_VERSION.txt b/BUILD_VERSION.txt
+index f8ac444..5a21b0a 100644
+--- a/BUILD_VERSION.txt
++++ b/BUILD_VERSION.txt
+@@ -1 +1 @@
+-1.5.2-SCOREBOARD-OWNERSHIP-FIX
++1.5.3-RUNTIME-API-VOID-HUB-FIX
+diff --git a/CAMBIOS_1.5.3.txt b/CAMBIOS_1.5.3.txt
+new file mode 100644
+index 0000000..1d4e5b3
+--- /dev/null
++++ b/CAMBIOS_1.5.3.txt
+@@ -0,0 +1,10 @@
++ARLIGHTPARKOUR 1.5.3 — RUNTIME API + VOID HUB FIX
++
++- Compilación completa contra Paper API 1.21.1 real.
++- Corrige ItemStack#setItemMeta con su firma boolean real.
++- Elimina los parches de bytecode basados en stubs.
++- Registra un generador vacío propio para Multiverse.
++- Detecta parkour_hub creado con terreno normal y lo recrea vacío al arrancar.
++- /parkour admin rebuildhub ahora descarga, borra y recrea el mundo como vacío.
++- Desactiva estructuras y usa el generador vacío del plugin.
++- Conserva el control de scoreboards de 1.5.2 y los cambios de 1.5.1.
+diff --git a/pom.xml b/pom.xml
+index 6c11796..620d559 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -4,7 +4,7 @@
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.arlight</groupId>
+   <artifactId>ArlightParkour</artifactId>
+-  <version>1.5.2</version>
++  <version>1.5.3</version>
+@@ -36,7 +36,7 @@
+-    <finalName>ArlightParkour-1.5.2-SCOREBOARD-OWNERSHIP-FIX</finalName>
++    <finalName>ArlightParkour-1.5.3-RUNTIME-API-VOID-HUB-FIX</finalName>
+diff --git a/src/main/java/com/arlight/parkour/ArlightParkourPlugin.java b/src/main/java/com/arlight/parkour/ArlightParkourPlugin.java
+index eaf1d8d..6733eaa 100644
+--- a/src/main/java/com/arlight/parkour/ArlightParkourPlugin.java
++++ b/src/main/java/com/arlight/parkour/ArlightParkourPlugin.java
+@@ -329,6 +329,11 @@ public final class ArlightParkourPlugin extends JavaPlugin implements Listener,
+         restorePendingPlayersOnline();
+     }
++
++    @Override
++    public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
++        return new EmptyWorldGenerator();
++    }
+@@ -3999,11 +4004,25 @@ public final class ArlightParkourPlugin extends JavaPlugin implements Listener,
+             case "rebuildhub" -> {
+-                if (hubManager != null) {
+-                    hubManager.initialize();
+-                    if (statsManager != null) hubManager.refreshTopDisplays(statsManager);
++                if (hubManager == null) {
++                    sender.sendMessage("§cEl administrador del hub todavía no está disponible.");
++                    break;
+                 }
+-                sender.sendMessage("§aSpawn y tops de Parkour reconstruidos.");
++                World hubWorld = hubManager.world();
++                List<Player> occupants = hubWorld == null ? List.of() : new ArrayList<>(hubWorld.getPlayers());
++                for (Player occupant : occupants) exitParkourToMainLobby(occupant);
++                sender.sendMessage("§eRecreando parkour_hub como mundo vacío...");
++                Bukkit.getScheduler().runTaskLater(this, () -> {
++                    try {
++                        hubManager.recreateVoidWorld();
++                        if (statsManager != null) hubManager.refreshTopDisplays(statsManager);
++                        sender.sendMessage("§aMundo vacío, estructura, spawn y tops de Parkour reconstruidos.");
++                    } catch (RuntimeException exception) {
++                        getLogger().severe("No se pudo reconstruir parkour_hub: " + exception.getMessage());
++                        sender.sendMessage("§cNo se pudo reconstruir parkour_hub. Revisa la consola.");
++                    }
++                }, 10L);
+             }
+diff --git a/src/main/java/com/arlight/parkour/ParkourHubManager.java b/src/main/java/com/arlight/parkour/ParkourHubManager.java
+index 45fb40a..f231745 100644
+--- a/src/main/java/com/arlight/parkour/ParkourHubManager.java
++++ b/src/main/java/com/arlight/parkour/ParkourHubManager.java
+@@ -7,6 +7,7 @@ import org.bukkit.Location;
+ import org.bukkit.Material;
+ import org.bukkit.World;
+ import org.bukkit.WorldCreator;
++import org.bukkit.WorldType;
+@@ -16,7 +17,11 @@ import org.bukkit.inventory.PlayerInventory;
+ import org.bukkit.inventory.meta.ItemMeta;
+ import org.bukkit.plugin.java.JavaPlugin;
++
++import java.io.IOException;
++import java.nio.file.Files;
++import java.nio.file.Path;
+ import java.util.ArrayList;
++import java.util.Comparator;
+@@ -31,6 +36,7 @@ import java.util.UUID;
+ final class ParkourHubManager {
++    private static final String VOID_MARKER = ".arlight-parkour-void-hub";
+@@ -52,10 +58,68 @@ final class ParkourHubManager {
+     void initialize() {
+         String worldName = plugin.getConfig().getString("hub.world", "parkour_hub");
++        boolean manageVoid = plugin.getConfig().getBoolean("hub.manage-void-world", true);
++        boolean recreateUnmanaged = plugin.getConfig().getBoolean("hub.recreate-unmanaged-world", true);
++        Path folder = worldFolder(worldName);
++        boolean existsWithoutMarker = Files.exists(folder) && !Files.exists(folder.resolve(VOID_MARKER));
++        if (manageVoid && recreateUnmanaged && existsWithoutMarker) {
++            World loaded = Bukkit.getWorld(worldName);
++            if (loaded == null || loaded.getPlayers().isEmpty()) {
++                recreateVoidWorldInternal(worldName, true);
++                return;
++            }
++            plugin.getLogger().warning("El mundo " + worldName + " tiene terreno y jugadores conectados; se reconstruirá con /parkour admin rebuildhub.");
++        }
+         world = Bukkit.getWorld(worldName);
+-        if (world == null) world = Bukkit.createWorld(new WorldCreator(worldName).generator(new EmptyGenerator()));
++        if (world == null) world = createVoidWorld(worldName);
+         if (world == null) throw new IllegalStateException("No se pudo crear el mundo lobby " + worldName);
++        writeMarker(world.getWorldFolder().toPath());
++        configureLoadedWorld(false);
++    }
++
++    void recreateVoidWorld() {
++        recreateVoidWorldInternal(plugin.getConfig().getString("hub.world", "parkour_hub"), false);
++    }
++
++    private void recreateVoidWorldInternal(String worldName, boolean startup) {
++        World loaded = Bukkit.getWorld(worldName);
++        if (loaded != null) {
++            if (!loaded.getPlayers().isEmpty()) throw new IllegalStateException("Todavía hay jugadores dentro de " + worldName);
++            clearDisplays();
++            if (!Bukkit.unloadWorld(loaded, false)) throw new IllegalStateException("No se pudo descargar el mundo " + worldName);
++        }
++        Path folder = worldFolder(worldName);
++        deleteRecursively(folder);
++        plugin.getConfig().set("hub.spawn", null);
++        plugin.saveConfig();
++        world = createVoidWorld(worldName);
++        if (world == null) throw new IllegalStateException("No se pudo recrear el mundo vacío " + worldName);
++        writeMarker(world.getWorldFolder().toPath());
++        configureLoadedWorld(true);
++        plugin.getLogger().info("Mundo vacío de Parkour recreado correctamente: " + worldName + (startup ? " (corrección automática de terreno)" : ""));
++    }
++
++    private World createVoidWorld(String worldName) {
++        return Bukkit.createWorld(new WorldCreator(worldName).environment(World.Environment.NORMAL).type(WorldType.FLAT).generateStructures(false).generator(new EmptyGenerator()));
++    }
++
++    private void configureLoadedWorld(boolean forceDefaultSpawn) {
+@@ -65,7 +129,7 @@ final class ParkourHubManager {
+-        Location configured = plugin.getConfig().getLocation("hub.spawn");
++        Location configured = forceDefaultSpawn ? null : plugin.getConfig().getLocation("hub.spawn");
+@@ -79,6 +143,44 @@ final class ParkourHubManager {
+         if (plugin.getConfig().getBoolean("hub.generate-structure", true)) buildStructure();
+     }
++
++    private Path worldFolder(String worldName) {
++        Path container = plugin.getServer().getWorldContainer().toPath().toAbsolutePath().normalize();
++        Path folder = container.resolve(worldName).normalize();
++        if (!folder.startsWith(container)) throw new IllegalArgumentException("Nombre de mundo no seguro: " + worldName);
++        return folder;
++    }
++
++    private void writeMarker(Path folder) {
++        try {
++            Files.createDirectories(folder);
++            Files.writeString(folder.resolve(VOID_MARKER), "ArlightParkour void hub 1.5.3\n");
++        } catch (IOException exception) {
++            plugin.getLogger().warning("No se pudo escribir el marcador del mundo vacío: " + exception.getMessage());
++        }
++    }
++
++    private void deleteRecursively(Path folder) {
++        if (!Files.exists(folder)) return;
++        try (var stream = Files.walk(folder)) {
++            stream.sorted(Comparator.reverseOrder()).forEach(path -> {
++                try { Files.deleteIfExists(path); }
++                catch (IOException exception) { throw new WorldDeleteException(exception); }
++            });
++        } catch (WorldDeleteException exception) {
++            throw new IllegalStateException("No se pudo borrar " + folder + ": " + exception.getCause().getMessage(), exception.getCause());
++        } catch (IOException exception) {
++            throw new IllegalStateException("No se pudo recorrer " + folder + ": " + exception.getMessage(), exception);
++        }
++    }
++
++    private static final class WorldDeleteException extends RuntimeException {
++        private WorldDeleteException(IOException cause) { super(cause); }
++    }
+diff --git a/src/main/resources/config.yml b/src/main/resources/config.yml
+index b7afe40..be93940 100644
+--- a/src/main/resources/config.yml
++++ b/src/main/resources/config.yml
+@@ -7,6 +7,10 @@ hub:
+   world: parkour_hub
+   default-y: 80
+   generate-structure: true
++  manage-void-world: true
++  recreate-unmanaged-world: true
+   spawn: null
+diff --git a/src/main/resources/plugin.yml b/src/main/resources/plugin.yml
+index aa4eda7..de4ddaa 100644
+--- a/src/main/resources/plugin.yml
++++ b/src/main/resources/plugin.yml
+@@ -1,5 +1,5 @@
+ name: ArlightParkour
+-version: '1.5.2'
++version: '1.5.3'
