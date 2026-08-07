@@ -7,6 +7,12 @@ on:
     paths:
       - 'EmilyEmotes/**'
       - '.github/workflows/emily-emotes-build.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'EmilyEmotes/**'
+      - '.github/workflows/emily-emotes-build.yml'
   workflow_dispatch:
 
 permissions:
