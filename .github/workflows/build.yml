@@ -54,7 +54,8 @@ jobs:
           download '1EG4yifuiujLFUjnUacEPAlrsEDo8zdLd' /tmp/client.zip
           download '1O0FMkO3yPNtNcNtsFfmxgDbVZdxKL7yP' /tmp/parkour.zip
           download '1PAd2BUK7h3YQSZYLBEJ7C0ElzqqBq5wK' /tmp/assets.zip
-          download '1GWGRONAAaZW85ecIevQOEJ35kdG_e3B4' /tmp/ArlightCore-1.25.4.jar
+          download '1d9sjeHwVDOB1hxVubQg_jOZ6CwKh_y60' /tmp/ArlightCore-1.25.4.jar
+          unzip -t /tmp/ArlightCore-1.25.4.jar >/dev/null
           mkdir -p /tmp/client /tmp/parkour /tmp/assets
           unzip -q /tmp/client.zip -d /tmp/client
           unzip -q /tmp/parkour.zip -d /tmp/parkour
