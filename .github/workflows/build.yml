@@ -1,5 +1,5 @@
-# Rebuild final con movimiento suavizado y cañón seguro
-name: Compilar Parkour Tops 1.8.0 / Client 5.7.0 / Assets 1.2.0
+# Build integrado Arlight Parkour: jugabilidad, hub, texturas y score visual
+name: Compilar Parkour 1.9.0 / Client 5.8.0 / Assets 1.3.0
 
 on:
   workflow_dispatch:
@@ -52,10 +52,13 @@ jobs:
               "https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t" \
               --output "$out"
           }
-          download '1uUweOtKITi1nbbttZMuhBJt1d-m_lhkW' /tmp/client.zip
-          download '1HBeYo0O3tb3rds-f-IEf_RlpP3KJlf21' /tmp/parkour.zip
-          download '1a8TahrxA1bZtI2o_0thqgfIcruCcunzx' /tmp/assets.zip
+          download '1fm_xeU56mDLU3kA1PHD3LIbC2ebAWtpz' /tmp/client.zip
+          download '1ZBxmS7o1Sn5lb6onPV017a5CSkqj6wGB' /tmp/parkour.zip
+          download '1GCgFruheKPFLEzTNU59ub_sVaTnfhSHA' /tmp/assets.zip
           download '1btR-7rUQChWC8yod4aKB_3UC3rWdHsa4' /tmp/ArlightCore-1.25.4.jar
+          unzip -t /tmp/client.zip >/dev/null
+          unzip -t /tmp/parkour.zip >/dev/null
+          unzip -t /tmp/assets.zip >/dev/null
           unzip -t /tmp/ArlightCore-1.25.4.jar >/dev/null
           mkdir -p /tmp/client /tmp/parkour /tmp/assets
           unzip -q /tmp/client.zip -d /tmp/client
@@ -75,7 +78,7 @@ jobs:
             -Dversion=1.25.4 \
             -Dpackaging=jar
 
-      - name: Compilar ArlightParkour 1.8.0
+      - name: Compilar ArlightParkour 1.9.0
         shell: bash
         run: |
           set -euo pipefail
@@ -83,18 +86,17 @@ jobs:
           mvn -B -ntp clean test package
           JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name 'original-*' -print -quit)"
           test -n "$JAR"
-          unzip -p "$JAR" plugin.yml | grep "version: '1.8.0'"
+          unzip -p "$JAR" plugin.yml | grep "version: '1.9.0'"
           if unzip -Z1 "$JAR" | grep -q '^org/bukkit/'; then
             echo 'ERROR: Bukkit embebido en plugin'
             exit 1
           fi
-          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ParkourStatsManager | grep 'topInfiniteByCheckpoint'
-          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.DynamicObstacleManager | grep 'applySoftForce'
-          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ArlightParkourPlugin | grep 'safeLaunchVelocity'
+          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ArlightParkourPlugin | grep 'validateInternalWalkablePath'
+          javap -classpath "$JAR:/tmp/ArlightCore-1.25.4.jar" -p com.arlight.parkour.ParkourHubManager | grep 'buildSpawnCore'
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.8.0-TETRIS-TOP-PANELS.jar"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkour-1.9.0-GAMEPLAY-HUB-SCORE.jar"
 
-      - name: Compilar ArlightParkourAssets 1.2.0
+      - name: Compilar ArlightParkourAssets 1.3.0
         shell: bash
         run: |
           set -euo pipefail
@@ -103,11 +105,13 @@ jobs:
           ./gradlew --no-daemon clean build
           JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
           test -n "$JAR"
-          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '1\.2\.0|version'
-          unzip -l "$JAR" | grep 'textures/block/fan.png'
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkourAssets-1.2.0-TEXTURE-PASS.jar"
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '1\.3\.0|version'
+          for t in fan crusher hammer laser_emitter moving_platform rotating_bar timed_door cannon; do
+            unzip -l "$JAR" | grep "textures/block/${t}.png"
+          done
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightParkourAssets-1.3.0-HD-ARCADE-BLOCKS.jar"
 
-      - name: Compilar ArlightChatClient 5.7.0
+      - name: Compilar ArlightChatClient 5.8.0
         shell: bash
         run: |
           set -euo pipefail
@@ -116,25 +120,27 @@ jobs:
           ./gradlew --no-daemon clean build
           JAR="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' -print -quit)"
           test -n "$JAR"
-          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '5\.7\.0|version'
-          for t in top_race top_time_trial top_daily top_wins top_infinite; do
-            unzip -l "$JAR" | grep "textures/parkour/${t}.png"
+          unzip -p "$JAR" META-INF/neoforge.mods.toml | grep -E '5\.8\.0|version'
+          for t in scoreboard_parkour scoreboard_parkour_hub scoreboard_parkour_infinite; do
+            unzip -l "$JAR" | grep "textures/gui/${t}.png"
           done
+          unzip -l "$JAR" | grep 'textures/gui/icons/parkour.png'
+          unzip -l "$JAR" | grep 'com/arlight/chatclient/ParkourGalleryRenderer.class'
           unzip -l "$JAR" | grep 'com/arlight/chatclient/BingoLobbyTopRenderer.class'
-          javap -classpath "$JAR" -p com.arlight.chatclient.ParkourGalleryRenderer >/dev/null
-          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightChatClient-5.7.0-PARKOUR-TOP-PANELS.jar"
+          cp "$JAR" "$GITHUB_WORKSPACE/dist/ArlightChatClient-5.8.0-PARKOUR-VISUAL-SCORE.jar"
 
       - name: Verificación final
         shell: bash
         run: |
           set -euo pipefail
           ls -lh dist
+          for jar in dist/*.jar; do unzip -t "$jar" >/dev/null; done
           sha256sum dist/* | tee dist/SHA256.txt
 
       - name: Subir entrega compilada
         uses: actions/upload-artifact@v4
         with:
-          name: ArlightParkour-1.8.0-Assets-1.2.0-ChatClient-5.7.0
+          name: ArlightParkour-1.9.0-Assets-1.3.0-ChatClient-5.8.0
           path: dist/*
           if-no-files-found: error
           retention-days: 30
